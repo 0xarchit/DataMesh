@@ -1,0 +1,170 @@
+{
+  "questions": 10,
+  "ours_accuracy": 1.0,
+  "rag_accuracy": 0.1,
+  "rag_canonical_accuracy": 0.4,
+  "rag_full_context": {
+    "raw": 0.2,
+    "canonical": 0.6
+  },
+  "rag_engine": "local llm: .\\weights\\qwen-3.8-27B.gguf",
+  "qa_plan_source": {
+    "query plan from local model": 10
+  },
+  "rag_k": 15,
+  "rag_corpus_chunks": 327,
+  "rag_canonical_chunks": 219,
+  "conflicts": {
+    "planted": 20,
+    "detected": 20,
+    "missed": [],
+    "spurious": [],
+    "resolved": 20,
+    "for_review": 0,
+    "load_order_baseline_wrong": 7,
+    "ours_wrong": 0,
+    "ours_wrong_invoices": []
+  },
+  "reconciliation": {
+    "raw_records": 327,
+    "source_counts": {
+      "csv": 20,
+      "xlsx": 100,
+      "pdf": 199,
+      "receipt": 8
+    },
+    "receipts_parsed": 8,
+    "vendor_clusters": 20,
+    "raw_transactions": 307,
+    "unique_transactions": 199,
+    "duplicates_removed": 108,
+    "conflicts_detected": 20,
+    "conflicts_resolved": 20,
+    "conflicts_for_review": 0,
+    "load_order_baseline_wrong": 7,
+    "total_spend_inr": 6185400,
+    "generated_from": "raw"
+  },
+  "table": [
+    {
+      "question": "How many distinct vendors appear in the data?",
+      "gold": 20,
+      "ours": 20,
+      "rag": 15,
+      "rag_canonical": 6,
+      "rag_raw": "15",
+      "rag_canonical_raw": "6",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": false
+    },
+    {
+      "question": "What is the total spend across all vendors in INR?",
+      "gold": 6185400,
+      "ours": 6185400,
+      "rag": 783100,
+      "rag_canonical": 34200,
+      "rag_raw": "783100",
+      "rag_canonical_raw": "34200",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": false
+    },
+    {
+      "question": "What is the total spend with Acme Ltd in INR?",
+      "gold": 214700,
+      "ours": 214700,
+      "rag": 298000,
+      "rag_canonical": 198900,
+      "rag_raw": "298000",
+      "rag_canonical_raw": "198900",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": false
+    },
+    {
+      "question": "What is the total spend with Globex Corporation in INR?",
+      "gold": 359900,
+      "ours": 359900,
+      "rag": 1000000,
+      "rag_canonical": 383100,
+      "rag_raw": "1000000",
+      "rag_canonical_raw": "383100",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": false
+    },
+    {
+      "question": "What city is Acme Ltd registered in?",
+      "gold": "Mumbai",
+      "ours": "mumbai",
+      "rag": "bombay",
+      "rag_canonical": "mumbai",
+      "rag_raw": "Bombay",
+      "rag_canonical_raw": "Mumbai",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": true
+    },
+    {
+      "question": "What city is Globex Corporation registered in?",
+      "gold": "Bengaluru",
+      "ours": "bengaluru",
+      "rag": "bangalore",
+      "rag_canonical": "bengaluru",
+      "rag_raw": "Bangalore",
+      "rag_canonical_raw": "Bengaluru",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": true
+    },
+    {
+      "question": "What is the GSTIN of Initech Solutions?",
+      "gold": "07AAECI5678Q1Z2",
+      "ours": "07aaeci5678q1z2",
+      "rag": "07aaeci5678q1z2",
+      "rag_canonical": "07aaeci5678q1z2",
+      "rag_raw": "07AAECI5678Q1Z2",
+      "rag_canonical_raw": "07AAECI5678Q1Z2",
+      "ours_correct": true,
+      "rag_correct": true,
+      "rag_canonical_correct": true
+    },
+    {
+      "question": "How many transactions involve Stark Industries?",
+      "gold": 9,
+      "ours": 9,
+      "rag": 15,
+      "rag_canonical": 10,
+      "rag_raw": "15",
+      "rag_canonical_raw": "10",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": false
+    },
+    {
+      "question": "What is the total spend with Hooli Services in INR?",
+      "gold": 160600,
+      "ours": 160600,
+      "rag": 100000,
+      "rag_canonical": 100700,
+      "rag_raw": "100000",
+      "rag_canonical_raw": "100700",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": false
+    },
+    {
+      "question": "What city is Wayne Enterprises registered in?",
+      "gold": "Pune",
+      "ours": "pune",
+      "rag": "poona",
+      "rag_canonical": "pune",
+      "rag_raw": "Poona",
+      "rag_canonical_raw": "Pune",
+      "ours_correct": true,
+      "rag_correct": false,
+      "rag_canonical_correct": true
+    }
+  ]
+}
