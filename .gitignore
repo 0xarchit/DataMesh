@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/
+data/intermediate/
+data/canonical/
+data/gold/
+data/chroma/
+
+# Local machine settings
+.claude/settings.local.json
+
+# Copyrighted journal papers, not redistributed
+academic/literature/*.pdf
+
+# Build and generated artifacts
+*.egg-info/
+data/chroma_canonical/
