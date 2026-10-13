@@ -18,7 +18,7 @@ CANON_STORE = os.path.join(ROOT, "data", "chroma_canonical")
 RESULTS = os.path.join(ROOT, "research", "results")
 
 from datamesh import downstream, qa
-from datamesh.core import llm
+from datamesh.core import llm, planner_needle
 from datamesh.ingestion import loaders
 from datamesh.pipeline import run as run_pipeline
 from datamesh.rag import baseline as rag
@@ -103,6 +103,15 @@ with st.sidebar:
         st.caption(llm.BASE_URL)
     use_llm = st.checkbox("Use local LLM", value=online, disabled=not online)
     st.caption("Thinking is disabled, calls answer in about 1 to 3 seconds")
+    planner_choices = []
+    if planner_needle.available():
+        planner_choices.append("Needle planner, local, no LLM tokens")
+    if online:
+        planner_choices.append("Local LLM planner")
+    planner_choices.append("Keyword rules")
+    planner = st.radio("Question planner", planner_choices, index=0)
+    use_needle = planner.startswith("Needle")
+    use_llm_plan = planner.startswith("Local LLM")
     st.divider()
     store_meta = rag.store_meta(STORE)
     st.caption("raw ready: {}".format("yes" if raw_ready() else "no"))
@@ -264,7 +273,9 @@ with tab_qa:
         live = live_panel("qa")
         if st.button("Answer", type="primary"):
             live.reset()
-            result = qa.outcome(text, vendors, rows, use_llm=use_llm, on_token=live.tok)
+            result = qa.outcome(
+                text, vendors, rows, use_llm=use_llm_plan, on_token=live.tok, use_needle=use_needle
+            )
             if result["plan"]:
                 live.say("our query plan ({}): {}".format(result["source"], json.dumps(result["plan"], sort_keys=True)))
             live.say("our status: {}".format(result["status"]))
@@ -361,7 +372,9 @@ with tab_demo:
         for i, item in enumerate(questions, start=1):
             live.say("question {}/{}: {}".format(i, n, item["q"]))
             gold = qa.normalize(item["answer"])
-            spec, source = qa.plan(item["q"], vendors, use_llm=use_llm, on_token=live.tok)
+            spec, source = qa.plan(
+                item["q"], vendors, use_llm=use_llm_plan, on_token=live.tok, use_needle=use_needle
+            )
             live.say("LLM our query plan ({}): {}".format(source, json.dumps(spec, sort_keys=True)))
             plan_sources[source] = plan_sources.get(source, 0) + 1
             ours = qa.normalize(qa.execute(spec, vendors, rows))
