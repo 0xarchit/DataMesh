@@ -16,6 +16,7 @@ dependencies = [
     "matplotlib",
     "streamlit",
     "chromadb",
+    "cactus-needle>=3.2.1",
 ]
 
 [build-system]
