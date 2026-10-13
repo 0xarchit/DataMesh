@@ -1,6 +1,7 @@
 import base64
 import json
 import os
+import time
 
 from openai import OpenAI
 
@@ -88,6 +89,35 @@ def chat(prompt, system=None, temperature=0.0, max_tokens=None, on_token=None):
     if on_token is None:
         return resp.choices[0].message.content or ""
     return _drain(resp, on_token)
+
+
+def chat_measured(prompt, system=None, temperature=0.0, max_tokens=None):
+    messages = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
+    started = time.time()
+    resp = client().chat.completions.create(
+        model=model_name(),
+        messages=messages,
+        temperature=temperature,
+        max_tokens=max_tokens or MAX_TOKENS,
+        stream=False,
+        **_extra(),
+    )
+    elapsed = time.time() - started
+    text = resp.choices[0].message.content or ""
+    usage = getattr(resp, "usage", None)
+    if usage is None:
+        tokens = {"prompt_tokens": None, "completion_tokens": None, "total_tokens": None, "estimated": True}
+    else:
+        tokens = {
+            "prompt_tokens": getattr(usage, "prompt_tokens", None),
+            "completion_tokens": getattr(usage, "completion_tokens", None),
+            "total_tokens": getattr(usage, "total_tokens", None),
+            "estimated": False,
+        }
+    return text, tokens, elapsed
 
 
 def vision_extract(image_path, on_token=None):

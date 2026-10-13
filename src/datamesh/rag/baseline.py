@@ -147,13 +147,6 @@ def load_store(raw_dir, store_dir, use_llm=True, emit=None, on_token=None, rebui
 
 
 def canonical_chunks(canonical_dir):
-    """The consolidated table rendered as text, one chunk per row.
-
-    Nothing is pre-aggregated: the model does the same work over this corpus
-    that it does over the raw one, on cleaner rows. The only things that have
-    gone are the duplicates, the unresolved name variants and the conflicting
-    amounts - which is exactly the variable the control arm isolates.
-    """
     with open(os.path.join(canonical_dir, "vendors.json"), encoding="utf-8") as f:
         vendors = json.load(f)
     by_id = {v["id"]: v for v in vendors}
@@ -178,12 +171,6 @@ def canonical_chunks(canonical_dir):
 
 
 def canonical_store(canonical_dir, store_dir, k=DEFAULT_K, emit=None):
-    """The control arm: same store, same embedding model, same k as load_store,
-    over the consolidated table instead of the raw records.
-
-    Rebuilt every call - 219 rows embed in seconds locally, and a stale control
-    arm would silently flatter the pipeline it is supposed to check.
-    """
     say = emit or (lambda s: None)
     chunks = canonical_chunks(canonical_dir)
     client = _client(store_dir)
@@ -229,12 +216,6 @@ def _keywords(question):
 
 
 def keyword_rules_answer(question, chunks):
-    """Floor baseline used only when no LLM server is reachable.
-
-    It reads the same raw chunks the retriever would, but with hand-written
-    patterns. It exists so the demo still completes offline; a number produced
-    here is not a RAG result and must not be reported as one.
-    """
     q = question.lower()
     keywords = _keywords(question)
     if "how many distinct vendors" in q:
@@ -270,6 +251,15 @@ def _warn_no_llm(say):
         say("no LLM server reachable - falling back to keyword rules; this arm is NOT a RAG run")
 
 
+def answer_system(context):
+    return (
+        "You answer questions about raw business records using only these records. "
+        "Output ONLY the answer value on a single line. No words, no commas, no explanation. "
+        "Amounts and counts must be a plain integer.\n\nRecords:\n"
+        + "\n".join(context)
+    )
+
+
 def rag_answer(question, retriever, chunks=None, use_llm=True, k=None, on_token=None, emit=None):
     say = emit or (lambda s: None)
     all_chunks = retriever.chunks if chunks is None else chunks
@@ -278,12 +268,7 @@ def rag_answer(question, retriever, chunks=None, use_llm=True, k=None, on_token=
         context = retriever.retrieve(question, k=depth) if chunks is None else chunks
         if not context:
             context = all_chunks
-        system = (
-            "You answer questions about raw business records using only these records. "
-            "Output ONLY the answer value on a single line. No words, no commas, no explanation. "
-            "Amounts and counts must be a plain integer.\n\nRecords:\n"
-            + "\n".join(context)
-        )
+        system = answer_system(context)
         say("LLM rag retrieved {}/{} chunks by vector similarity, answering".format(len(context), len(all_chunks)))
         try:
             return llm.chat(question, system=system, max_tokens=64, on_token=on_token)
