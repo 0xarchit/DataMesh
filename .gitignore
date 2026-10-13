@@ -20,5 +20,16 @@ data/external/
 *.egg-info/
 data/chroma_canonical/
 
-results
+/results
 Agents/*
+
+# Needle base weights and trained adapters, rebuilt by scripts/train_needle.py
+checkpoints/
+training/needle/*.safetensors
+training/needle/*.cact
+
+# Superseded dataset shards kept locally for reference
+training/needle/shards_old/
+
+# Training run output
+training/needle/*.log
