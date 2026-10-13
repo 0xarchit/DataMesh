@@ -14,16 +14,10 @@ INTER = os.path.join(ROOT, "data", "intermediate")
 GOLD = os.path.join(ROOT, "data", "gold")
 RESULTS = os.path.join(ROOT, "research", "results")
 
-# the load order the pipeline has always used: first source listed wins a duplicate
 LOAD_ORDER = {"csv": 0, "xlsx": 1, "pdf": 2, "receipt": 3}
 
 
 def score_conflicts():
-    """Score conflict detection against the generator's ground truth.
-
-    The baseline is recomputed straight from the extracted records in load
-    order, so it does not depend on the fusion module it is compared against.
-    """
     gold = {c["invoice_id"]: c for c in json.load(open(os.path.join(GOLD, "conflicts.json"), encoding="utf-8"))}
     decided = {
         c["invoice_id"]: c for c in json.load(open(os.path.join(CANON, "conflicts.json"), encoding="utf-8"))
@@ -59,14 +53,6 @@ def baseline_engine():
 
 
 def full_context_scores(questions, retriever, canon_retriever, chunks, canon_chunks, use_llm=True):
-    """Both RAG arms again, but with the whole corpus in context instead of the
-    top-k, and otherwise the same prompt, model and question set.
-
-    Top-k truncation is a confound: with k=15 of 327 chunks the model cannot
-    see enough rows to total anything, so it would fail for a reason that has
-    nothing to do with consolidation. Giving both arms the full corpus removes
-    that, leaving the corpus as the only difference between them.
-    """
     scores = {}
     for name, retriever_, corpus in (("raw", retriever, chunks), ("canonical", canon_retriever, canon_chunks)):
         correct = 0
@@ -88,8 +74,6 @@ def main(use_llm=True):
 
     store = os.path.join(ROOT, "data", "chroma")
     chunks, retriever = rag.load_store(RAW, store, use_llm=use_llm, rebuild=True)
-    # Control arm: identical store, embedding model and k, over the consolidated
-    # table. Same method, different corpus - so any gap is the corpus talking.
     canon_chunks, canon_retriever = rag.canonical_store(CANON, os.path.join(ROOT, "data", "chroma_canonical"))
 
     table = []

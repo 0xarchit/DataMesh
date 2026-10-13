@@ -1,23 +1,8 @@
-"""Cross-source conflict detection for the same business key.
-
-Two sources describing the same invoice can disagree about the amount. Loading
-order decides the winner by accident; this module decides on purpose, and
-records what it saw either way.
-
-Three outcomes per invoice:
-  AGREED    every copy carried the same amount, nothing to decide
-  RESOLVED  copies disagreed, evidence picked one
-  REVIEW    copies disagreed and evidence could not separate them - the row is
-            flagged rather than silently merged (the abstain branch)
-"""
-
 from collections import Counter, defaultdict
 
 SOURCE_PRIORITY = {"csv": 0, "xlsx": 1, "pdf": 2, "receipt": 3}
 SOURCE_RELIABILITY = {"csv": 1.0, "xlsx": 1.0, "pdf": 0.95, "receipt": 0.8}
 
-# xlsx and pdf reliability differ by less than this, so that gap on its own is
-# not evidence and the invoice is flagged instead of guessed.
 RELIABILITY_MARGIN = 0.1
 
 AGREED = "agreed"
@@ -33,11 +18,6 @@ def group_by_invoice(transactions):
 
 
 def vendor_profiles(transactions):
-    """Count how often each amount occurs per vendor cluster.
-
-    A vendor bills from a small set of recurring values, so a digit-shift
-    misread appears once while a real amount repeats across other invoices.
-    """
     profile = defaultdict(Counter)
     for t in transactions:
         profile[t.vendor_cluster][t.amount] += 1
@@ -49,7 +29,6 @@ def _by_priority(rows):
 
 
 def resolve_group(rows, profile):
-    """Decide one amount for one invoice. Returns (chosen_row, decision, detail)."""
     ordered = _by_priority(rows)
     amounts = [r.amount for r in ordered]
     counts = Counter(amounts)
@@ -63,8 +42,6 @@ def resolve_group(rows, profile):
         return chosen, RESOLVED, {"candidates": amounts, "rule": "majority of the copies"}
 
     prof = Counter(profile.get(ordered[0].vendor_cluster, Counter()))
-    # evidence has to come from the vendor's OTHER invoices: this invoice's own
-    # copies would inflate every candidate by one and cancel the difference out
     prof.subtract(amounts)
 
     def strength(amount):
@@ -89,10 +66,6 @@ def resolve_group(rows, profile):
 
 
 def reconcile(transactions):
-    """Collapse duplicate invoices, resolving cross-source disagreements.
-
-    Returns (unique_transactions, conflict_report).
-    """
     profile = vendor_profiles(transactions)
     unique, conflicts = [], []
     for invoice_id, rows in group_by_invoice(transactions).items():
@@ -117,7 +90,6 @@ def reconcile(transactions):
 
 
 def demo():
-    """Self-check: three copies resolve by majority, two copies by vendor profile."""
     from types import SimpleNamespace
 
     def row(source, amount, cluster="C001"):
@@ -125,19 +97,15 @@ def demo():
 
     profile = defaultdict(Counter, {"C001": Counter({24800: 3, 96000: 2})})
 
-    # same invoice in three sources, the xlsx copy is a digit-shift misread
     chosen, decision, _ = resolve_group([row("xlsx", 248000), row("pdf", 24800), row("receipt", 24800)], profile)
     assert (chosen.amount, decision) == (24800, RESOLVED), (chosen.amount, decision)
 
-    # two copies, no majority - the vendor amount profile breaks the tie
     chosen, decision, _ = resolve_group([row("xlsx", 248000), row("pdf", 24800)], profile)
     assert (chosen.amount, decision) == (24800, RESOLVED), (chosen.amount, decision)
 
-    # two copies, nothing to separate them - flagged, not guessed
     chosen, decision, _ = resolve_group([row("xlsx", 111), row("pdf", 222)], defaultdict(Counter))
     assert decision == REVIEW, decision
 
-    # agreement is not a conflict
     chosen, decision, _ = resolve_group([row("xlsx", 500), row("pdf", 500)], profile)
     assert decision == AGREED, decision
 

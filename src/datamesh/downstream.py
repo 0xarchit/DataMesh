@@ -114,9 +114,6 @@ def evaluate(df, model=None):
     if model is None:
         model, _ = build_model()
     pred = cross_val_predict(model, X, y, cv=LeaveOneOut())
-    # The two arms do not have the same row count - fragmentation is the thing
-    # being measured - so balanced accuracy and macro F1 are reported alongside
-    # raw accuracy. Both are invariant to how the classes are proportioned.
     return {
         "rows": len(df),
         "high_value_share": round(float(y.mean()), 4),
