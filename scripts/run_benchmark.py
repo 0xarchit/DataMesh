@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.join(ROOT, "src"))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 from datamesh import qa
-from datamesh.core import llm
+from datamesh.core import llm, planner_needle
 from datamesh.pipeline import run
 from datamesh.rag import baseline as rag
 from generate_data import build
@@ -42,6 +42,13 @@ def measured_plan(question, vendors):
     if not spec or spec.get("op") not in ("sum", "count", "distinct_count", "lookup"):
         return qa.plan_rules(question, vendors), counted(tokens, qa.PLAN_SYSTEM + question, text), elapsed, "keyword rules"
     return spec, counted(tokens, qa.PLAN_SYSTEM + question, text), elapsed, "local model"
+
+
+def measured_needle(question, vendors):
+    zero = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0, "estimated": False}
+    started = time.time()
+    spec, source = qa.plan(question, vendors, use_llm=False, use_needle=True)
+    return spec, zero, time.time() - started, source
 
 
 def measured_rag(question, retriever, k=None):
@@ -112,6 +119,9 @@ def main():
     with open(args.questions, encoding="utf-8") as f:
         questions = json.load(f)
     print("questions:", len(questions))
+    use_needle = planner_needle.available()
+    if not use_needle:
+        print("needle weights not found, skipping the local planner arm")
 
     index_started = time.time()
     raw_chunks, raw_retriever = rag.load_store(RAW, STORE, use_llm=True, rebuild=args.rebuild, k=args.k or rag.DEFAULT_K)
@@ -123,7 +133,8 @@ def main():
         )
     )
 
-    ours, rag_raw, rag_canon, table = [], [], [], []
+    ours, needle, rag_raw, rag_canon, table = [], [], [], [], []
+    needle_sources = {}
     for item in questions:
         question = item["q"]
         gold = qa.normalize(item["answer"])
@@ -135,6 +146,16 @@ def main():
         ours_correct = int(ours_answer == gold)
         qtype = item.get("type", "unknown")
         ours.append({"correct": ours_correct, "tokens": plan_tokens, "seconds": ours_seconds, "type": qtype})
+
+        spec_n, needle_tokens, needle_seconds, needle_source = measured_needle(question, vendors)
+        compute_started = time.time()
+        needle_answer = qa.normalize(qa.execute(spec_n, vendors, rows))
+        needle_seconds += time.time() - compute_started
+        needle_correct = int(needle_answer == gold)
+        needle.append(
+            {"correct": needle_correct, "tokens": needle_tokens, "seconds": needle_seconds, "type": qtype}
+        )
+        needle_sources[needle_source] = needle_sources.get(needle_source, 0) + 1
 
         text, raw_tokens, seconds, seen = measured_rag(question, raw_retriever, k=args.k)
         raw_answer = rag.normalize_answer(text)
@@ -156,6 +177,13 @@ def main():
                     "plan_source": source,
                     **plan_tokens,
                     "seconds": round(ours_seconds, 3),
+                },
+                "ours_needle_planner": {
+                    "answer": needle_answer,
+                    "correct": needle_correct,
+                    "plan_source": needle_source,
+                    **needle_tokens,
+                    "seconds": round(needle_seconds, 3),
                 },
                 "rag_raw": {
                     "answer": raw_answer,
@@ -183,6 +211,21 @@ def main():
             )
         )
 
+    arms = {
+        "ours_consolidated_engine": summarize(ours),
+        "rag_over_raw_records": summarize(rag_raw),
+        "rag_over_consolidated_table": summarize(rag_canon),
+    }
+    types = {
+        "ours_consolidated_engine": by_type(ours),
+        "rag_over_raw_records": by_type(rag_raw),
+        "rag_over_consolidated_table": by_type(rag_canon),
+    }
+    if use_needle:
+        arms["ours_needle_planner"] = summarize(needle)
+        types["ours_needle_planner"] = by_type(needle)
+        arms["ours_needle_planner"]["plan_sources"] = needle_sources
+
     result = {
         "model": llm.model_name(),
         "seed": args.seed,
@@ -192,16 +235,8 @@ def main():
         "consolidation_seconds": consolidation_seconds,
         "rag_index_seconds": rag_index_seconds,
         "reconciliation": report,
-        "arms": {
-            "ours_consolidated_engine": summarize(ours),
-            "rag_over_raw_records": summarize(rag_raw),
-            "rag_over_consolidated_table": summarize(rag_canon),
-        },
-        "by_type": {
-            "ours_consolidated_engine": by_type(ours),
-            "rag_over_raw_records": by_type(rag_raw),
-            "rag_over_consolidated_table": by_type(rag_canon),
-        },
+        "arms": arms,
+        "by_type": types,
         "per_question": table,
     }
     total_questions = len(questions)
@@ -230,15 +265,16 @@ def main():
         )
     print()
     print("accuracy by question type")
-    arms = ("ours_consolidated_engine", "rag_over_raw_records", "rag_over_consolidated_table")
-    types = sorted({t for arm in result["by_type"].values() for t in arm})
-    print("{:<24} {:>10} {:>10} {:>10}".format("type", "ours", "rag_raw", "rag_canon"))
-    for t in types:
+    arm_names = tuple(result["arms"])
+    type_names = sorted({t for arm in result["by_type"].values() for t in arm})
+    header = "{:<24}" + " {:>12}" * len(arm_names)
+    print(header.format("type", *[a.replace("ours_", "")[:11] for a in arm_names]))
+    for t in type_names:
         cells = []
-        for a in arms:
+        for a in arm_names:
             bucket = result["by_type"][a].get(t, {"correct": 0, "questions": 0})
             cells.append("{}/{}".format(bucket["correct"], bucket["questions"]))
-        print("{:<24} {:>10} {:>10} {:>10}".format(t, cells[0], cells[1], cells[2]))
+        print(header.format(t, *cells))
     print()
     print("wrote", os.path.relpath(out_path, ROOT))
 
