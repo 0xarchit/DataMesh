@@ -3,7 +3,7 @@ import json
 import os
 import re
 
-from datamesh.core import llm
+from datamesh.core import llm, planner_needle
 from datamesh.core.schema import normalize_name
 
 PLAN_SYSTEM = (
@@ -140,7 +140,21 @@ def execute(spec, vendors, rows):
     return None
 
 
-def plan(question, vendors, use_llm=True, on_token=None):
+def needle_spec_ok(spec, question):
+    if spec is None:
+        return False
+    op = spec.get("op")
+    if op in ("lookup", "count"):
+        return bool(spec.get("entity"))
+    return op in ("sum", "distinct_count")
+
+
+def plan(question, vendors, use_llm=True, on_token=None, use_needle=False):
+    if use_needle and planner_needle.load() is not None:
+        spec = planner_needle.plan(question)
+        if needle_spec_ok(spec, question):
+            return spec, "query plan from Needle, local, no llm tokens"
+        return None, "refused by Needle"
     if use_llm:
         spec = plan_llm(question, on_token=on_token)
         if spec is not None:
@@ -151,8 +165,8 @@ def plan(question, vendors, use_llm=True, on_token=None):
     return spec, "query plan from keyword rules"
 
 
-def outcome(question, vendors, rows, use_llm=True, on_token=None):
-    spec, source = plan(question, vendors, use_llm=use_llm, on_token=on_token)
+def outcome(question, vendors, rows, use_llm=True, on_token=None, use_needle=False):
+    spec, source = plan(question, vendors, use_llm=use_llm, on_token=on_token, use_needle=use_needle)
     guess = mentioned_entity(question)
     if spec is None:
         if guess and find_vendor(guess, vendors) is None:
