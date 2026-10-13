@@ -245,40 +245,71 @@ with tab_pipe:
         st.info("Run consolidation first to see the canonical tables.")
 
 with tab_qa:
-    st.subheader("Question answering on the consolidated table")
+    st.subheader("Ask a question")
     if not canon_ready():
         st.warning("Run tab 3 first.")
     else:
         vendors, rows = qa.load_canonical(CANON)
-        options = [q["q"] for q in gold_questions()] + ["Custom question"]
-        picked = st.selectbox("Question", options)
-        if picked == "Custom question":
-            picked = st.text_input("Type your question", value="What is the total spend with Acme Ltd in INR?")
         gold_map = {q["q"]: q["answer"] for q in gold_questions()}
+        picked = st.selectbox("Question", ["Custom question"] + list(gold_map))
+        if picked == "Custom question":
+            text = st.text_input("Type your question", value="What is the total spend with Acme Ltd in INR?")
+            st.caption(
+                "Try a real one, then try one the data cannot answer, such as "
+                "'What is the total spend with FooBar Inc in INR?' or 'What is the weather in Mumbai?'"
+            )
+        else:
+            text = picked
+        ask_rag = st.checkbox("Ask RAG the same question and compare", value=True)
         live = live_panel("qa")
         if st.button("Answer", type="primary"):
             live.reset()
-            spec, source = qa.plan(picked, vendors, use_llm=use_llm, on_token=live.tok)
-            live.say("LLM our query plan ({}): {}".format(source, json.dumps(spec, sort_keys=True)))
-            shown = qa.normalize(qa.execute(spec, vendors, rows))
-            st.markdown("### Answer")
-            st.code(str(shown), language="text")
-            if picked in gold_map:
-                if shown == qa.normalize(gold_map[picked]):
-                    st.success("Matches ground truth")
-                else:
-                    st.error("Ground truth is {}".format(qa.normalize(gold_map[picked])))
-            v = qa.find_vendor(spec.get("entity"), vendors)
-            if v:
-                match = [r for r in rows if r["vendor_cluster"] == v["id"]]
+            result = qa.outcome(text, vendors, rows, use_llm=use_llm, on_token=live.tok)
+            if result["plan"]:
+                live.say("our query plan ({}): {}".format(result["source"], json.dumps(result["plan"], sort_keys=True)))
+            live.say("our status: {}".format(result["status"]))
+
+            st.markdown("### Our pipeline")
+            if result["status"] == "answered":
+                st.code(str(result["value"]), language="text")
+                if text in gold_map:
+                    if result["value"] == qa.normalize(gold_map[text]):
+                        st.success("Matches ground truth")
+                    else:
+                        st.error("Ground truth is {}".format(qa.normalize(gold_map[text])))
+            elif result["status"] == "entity_not_found":
+                st.warning("Not answered. " + result["message"])
+                st.caption("The engine refuses rather than compute a number for an entity that is not in the table.")
+            else:
+                st.info("Not answered. " + result["message"])
+                st.caption("Both the model planner and the keyword planner found nothing to compute, so nothing is returned.")
+
+            if result["vendor"]:
+                match = [r for r in rows if r["vendor_cluster"] == result["vendor"]["id"]]
                 st.markdown("### Evidence rows used")
-                st.metric("Vendor", "{} ({})".format(v["name"], v["id"]))
-                st.metric("City", v["city"])
-                st.metric("Transactions", len(match))
+                c1, c2, c3 = st.columns(3)
+                c1.metric("Vendor", result["vendor"]["name"])
+                c2.metric("Cluster", result["vendor"]["id"])
+                c3.metric("Transactions", len(match))
                 st.dataframe(pd.DataFrame(match), width="stretch")
+
+            if ask_rag:
+                st.markdown("### RAG over the raw records, same question")
+                try:
+                    _, retriever = rag.load_store(RAW, STORE, use_llm=use_llm, emit=live.say, on_token=live.tok)
+                    rag_text = rag.rag_answer(text, retriever, use_llm=use_llm, on_token=live.tok, emit=live.say)
+                    st.code(str(rag_text).strip() or "(empty)", language="text")
+                    if result["status"] == "answered":
+                        if rag.normalize_answer(rag_text) == result["value"]:
+                            st.caption("RAG agrees with the value computed over the canonical table.")
+                        else:
+                            st.caption("RAG differs from the value computed over the canonical table.")
+                except Exception as exc:
+                    st.error("RAG arm unavailable: {}".format(exc))
         st.caption(
-            "The model writes a query plan as JSON, the executor computes it over the canonical table. "
-            "No retrieval and no prewritten answers, the value is always calculated from the rows."
+            "The model writes a query plan as JSON and the executor computes it over the canonical table. "
+            "Nothing is retrieved and no answer is prewritten, so the value is always calculated from the rows. "
+            "When a question cannot be computed, the engine says so instead of returning a number."
         )
 
 with tab_demo:

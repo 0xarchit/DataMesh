@@ -66,29 +66,44 @@ def plan_llm(question, on_token=None):
     return spec
 
 
-def plan_rules(question, vendors):
-    """Floor planner used only when no query plan can be obtained from the model.
+GLOBAL_PHRASES = ("across all", "all vendors", "distinct vendors", "how many vendors", "in the data", "overall")
 
-    It matches hand-written phrasings, so it covers the wording in
-    data/gold/questions.json and little else. It exists so the demo and the
-    offline test still run without a model; a *result* produced here is not an
-    LLM planning result and must not be reported as one. Callers can tell the
-    two apart - `plan()` returns the source string alongside the spec.
-    """
+WITH_ENTITY = re.compile(r"\b(?:with|of|for)\s+([A-Za-z][A-Za-z0-9&.,'\- ]{2,40}?)\s*(?:in inr|\?|$|,|\.)", re.I)
+
+
+def looks_global(question):
+    q = question.lower()
+    return any(phrase in q for phrase in GLOBAL_PHRASES)
+
+
+def mentioned_entity(question):
+    m = WITH_ENTITY.search(question)
+    return m.group(1).strip(" ,.") if m else None
+
+
+def plan_rules(question, vendors):
     q = question.lower()
     match = find_vendor(question, vendors)
     entity = match["name"] if match else None
     if "how many distinct vendors" in q or "how many vendors" in q:
         return {"op": "distinct_count", "entity": None, "column": "vendor_cluster"}
     if "how many transactions" in q:
+        if entity is None:
+            return None
         return {"op": "count", "entity": entity, "column": "invoice_id"}
-    if "total spend" in q or "total amount" in q or "spend" in q:
+    if "total spend" in q or "total amount" in q:
+        if entity is None and not looks_global(question):
+            return None
         return {"op": "sum", "entity": entity, "column": "amount_inr"}
     if "gstin" in q or "tax" in q:
+        if entity is None:
+            return None
         return {"op": "lookup", "entity": entity, "column": "tax_id"}
     if "city" in q:
+        if entity is None:
+            return None
         return {"op": "lookup", "entity": entity, "column": "city"}
-    return {"op": "sum", "entity": entity, "column": "amount_inr"}
+    return None
 
 
 def select_rows(vendors, rows, entity):
@@ -101,6 +116,8 @@ def select_rows(vendors, rows, entity):
 
 
 def execute(spec, vendors, rows):
+    if not spec:
+        return None
     op = spec.get("op")
     column = spec.get("column") or "amount_inr"
     entity = spec.get("entity")
@@ -128,7 +145,61 @@ def plan(question, vendors, use_llm=True, on_token=None):
         spec = plan_llm(question, on_token=on_token)
         if spec is not None:
             return spec, "query plan from local model"
-    return plan_rules(question, vendors), "query plan from keyword rules"
+    spec = plan_rules(question, vendors)
+    if spec is None:
+        return None, "out of scope"
+    return spec, "query plan from keyword rules"
+
+
+def outcome(question, vendors, rows, use_llm=True, on_token=None):
+    spec, source = plan(question, vendors, use_llm=use_llm, on_token=on_token)
+    guess = mentioned_entity(question)
+    if spec is None:
+        if guess and find_vendor(guess, vendors) is None:
+            return {
+                "status": "entity_not_found",
+                "value": None,
+                "plan": None,
+                "source": source,
+                "vendor": None,
+                "message": "No vendor matching {!r} exists in the consolidated table.".format(guess),
+            }
+        return {
+            "status": "out_of_scope",
+            "value": None,
+            "plan": None,
+            "source": source,
+            "vendor": None,
+            "message": "This question is not about the vendors or transactions in this workspace, so nothing is computed.",
+        }
+    entity = spec.get("entity")
+    vendor = find_vendor(entity, vendors) if entity else None
+    if entity and vendor is None:
+        return {
+            "status": "entity_not_found",
+            "value": None,
+            "plan": spec,
+            "source": source,
+            "vendor": None,
+            "message": "No vendor matching {!r} exists in the consolidated table.".format(entity),
+        }
+    if vendor is None and guess and find_vendor(guess, vendors) is None and not looks_global(question):
+        return {
+            "status": "entity_not_found",
+            "value": None,
+            "plan": spec,
+            "source": source,
+            "vendor": None,
+            "message": "No vendor matching {!r} exists in the consolidated table.".format(guess),
+        }
+    return {
+        "status": "answered",
+        "value": normalize(execute(spec, vendors, rows)),
+        "plan": spec,
+        "source": source,
+        "vendor": vendor,
+        "message": "",
+    }
 
 
 def answer(question, vendors, rows, use_llm=True, on_token=None, emit=None):
