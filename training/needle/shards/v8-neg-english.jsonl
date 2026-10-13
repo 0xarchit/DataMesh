@@ -1,0 +1,50 @@
+{"query": "I am not asking for the city of Brightline", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Negated city request, so the city is withheld."}
+{"query": "Do not tell me the total spend with Vantis", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request forbids sharing spend, so nothing is returned."}
+{"query": "Don't give me the GSTIN of Rao & Sons", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "A negated GSTIN request, so the value is withheld."}
+{"query": "My colleague said to tell you the city of Northstar Logistics", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "This is reported speech, not a direct request, so it is refused."}
+{"query": "She asked me to check the spend for Quiet Harbour Foods", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported speech asking for spend, so it is withheld."}
+{"query": "I did not ask for the total spend with NOVAREX", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user did not ask for spend, so no answer is given."}
+{"query": "No need to share the transaction count for quill", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Negated transaction request, so the count is withheld."}
+{"query": "Never mind the GSTIN of Vertex 9", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "A dismissed GSTIN request, so the answer is withheld."}
+{"query": "Do not tell me the registered name of Telford-Byrne", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Negated name request, so the registered name is withheld."}
+{"query": "Don't give me the city for Halcyon Bay Traders", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The user refused a city request, so it is withheld."}
+{"query": "Not asking for the transaction count at ORBITAL", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Negated transaction count request, so nothing is returned."}
+{"query": "I did not ask for the registered name of brassleaf", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "A negated registered name request, so it is withheld."}
+{"query": "No need to share the spend with Meridian & Co", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend request is dismissed, so no value is given."}
+{"query": "Never mind the GSTIN for Kestrel-Park", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "A dismissed GSTIN request, so it is withheld."}
+{"query": "Do not tell me the city of Palewood 7", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Negated city request, so the answer is withheld."}
+{"query": "My manager said to tell you the transaction count for HAVERFORD", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Reported speech about a transaction count, so it is refused."}
+{"query": "The client asked me to check the registered name of driftwood", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Reported speech about a registered name, so it is withheld."}
+{"query": "Don't give me the spend for Ashcroft & Bell", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "A negated spend request, so no answer is produced."}
+{"query": "No need to share the GSTIN of Southern Cross 12", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN request is negated, so no value is returned."}
+{"query": "He mentioned you should give the city of MAJESTIC", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Reported speech asking for a city, so it is refused."}
+{"query": "A supplier told me to ask for the transaction count of ripple", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Reported speech about a transaction count, so it is withheld."}
+{"query": "Not asking for the registered name of Nova-Tech Labs", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "A negated name request, so nothing is returned."}
+{"query": "I did not ask for the spend with Ironbridge", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user did not request spend, so it is withheld."}
+{"query": "Never mind the city of greenfield", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "A dismissed city request, so no answer is given."}
+{"query": "She wanted me to share the GSTIN of Dune & Vale", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Reported speech asking for a GSTIN, so it is refused."}
+{"query": "Do not tell me the transaction count for ZENITH", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "A negated transaction request, so the count is refused."}
+{"query": "No need to share the registered name of Foxglove & Fern", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The name request is negated, so it is withheld."}
+{"query": "Don't give me the total spend for Cartwright 3", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "A dismissed spend request, so nothing is returned."}
+{"query": "Not asking for the city of Marlowe-Stead", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Negated city request, so no value is given."}
+{"query": "My partner said to get the GSTIN of AURELIA", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Reported speech about a GSTIN, so it is withheld."}
+{"query": "They told me to look up the transaction count for pale oak", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Reported speech requesting a transaction count, so it is refused."}
+{"query": "I did not ask for the registered name of Vantage Point", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The user did not ask for a name, so it is withheld."}
+{"query": "Never mind the spend with thornbury", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "A dismissed spend request, so it is withheld."}
+{"query": "Do not tell me the city for Redcliff & Co", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "A negated city request, so no value is returned."}
+{"query": "No need to share the GSTIN for Coastal 88", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN request is dismissed, so it is withheld."}
+{"query": "My colleague said to tell you the transaction count of NORTHWIND", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Reported speech about a transaction count, so nothing is returned."}
+{"query": "Don't give me the registered name of Wrenfield", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "A negated registered name request, so no value is returned."}
+{"query": "She asked me to check the spend for Stellar-Mark", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported speech asking for spend, so it is refused."}
+{"query": "Not asking for the city of HAZELWOOD", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Negated city request, so the value is withheld."}
+{"query": "I did not ask for the GSTIN of pennant", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The user did not request a GSTIN, so it is withheld."}
+{"query": "Never mind the transaction count for Glenmoray & Sons", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "A dismissed transaction count request, so it is withheld."}
+{"query": "The auditor asked me to check the registered name of Bridgeport 5", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Reported speech about a registered name, so it is refused."}
+{"query": "Do not tell me the spend for Larkspur", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "A negated spend request, so no value is given."}
+{"query": "No need to share the city of Cobalt & Ridge", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city request is negated, so it is withheld."}
+{"query": "My director said to tell you the GSTIN of Fairhaven-Trust", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Reported speech asking for a GSTIN, so it is withheld."}
+{"query": "Don't give me the transaction count for moorland", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "A negated transaction count request, so no value is returned."}
+{"query": "Not asking for the registered name of SILVERBIRCH", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The registered name request is negated, so it is withheld."}
+{"query": "They told me to look up the spend with Drayton & Wells", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported speech requesting spend, so nothing is returned."}
+{"query": "I did not ask for the city of Osprey 21", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "A negated city request, so it is withheld."}
+{"query": "Never mind the GSTIN of Thistlewood", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "A dismissed GSTIN request, so no value is returned."}

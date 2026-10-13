@@ -1,0 +1,319 @@
+{
+  "weights": "training/needle/tuned_v7.cact",
+  "examples": 245,
+  "exact_matches": 228,
+  "exact_accuracy": 0.9306,
+  "tool_name_accuracy": 0.9388,
+  "empty_answers_total": 22,
+  "empty_answers_correct": 19,
+  "per_tool": {
+    "count_transactions": {
+      "total": 37,
+      "exact": 34
+    },
+    "total_spend": {
+      "total": 38,
+      "exact": 36
+    },
+    "count_vendors": {
+      "total": 46,
+      "exact": 43
+    },
+    "vendor_city": {
+      "total": 35,
+      "exact": 33
+    },
+    "vendor_gstin": {
+      "total": 31,
+      "exact": 29
+    },
+    "vendor_name": {
+      "total": 36,
+      "exact": 34
+    }
+  },
+  "seconds": 31.5,
+  "ms_per_query": 128.5,
+  "failures": [
+    {
+      "query": "Questline Analytics kahan based hai",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Questline Analytics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Questline Analytics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "explain gstin format",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": ""
+          }
+        }
+      ]
+    },
+    {
+      "query": "Data me total vendor kitne, seedha jawab do",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {}
+        }
+      ]
+    },
+    {
+      "query": "Brotech Softtech ka sheher kya hai",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Brotech Softtech"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Brotech Softtech"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Ironwood Furniture kitne bills",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Ironwood Furniture"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "kitna diya Qadir Fabrics ko",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Qadir Fabrics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Qadir Fabrics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Report the number of sellers in the dataset",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Sarvodaya Stores wale bill kitne hain",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Sarvodaya Stores"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Sarvodaya Stores"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Ideal Home Appliances ka tax number",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Ideal Home Appliances"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Ideal Home Appliances"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Icon Printers ka official name kya hai",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Icon Printers"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Printers"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Balaji Roadways ka kul kharch",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Balaji Roadways"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Balaji Roadways"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Is Wisteria Cosmetics cruelty free?",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Wisteria Cosmetics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "how often did Quadrant Robotics appear",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Quadrant Robotics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Quadrant Robotics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Mukesh Packaging registered as what",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Mukesh Packaging"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Mukesh Packaging"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Draft a sales pitch email to Brass Lantern Brewery.",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Brass Lantern Brewery"
+          }
+        }
+      ]
+    },
+    {
+      "query": "How many different vendor names exist?",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": ""
+          }
+        }
+      ]
+    },
+    {
+      "query": "Gujarat Pumps and Motors GSTIN please",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Gujarat Pumps and Motors"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Gujarat Pumps and Motors GSTIN"
+          }
+        }
+      ]
+    }
+  ]
+}

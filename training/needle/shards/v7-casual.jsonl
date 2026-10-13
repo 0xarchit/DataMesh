@@ -1,0 +1,43 @@
+{"query": "How many vendors are in the data?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Counting distinct vendors matches this request."}
+{"query": "Hey, how many vendors do we have?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "The user is asking for the vendor total."}
+{"query": "Can you count the vendors for me?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Straightforward vendor count question."}
+{"query": "I need to know how many vendors there are.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "They want to know how many vendors exist."}
+{"query": "Quick one, how many vendors show up?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "A tally of vendors is what's needed here."}
+{"query": "Just tell me how many vendors we've got.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "This is a vendor counting task."}
+{"query": "Count up all the vendors, will you?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asking for the total vendor count."}
+{"query": "Any idea how many vendors that is?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Need to count the distinct vendors."}
+{"query": "How many different vendors are in there?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the count of different vendors."}
+{"query": "Give me the vendor count real quick.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "User seeks the number of vendors present."}
+{"query": "So how many vendors are we looking at?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "This calls for the vendor count tool."}
+{"query": "Could you tally up the vendors please?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Request for how many vendors there are."}
+{"query": "Tell me the number of distinct vendors.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Counting vendors answers this question."}
+{"query": "How many vendors exist in this dataset?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "They're inquiring about the vendor total."}
+{"query": "I'm curious how many vendors there are.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Need a count of all vendors."}
+{"query": "Mind counting the vendors in the data?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "The user wants the vendor tally."}
+{"query": "What's our vendor count looking like?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asking how many vendors we have."}
+{"query": "How many unique vendors can you find?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "This is about counting vendors."}
+{"query": "Can you figure out how many vendors there are?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "User wants the distinct vendor count."}
+{"query": "Do me a favor and count the vendors.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Count of vendors is the right answer."}
+{"query": "How many vendors are we dealing with here?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "They ask for the vendor quantity."}
+{"query": "Just curious, how many vendors are listed?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Requests the number of vendors in the data."}
+{"query": "Count the vendors in there for me.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "This needs the vendor counting tool."}
+{"query": "How many vendors does the data contain?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants to know the vendor count."}
+{"query": "Got a sec? How many vendors are there?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "A simple vendor count request."}
+{"query": "Tell me how many vendors we have on hand.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "The question asks for vendor totals."}
+{"query": "How many distinct vendors are sitting in there?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Counting all vendors satisfies this."}
+{"query": "Run a count of all the vendors for me.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "User inquires how many vendors exist."}
+{"query": "Hmm, how many vendors have we got?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "They want a vendor count returned."}
+{"query": "What number of vendors are in this set?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "This is a request to count vendors."}
+{"query": "Can you tell me the vendor count?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Need the number of distinct vendors."}
+{"query": "How many vendors is that altogether?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asking for vendor count directly."}
+{"query": "Please count how many vendors appear.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "User wants the vendors counted."}
+{"query": "How many vendors are recorded in the data?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the count of vendors available."}
+{"query": "Tally the vendors and tell me the number.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Requesting a count of the vendors."}
+{"query": "How many separate vendors do we have?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "They ask how many vendors are present."}
+{"query": "Let me know how many vendors are present.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "The user needs a vendor tally."}
+{"query": "What's the weather like in Paris today?", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Weather question, unrelated to vendor data."}
+{"query": "Can you tell me a good pizza recipe?", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Cooking question with no vendor relevance."}
+{"query": "Who won the football game last night?", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Sports question unrelated to the data."}
+{"query": "Play some music for me please.", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Music request, nothing to do with vendors."}
+{"query": "How do I fix a leaky faucet?", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Home repair question, no vendor data needed."}
+{"query": "Tell me a joke to cheer me up.", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Joke request, unrelated to vendor data."}

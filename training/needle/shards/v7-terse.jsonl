@@ -1,0 +1,37 @@
+{"query": "count vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "request maps to counting distinct vendors"}
+{"query": "distinct vendor count", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct vendors are tallied by the tool"}
+{"query": "number of unique vendors present", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "user needs a unique vendor total"}
+{"query": "tally every vendor in the dataset", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "every vendor name gets counted once"}
+{"query": "vendors listed, how many", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "question asks how many vendors listed"}
+{"query": "count up all vendor names", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "all vendor names must be tallied"}
+{"query": "tell me vendor count", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "caller wants the vendor count"}
+{"query": "unique vendors across dataset", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct vendors across data needed"}
+{"query": "compute the count of distinct vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "counting unique vendors solves it"}
+{"query": "count each vendor once", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "each vendor counted a single time"}
+{"query": "vendor tally, please", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendor tally is what is asked"}
+{"query": "distinct vendors enumerated", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "enumerate then count distinct vendors"}
+{"query": "figure out vendor count", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendor figure must be computed"}
+{"query": "sum up unique vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "unique vendors get summed up"}
+{"query": "vendors, how many distinct", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct vendor number is requested"}
+{"query": "count every distinct vendor", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "count every distinct vendor present"}
+{"query": "vendor count needed", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "a vendor count is required here"}
+{"query": "distinct vendor figure", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct vendor figure must be given"}
+{"query": "count vendors in the table", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendors in table are counted"}
+{"query": "vendor headcount across the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "headcount across data is needed"}
+{"query": "tally distinct vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct vendors tallied for caller"}
+{"query": "count the whole vendor set", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "whole vendor set is counted"}
+{"query": "vendor set size, compute", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "size of vendor set computed"}
+{"query": "what is the distinct vendor tally", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct vendor tally is wanted"}
+{"query": "enumerate unique vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "unique vendors listed then counted"}
+{"query": "how many vendors in this data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "number of vendors in data needed"}
+{"query": "how many different vendors appear", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "different vendors must be counted"}
+{"query": "how many vendors we got", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendor count is the ask"}
+{"query": "number of vendors on record", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendors on record are counted"}
+{"query": "how many vendors exist", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "count of existing vendors needed"}
+{"query": "how many vendors overall", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "overall vendor number is requested"}
+{"query": "what is the weather today", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "weather question unrelated to vendor data"}
+{"query": "capital of France, please", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "capital question unrelated to vendor data"}
+{"query": "tell me a joke", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "joke request unrelated to vendor data"}
+{"query": "how many days in a week", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "calendar question unrelated to vendor data"}
+{"query": "best pizza topping", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "food question unrelated to vendor data"}
+{"query": "translate hello into Spanish", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "translation request unrelated to vendor data"}

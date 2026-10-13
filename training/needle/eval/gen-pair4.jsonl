@@ -1,0 +1,40 @@
+{"query": "How much did we spend with PIONEER LOGISTICS in total?", "tool": "total_spend", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "PIONEER LOGISTICS ka total spend kitna hai?", "tool": "total_spend", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Give me the total amount paid to Pioneer Logistical overall", "tool": "total_spend", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Pioneer Logistical se kitna paisa gaya total?", "tool": "total_spend", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Tell me the grand total spend with PIONEER LOGISTICS", "tool": "total_spend", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "What is the overall amount spent with Pioneer Logistical?", "tool": "total_spend", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "How many transactions involve PIONEER LOGISTICS?", "tool": "count_transactions", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Pioneer Logistical ke kitne invoices hain?", "tool": "count_transactions", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Count the number of invoices from PIONEER LOGISTICS", "tool": "count_transactions", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "How many transactions does Pioneer Logistical have?", "tool": "count_transactions", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "PIONEER LOGISTICS ke saath kitne transactions hue?", "tool": "count_transactions", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Number of invoices billed by Pioneer Logistical", "tool": "count_transactions", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Which city is PIONEER LOGISTICS registered in?", "tool": "vendor_city", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Pioneer Logistical kis city me registered hai?", "tool": "vendor_city", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "What is the registered city of PIONEER LOGISTICS?", "tool": "vendor_city", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Tell me the city for Pioneer Logistical", "tool": "vendor_city", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "PIONEER LOGISTICS ka city kya hai registration me?", "tool": "vendor_city", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Where is Pioneer Logistical based, which city exactly?", "tool": "vendor_city", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "What is the GSTIN of PIONEER LOGISTICS?", "tool": "vendor_gstin", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Pioneer Logistical ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Give me the tax id for PIONEER LOGISTICS", "tool": "vendor_gstin", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "What GSTIN is registered for Pioneer Logistical?", "tool": "vendor_gstin", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "PIONEER LOGISTICS ka GST number bata do", "tool": "vendor_gstin", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "What is the official registered name of PIONEER LOGISTICS?", "tool": "vendor_name", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Pioneer Logistical ka official name kya hai?", "tool": "vendor_name", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Tell me the registered name for PIONEER LOGISTICS", "tool": "vendor_name", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "What is the full official name of Pioneer Logistical?", "tool": "vendor_name", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "PIONEER LOGISTICS ka registered naam kya hai?", "tool": "vendor_name", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "How many suppliers exist in this dataset?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Is data me total kitne vendors hain?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Delhi today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the football match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Write me a short poem about the ocean", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Aaj ke dinner ka menu kya hai?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Which city is the vendor registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the GSTIN for the supplier?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "How many transactions does the supplier have?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with PIONEER LOGISTICS", "tool": "none", "vendor": "PIONEER LOGISTICS", "category": "negation"}
+{"query": "I am not asking for the city of Pioneer Logistical", "tool": "none", "vendor": "Pioneer Logistical", "category": "negation"}
+{"query": "PIONEER LOGISTICS ka GSTIN mat batao", "tool": "none", "vendor": "PIONEER LOGISTICS", "category": "negation"}

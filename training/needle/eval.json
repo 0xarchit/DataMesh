@@ -1,0 +1,657 @@
+{
+  "weights": "/mnt/d/B.Tech/ProjeX/DataMesh/training/needle/tuned.cact",
+  "examples": 223,
+  "exact_matches": 155,
+  "exact_accuracy": 0.6951,
+  "tool_name_accuracy": 0.8161,
+  "empty_answers_total": 33,
+  "empty_answers_correct": 29,
+  "per_tool": {
+    "vendor_detail": {
+      "total": 88,
+      "exact": 54
+    },
+    "count_vendors": {
+      "total": 33,
+      "exact": 27
+    },
+    "total_spend": {
+      "total": 42,
+      "exact": 19
+    },
+    "count_transactions": {
+      "total": 27,
+      "exact": 26
+    }
+  },
+  "seconds": 148.1,
+  "ms_per_query": 664.3,
+  "failures": [
+    {
+      "query": "Need the tax id for Vertex Analytics",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Vertex Analytics",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Where is Indore Pharma Labs registered?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Indore Pharma Labs",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Count all unique vendors.",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Country"
+          }
+        }
+      ]
+    },
+    {
+      "query": "what is Adani Wilmar gst identification number",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Adani Wilmar",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "how much we paid Pioneer Logistical",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Pioneer Logistical"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Pioneer Logistical gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Please furnish the aggregate amount paid to Cisco Systems.",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Cisco Systems"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Cisco Systems gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "What's the score in the tennis final?",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ]
+    },
+    {
+      "query": "Cisco Systems gst number",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Cisco Systems",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "State the cumulative consideration paid to JSW Steel Supplies.",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "JSW Steel Supplies"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "JSW Steel Supplies gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Ashok Leyland official naam",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Ashok Leyland",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "How much did we spend with Dr Reddy's Labs?",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Dr Reddy's Labs"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Dr Reddy's Gstin gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "How much did we pay Zomato?",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Zomato"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Zomato gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "gst no of Acme Limited",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Acme Limited",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Kindly confirm the total payable to Stark Industries per our ledgers.",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Stark Industries"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Stark Industries gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Pull the GST number associated with Tyrell Corp",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Tyrell Corp",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "joshi electronics paid",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Joshi Electronics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Joshi Electronics gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "What have we spent on Berger Paints?",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Berger Paints"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Berger Paints invoice"
+          }
+        }
+      ]
+    },
+    {
+      "query": "verma chemicals total",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Verma Chemicals"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "verma chemicals gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "zenith traders tax id?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "zenith traders",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "I need the GST number registered for Initech Solutions",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Initech Solutions",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Hooli Services based where, any idea",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Hooli Services",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Hooli Services gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Pidilite registered in which place?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Pidilite",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Give me a synonym for the word spend.",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Spend gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "deshmukh agro ka gstin",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "deshmukh agro",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "deshmukh agro ka",
+            "field": "gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Where is Globex Corporation located?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Globex Corporation",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Onida Electronics - what's their GST number?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Onida Electronics",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "For audit purposes, state the aggregate disbursed to Tata Motors.",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Tata Motors"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Tata Motors gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "sum up our invoces for Glenmarc",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Glenmarc"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Glenmarc GSTIN"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Hey, when you have a moment, could you please work out our total spend with Ganesh Traders?",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Ganesh Traders"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Ganesh Traders invoice"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Where is Cuttack Silverworks registered?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Cuttack Silverworks",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Surat Silk Mills kaha registered hai?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Surat Silk Mills",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Total number of vendors, if you could.",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Airport GSTIN"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Vandelay Industries based out of which place?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Vandelay Industries",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "What is Nova Retailers registered as?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Nova Retailers",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "fix the grammar in this invoice description for me",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "me"
+          }
+        }
+      ]
+    },
+    {
+      "query": "What's the GST number registered for InGen?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "InGen",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Please confirm the total number of vendors.",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "PetCo GSTIN"
+          }
+        }
+      ]
+    },
+    {
+      "query": "orion systematics spend",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Orion Systematics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "orion systematics gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Vandelay Industries ko kitna diya",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Vandelay Industries"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Vandelay Industries gstin"
+          }
+        }
+      ]
+    },
+    {
+      "query": "gst no for Umbrella Traders pls",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Umbrella Traders",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    }
+  ]
+}

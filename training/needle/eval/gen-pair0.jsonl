@@ -1,0 +1,40 @@
+{"query": "How much did we spend with Zenith Traders in total?", "tool": "total_spend", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Zenith Trading Company ka total spend kitna hai?", "tool": "total_spend", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the total amount paid to Zenith Traders?", "tool": "total_spend", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Give me the overall spend for Zenith Trading Company please", "tool": "total_spend", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Zenith Traders se total kitna paisa gaya?", "tool": "total_spend", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Tell me the grand total spend with Zenith Trading Company", "tool": "total_spend", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "How many transactions involve Zenith Traders?", "tool": "count_transactions", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Zenith Trading Company ke kitne transactions hain?", "tool": "count_transactions", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Count the number of invoices from Zenith Traders", "tool": "count_transactions", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "How many invoices does Zenith Trading Company have?", "tool": "count_transactions", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Zenith Traders ke saath kitne transactions hue?", "tool": "count_transactions", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Number of transactions billed by Zenith Trading Company", "tool": "count_transactions", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Which city is Zenith Traders registered in?", "tool": "vendor_city", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Zenith Trading Company kis city me registered hai?", "tool": "vendor_city", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the registered city of Zenith Traders?", "tool": "vendor_city", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Tell me the city for Zenith Trading Company", "tool": "vendor_city", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Zenith Traders ka city kya hai registration me?", "tool": "vendor_city", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Where is Zenith Trading Company based, which city exactly?", "tool": "vendor_city", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the GSTIN of Zenith Traders?", "tool": "vendor_gstin", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Zenith Trading Company ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Give me the tax id for Zenith Traders", "tool": "vendor_gstin", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "What GSTIN is registered for Zenith Trading Company?", "tool": "vendor_gstin", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Zenith Traders ka GST number bata do", "tool": "vendor_gstin", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "What is the official registered name of Zenith Traders?", "tool": "vendor_name", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Zenith Trading Company ka official name kya hai?", "tool": "vendor_name", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Tell me the registered name for Zenith Traders", "tool": "vendor_name", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "What is the full official name of Zenith Trading Company?", "tool": "vendor_name", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Zenith Traders ka registered naam kya hai?", "tool": "vendor_name", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "How many vendors are there in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Total kitne suppliers hain is data me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Can you write me a short poem about mountains?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Aaj ke lunch ka menu kya hai?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Which city is the vendor registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the GSTIN registered for the supplier?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the total spend for that vendor?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with Zenith Traders", "tool": "none", "vendor": "Zenith Traders", "category": "negation"}
+{"query": "I am not asking for the city of Zenith Trading Company", "tool": "none", "vendor": "Zenith Trading Company", "category": "negation"}
+{"query": "Zenith Traders ka total spend mat batao", "tool": "none", "vendor": "Zenith Traders", "category": "negation"}

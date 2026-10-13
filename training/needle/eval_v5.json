@@ -1,0 +1,443 @@
+{
+  "weights": "training/needle/tuned_v5.cact",
+  "examples": 245,
+  "exact_matches": 219,
+  "exact_accuracy": 0.8939,
+  "tool_name_accuracy": 0.8939,
+  "empty_answers_total": 22,
+  "empty_answers_correct": 18,
+  "per_tool": {
+    "count_transactions": {
+      "total": 37,
+      "exact": 35
+    },
+    "total_spend": {
+      "total": 38,
+      "exact": 35
+    },
+    "count_vendors": {
+      "total": 46,
+      "exact": 32
+    },
+    "vendor_city": {
+      "total": 35,
+      "exact": 33
+    },
+    "vendor_gstin": {
+      "total": 31,
+      "exact": 31
+    },
+    "vendor_name": {
+      "total": 36,
+      "exact": 35
+    }
+  },
+  "seconds": 28.6,
+  "ms_per_query": 116.8,
+  "failures": [
+    {
+      "query": "Please confirm how many vendors are included in the set.",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Questline Analytics kahan based hai",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Questline Analytics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Questline Analytics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "explain gstin format",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": ""
+          }
+        }
+      ]
+    },
+    {
+      "query": "Data me total vendor kitne, seedha jawab do",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Data Me"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Brotech Softtech ka sheher kya hai",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Brotech Softtech"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Brotech Softtech"
+          }
+        }
+      ]
+    },
+    {
+      "query": "kitna diya Qadir Fabrics ko",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Qadir Fabrics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Qadir Fabrics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "tally every vendor in the dataset",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {}
+        }
+      ]
+    },
+    {
+      "query": "Report the number of sellers in the dataset",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Report the number of sellers"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Sarvodaya Stores wale bill kitne hain",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Sarvodaya Stores"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Sarvodaya Stores"
+          }
+        }
+      ]
+    },
+    {
+      "query": "How many distinct vendors can you find?",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "How many distinct vendors"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Vendor count kya hai is data ka",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Vendor"
+          }
+        }
+      ]
+    },
+    {
+      "query": "give total vendor headcount",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "translate good morning into Hindi",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Good Morning"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Balaji Roadways ka kul kharch",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Balaji Roadways"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Balaji Roadways"
+          }
+        }
+      ]
+    },
+    {
+      "query": "how often did Quadrant Robotics appear",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Quadrant Robotics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Quadrant Robotics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "How many unique vendor names show up?",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "State the quantity of unique vendors held.",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "State the quantity of unique vendors held"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Mukesh Packaging registered as what",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Mukesh Packaging"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Mukesh Packaging"
+          }
+        }
+      ]
+    },
+    {
+      "query": "spnt with Ulhasnagar Plastics",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Ulhasnagar Plastics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Ulhasnagar Plastics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "distinct supplier total",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "distinct supplier"
+          }
+        }
+      ]
+    },
+    {
+      "query": "How many different vendor names exist?",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "How many different vendor names"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Please do tell me how many distinct vendors appear.",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": ""
+          }
+        }
+      ]
+    },
+    {
+      "query": "How many unique suppliers does this data hold?",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Which ships faster, Northwind Shipping or a local courier?",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Northwind Shipping"
+          }
+        }
+      ]
+    },
+    {
+      "query": "What is the total number of sellers recorded here?",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {}
+        }
+      ]
+    },
+    {
+      "query": "whats 17 times 43",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {}
+        }
+      ]
+    }
+  ]
+}

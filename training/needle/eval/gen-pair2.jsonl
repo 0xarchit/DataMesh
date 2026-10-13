@@ -1,0 +1,40 @@
+{"query": "How much did we spend with Vertex Analytics in total?", "tool": "total_spend", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "What is the total spend for VERTEX ANALYSIS?", "tool": "total_spend", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Kitna paisa diya humne Vertex Analytics ko total?", "tool": "total_spend", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "sum of all payments to VERTEX ANALYSIS", "tool": "total_spend", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Tell me the cumulative amount paid to Vertex Analytics", "tool": "total_spend", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "Total money spent on VERTEX ANALYSIS invoices please", "tool": "total_spend", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "How many transactions involve Vertex Analytics?", "tool": "count_transactions", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "Kitne invoices hain VERTEX ANALYSIS ke?", "tool": "count_transactions", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Number of invoices from Vertex Analytics", "tool": "count_transactions", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "count all transactions with VERTEX ANALYSIS", "tool": "count_transactions", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "How many times did we transact with Vertex Analytics?", "tool": "count_transactions", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "VERTEX ANALYSIS se kitni transactions hui hain?", "tool": "count_transactions", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Which city is Vertex Analytics registered in?", "tool": "vendor_city", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "What city is VERTEX ANALYSIS based out of?", "tool": "vendor_city", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "VERTEX ANALYSIS ka city kya hai?", "tool": "vendor_city", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Where is Vertex Analytics located, which city?", "tool": "vendor_city", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "city registered for Vertex Analytics vendor", "tool": "vendor_city", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "Batao VERTEX ANALYSIS kis sheher me registered hai", "tool": "vendor_city", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "What is the GSTIN of Vertex Analytics?", "tool": "vendor_gstin", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "Give me the GSTIN tax id for VERTEX ANALYSIS", "tool": "vendor_gstin", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "VERTEX ANALYSIS ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Find the gstin for Vertex Analytics", "tool": "vendor_gstin", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "What GSTIN is registered against Vertex Analytics?", "tool": "vendor_gstin", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "What is the official registered name of Vertex Analytics?", "tool": "vendor_name", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "What is the full registered name for VERTEX ANALYSIS?", "tool": "vendor_name", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "VERTEX ANALYSIS ka official naam kya hai?", "tool": "vendor_name", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Tell me the registered name of the vendor Vertex Analytics", "tool": "vendor_name", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "official name for Vertex Analytics in records", "tool": "vendor_name", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "How many vendors are there in the data?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Total kitne suppliers hain dataset me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket world cup final?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Explain how photosynthesis works in plants", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Best recipe for paneer butter masala", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "What city is registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the GSTIN?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "How much was spent in total?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with Vertex Analytics", "tool": "none", "vendor": "Vertex Analytics", "category": "negation"}
+{"query": "I am not asking for the city of VERTEX ANALYSIS", "tool": "none", "vendor": "VERTEX ANALYSIS", "category": "negation"}
+{"query": "Don't give me the GSTIN of Vertex Analytics", "tool": "none", "vendor": "Vertex Analytics", "category": "negation"}

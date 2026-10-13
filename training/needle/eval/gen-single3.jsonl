@@ -1,0 +1,40 @@
+{"query": "How much total money did we spend with Wonka Industries?", "tool": "total_spend", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "VANDELAY INDUSTRIES pe total spend kitna hua hai?", "tool": "total_spend", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "What is the total spend with Dunder Mifflin this year?", "tool": "total_spend", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Sterling Cooper ko kul kitna paisa diya gaya hai?", "tool": "total_spend", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "Tell me the overall amount spent with Wonka Industries please", "tool": "total_spend", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "Total expenditure on VANDELAY INDUSTRIES invoices so far", "tool": "total_spend", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "How many transactions involve Dunder Mifflin?", "tool": "count_transactions", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Sterling Cooper ke saath kitne transactions hue hain?", "tool": "count_transactions", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "Count the number of invoices for Wonka Industries", "tool": "count_transactions", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "VANDELAY INDUSTRIES ke kitne invoice generate hue?", "tool": "count_transactions", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "How many transactions does Sterling Cooper have in the system?", "tool": "count_transactions", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "Number of invoices linked to Dunder Mifflin in our records", "tool": "count_transactions", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Which city is Wonka Industries registered in?", "tool": "vendor_city", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "VANDELAY INDUSTRIES ka city kya hai?", "tool": "vendor_city", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "What city is Dunder Mifflin registered in?", "tool": "vendor_city", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Sterling Cooper kis city me registered hai?", "tool": "vendor_city", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "Tell me the registered city of Wonka Industries please", "tool": "vendor_city", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "City of registration for Sterling Cooper?", "tool": "vendor_city", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "What is the GSTIN of VANDELAY INDUSTRIES?", "tool": "vendor_gstin", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "Dunder Mifflin ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Give me the GSTIN for Sterling Cooper please", "tool": "vendor_gstin", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "Wonka Industries ka tax id gstin batao", "tool": "vendor_gstin", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "What GSTIN is registered for Dunder Mifflin?", "tool": "vendor_gstin", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "What is the official registered name of Wonka Industries?", "tool": "vendor_name", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "VANDELAY INDUSTRIES ka official name kya hai?", "tool": "vendor_name", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "Tell me the registered name for Sterling Cooper", "tool": "vendor_name", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "Dunder Mifflin ka asli registered naam kya hai?", "tool": "vendor_name", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "What is the official name of Dunder Mifflin as registered?", "tool": "vendor_name", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "How many vendors are there in the data?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Total kitne suppliers exist karte hain data me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai tomorrow?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket world cup final?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Recipe batao paneer butter masala ki", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "What is the capital of France?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Which city is registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the gstin number?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Tell me the total spend", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with Wonka Industries", "tool": "none", "vendor": "Wonka Industries", "category": "negation"}
+{"query": "I am not asking for the city of Dunder Mifflin", "tool": "none", "vendor": "Dunder Mifflin", "category": "negation"}
+{"query": "VANDELAY INDUSTRIES ki gstin mat batao", "tool": "none", "vendor": "VANDELAY INDUSTRIES", "category": "negation"}

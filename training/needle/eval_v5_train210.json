@@ -1,0 +1,739 @@
+{
+  "weights": "training/needle/tuned_v5.cact",
+  "examples": 210,
+  "exact_matches": 65,
+  "exact_accuracy": 0.3095,
+  "tool_name_accuracy": 0.3238,
+  "empty_answers_total": 27,
+  "empty_answers_correct": 19,
+  "per_tool": {
+    "count_transactions": {
+      "total": 37,
+      "exact": 0
+    },
+    "total_spend": {
+      "total": 33,
+      "exact": 24
+    },
+    "vendor_gstin": {
+      "total": 36,
+      "exact": 2
+    },
+    "vendor_city": {
+      "total": 35,
+      "exact": 4
+    },
+    "count_vendors": {
+      "total": 8,
+      "exact": 0
+    },
+    "vendor_name": {
+      "total": 34,
+      "exact": 16
+    }
+  },
+  "seconds": 154.4,
+  "ms_per_query": 735.2,
+  "failures": [
+    {
+      "query": "Yashica Footwear invoicing count",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Yashica Footwear"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Yashica Footwear"
+          }
+        }
+      ]
+    },
+    {
+      "query": "gst number Tushar Trading Co",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Tushar Trading Co"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Tushar Trading Co"
+          }
+        }
+      ]
+    },
+    {
+      "query": "whats two plus two",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": ""
+          }
+        }
+      ]
+    },
+    {
+      "query": "running total with Dynasty Roadways",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Dynasty Roadways"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Dynasty Roadways"
+          }
+        }
+      ]
+    },
+    {
+      "query": "count invoices for Rathi Rubber",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Rathi Rubber"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Rathi Rubber"
+          }
+        }
+      ]
+    },
+    {
+      "query": "how many unique vendors are there",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Home Depot"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Qamar Textiles total",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Qamar Textiles"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Qamar Textiles"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Ganpati Cement Traders ke kitne transaction hain",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Ganpati Cement Traders"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Ganpati Cement Traders"
+          }
+        }
+      ]
+    },
+    {
+      "query": "gstn of Hindustan Packaging Industries",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Hindustan Packaging Industries"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Hindustan Packaging Industries"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Vrundavan Sweets ka legal name",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Vrundavan Sweets"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Vrundavan Sweets"
+          }
+        }
+      ]
+    },
+    {
+      "query": "kaunse sheher mein hai Avyanna Cosmetics",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Avyanna Cosmetics"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "state the registered name of Origami Water Tech Pvt Ltd",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Origami Water Tech Pvt Ltd"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Kavach Systems registered in which city",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Kavach Systems"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Kavach Systems"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Yojana Media kitne transaction",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Yojana Media"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Yojana Media"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Fourwalls Construction Co gstin",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Fourwalls Construction Co"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Fourwalls Construction Co"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Kohli Exports total kitna hua",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Kohli Exports"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Huawei"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Bhuvan Tools kis city mein registered hai",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Bhuvan Tools"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Bhuvan Tools"
+          }
+        }
+      ]
+    },
+    {
+      "query": "kindly provide the aggregate amount paid to Orion Mining Corp Ltd",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Orion Mining Corp Ltd"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Bajrang Motors invoice count",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Bajrang Motors"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Bajrang Motors"
+          }
+        }
+      ]
+    },
+    {
+      "query": "bills received from Indorama Fibres count",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Indorama Fibres"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Indorama Fibres"
+          }
+        }
+      ]
+    },
+    {
+      "query": "which city is Hindustan Steel Fabricators in",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Hindustan Steel Fabricators"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Hindustan Steel Fabricators"
+          }
+        }
+      ]
+    },
+    {
+      "query": "how many times did we deal with Dhruv Technologies",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Dhruv Technologies"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Dhruv Technologies"
+          }
+        }
+      ]
+    },
+    {
+      "query": "tally the invoices from Infinity Software",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Infinity Software"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Infinity Software"
+          }
+        }
+      ]
+    },
+    {
+      "query": "gstin of Goa Marine Supplies",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Goa Marine Supplies"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Goa Marine Supplies"
+          }
+        }
+      ]
+    },
+    {
+      "query": "First Harvest Agro gstin",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "First Harvest Agro"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "First Harvest Agro"
+          }
+        }
+      ]
+    },
+    {
+      "query": "how many bills came from Jai Logistics",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Jai Logistics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Jai Logistics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "whats the official name of Oberon Traders",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Oberon Traders"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Shakti Silk House kis shehar me hai",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Shakti Silk House"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Shakti Silk House"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Golden Grain Agro Foods invoice count",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Golden Grain Agro Foods"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Golden Grain Agro Foods"
+          }
+        }
+      ]
+    },
+    {
+      "query": "registered name of Bhaskar Marine Supply",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Bhaskar Marine Supply"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "kindly share gstin of Indu Seeds",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Indu Seeds"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Indu Seeds"
+          }
+        }
+      ]
+    },
+    {
+      "query": "what is the gst id for Xceed Printing Works",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Xceed Printing Works"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Xceed Printing Works"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Shalini Dyes and Intermediates city",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Shalini Dyes and Intermediates"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Intermediates"
+          }
+        }
+      ]
+    },
+    {
+      "query": "where is Astitva Refractories based",
+      "expected": [
+        {
+          "name": "vendor_city",
+          "arguments": {
+            "vendor": "Astitva Refractories"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Everwood Furniture official name",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Everwood Furniture"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Supermarket"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Flexdrive Bearings registered name",
+      "expected": [
+        {
+          "name": "vendor_name",
+          "arguments": {
+            "vendor": "Flexdrive Bearings"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Flexdrive Bearings"
+          }
+        }
+      ]
+    },
+    {
+      "query": "total payable to Manali Print House",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Manali Print House"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "invoice count for Warudkar Cold Storage",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Warudkar Cold Storage"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Warudkar Cold Storage"
+          }
+        }
+      ]
+    },
+    {
+      "query": "total number of vendors we deal with",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Signal"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Bhima Cement Traders ka gst number",
+      "expected": [
+        {
+          "name": "vendor_gstin",
+          "arguments": {
+            "vendor": "Bhima Cement Traders"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Bhima Cement Traders"
+          }
+        }
+      ]
+    }
+  ]
+}

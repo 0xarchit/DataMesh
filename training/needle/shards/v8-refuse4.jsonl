@@ -1,0 +1,44 @@
+{"query": "What is the GSTIN tax id?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is named, so no argument can be grounded."}
+{"query": "kitne invoices hue is supplier ke?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The query names no vendor, so nothing can be grounded."}
+{"query": "Which city is the vendor in?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request omits any vendor name, leaving no argument to ground."}
+{"query": "What is the registered name?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Since no vendor is named, no grounded argument exists."}
+{"query": "That supplier ka tax id kya hai", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is mentioned, so the request must be refused."}
+{"query": "How many transactions were recorded?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user names no vendor, so no argument can be built."}
+{"query": "us seller ka city kya hai", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Without a vendor name, grounding cannot happen."}
+{"query": "Give the GSTIN for this party", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor appears, so the query cannot be grounded."}
+{"query": "vendor ka registered name batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The question names no vendor, so it must be refused."}
+{"query": "How many invoices for the company?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request names no vendor to ground the argument."}
+{"query": "is vendor ka GSTIN number", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor name is given, so refusal is required."}
+{"query": "Which city is that supplier in?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "This question names no vendor, so grounding fails."}
+{"query": "Transaction count for the vendor", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is referenced, so no grounded argument exists."}
+{"query": "company ka tax id kya hai", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The query gives no vendor name, so it cannot be grounded."}
+{"query": "What is the tax identification number?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is named here, so no argument can be formed."}
+{"query": "kitna spend hua hai vendor ke saath", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Because no vendor is named, the request must be refused."}
+{"query": "registered name of that supplier", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user names no vendor, so no call can be grounded."}
+{"query": "this party ka GSTIN batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is supplied, so there is nothing to ground."}
+{"query": "How many transactions involve the seller?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request provides no vendor name to ground against."}
+{"query": "vendor ki city kya hai", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is mentioned, so refusal is the only option."}
+{"query": "us company ka registered name", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor name appears, so no argument can be grounded."}
+{"query": "Give me the GSTIN", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Since no vendor is named, the request cannot be grounded."}
+{"query": "kitne transactions hue is party ke", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The question names no vendor, so it must be refused outright."}
+{"query": "What city is the company in?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is named, so there is nothing to ground."}
+{"query": "the supplier ka tax id number", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The query contains no vendor name, so grounding is impossible."}
+{"query": "Spend total for that seller", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Without a vendor name, no argument can be grounded."}
+{"query": "How many invoices does the vendor have?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is named, so the call cannot be grounded."}
+{"query": "is supplier ka registered naam", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request names no vendor, so it must be refused."}
+{"query": "What is the GSTIN tax id here?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor appears, so no grounded argument can be made."}
+{"query": "us party ki city kya hai", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user specifies no vendor, so grounding cannot happen."}
+{"query": "Count the transactions for this party", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The question omits any vendor, so it cannot be grounded."}
+{"query": "seller ka GSTIN kya hai", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor name is present, so the request must be refused."}
+{"query": "What is the official registered name?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Since no vendor appears, no argument can be grounded."}
+{"query": "Which city does that supplier belong to?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is given, so no argument can be grounded."}
+{"query": "the vendor ka tax id", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request has no vendor name, so it must be refused."}
+{"query": "How many transactions for the seller?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is named, so no grounded call is possible."}
+{"query": "this company ka city", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The question names no vendor to ground the argument."}
+{"query": "Give the registered name of the vendor", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor appears in the request, so refusal is needed."}
+{"query": "us seller ke kitne invoices hai", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Without any vendor named, the argument cannot be grounded."}
+{"query": "vendor ka GSTIN number chahiye", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The query mentions no vendor, so grounding cannot occur."}
+{"query": "How many vendors are there?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor name is supplied, so no grounding is possible."}
+{"query": "invoices count for that party", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request names no vendor, so no argument can be grounded."}
+{"query": "company ki registered name batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "No vendor is named, so there is no argument to ground."}
+{"query": "What city is this party registered in?", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user names no vendor, so the request cannot be grounded."}

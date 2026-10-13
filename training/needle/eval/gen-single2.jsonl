@@ -1,0 +1,40 @@
+{"query": "What is the total spend with Soylent Foods?", "tool": "total_spend", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "How much money did we spend with Hooli Services in total?", "tool": "total_spend", "vendor": "Hooli Services", "category": "positive"}
+{"query": "Soylent Foods par humne total kitna paisa spend kiya hai?", "tool": "total_spend", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "Give me the total amount spent with Aperture Labs.", "tool": "total_spend", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "Hooli Services ke saath total kharch kitna hua?", "tool": "total_spend", "vendor": "Hooli Services", "category": "positive"}
+{"query": "What is the cumulative spend on PIED PIPER?", "tool": "total_spend", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "How many transactions involve Soylent Foods?", "tool": "count_transactions", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "PIED PIPER ke kitne transactions hain?", "tool": "count_transactions", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "Count the number of invoices for Aperture Labs.", "tool": "count_transactions", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "How many times did we transact with Hooli Services?", "tool": "count_transactions", "vendor": "Hooli Services", "category": "positive"}
+{"query": "Aperture Labs ke saath kitne invoices hain?", "tool": "count_transactions", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "Number of transactions recorded under Soylent Foods?", "tool": "count_transactions", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "Which city is Soylent Foods registered in?", "tool": "vendor_city", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "PIED PIPER ka registered city kya hai?", "tool": "vendor_city", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "What is the registered city for Aperture Labs?", "tool": "vendor_city", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "Tell me the city where Hooli Services is registered.", "tool": "vendor_city", "vendor": "Hooli Services", "category": "positive"}
+{"query": "Hooli Services kis city me registered hai?", "tool": "vendor_city", "vendor": "Hooli Services", "category": "positive"}
+{"query": "PIED PIPER is registered in which city?", "tool": "vendor_city", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "What is the GSTIN of Soylent Foods?", "tool": "vendor_gstin", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "Aperture Labs ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "Provide the GSTIN tax id for Hooli Services.", "tool": "vendor_gstin", "vendor": "Hooli Services", "category": "positive"}
+{"query": "PIED PIPER ka GSTIN bata do.", "tool": "vendor_gstin", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "What GSTIN is registered to Aperture Labs?", "tool": "vendor_gstin", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "What is the official registered name of Soylent Foods?", "tool": "vendor_name", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "PIED PIPER ka official registered name kya hai?", "tool": "vendor_name", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "Give me the registered name for Hooli Services.", "tool": "vendor_name", "vendor": "Hooli Services", "category": "positive"}
+{"query": "Aperture Labs ka poora registered naam kya hai?", "tool": "vendor_name", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "What is the official name under which PIED PIPER is registered?", "tool": "vendor_name", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "How many vendors are there in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Data me total kitne suppliers hain?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Aaj ka IPL score kya hai?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Can you recommend a good restaurant nearby?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Which city is registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the GSTIN tax id?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the registered name?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with Soylent Foods.", "tool": "none", "vendor": "Soylent Foods", "category": "negation"}
+{"query": "I am not asking for the city of Hooli Services.", "tool": "none", "vendor": "Hooli Services", "category": "negation"}
+{"query": "PIED PIPER ka GSTIN mat batao.", "tool": "none", "vendor": "PIED PIPER", "category": "negation"}

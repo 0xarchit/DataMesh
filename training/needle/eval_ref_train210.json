@@ -1,0 +1,265 @@
+{
+  "path": "reference render_example plus python generate",
+  "adapter": "/mnt/d/B.Tech/ProjeX/DataMesh/training/needle/adapter_v5.safetensors",
+  "data": "training/needle/train.jsonl",
+  "examples": 210,
+  "exact_matches": 193,
+  "exact_accuracy": 0.919,
+  "per_tool": {
+    "count_transactions": {
+      "total": 37,
+      "exact": 35
+    },
+    "total_spend": {
+      "total": 33,
+      "exact": 29
+    },
+    "vendor_gstin": {
+      "total": 36,
+      "exact": 35
+    },
+    "vendor_city": {
+      "total": 35,
+      "exact": 33
+    },
+    "count_vendors": {
+      "total": 8,
+      "exact": 8
+    },
+    "vendor_name": {
+      "total": 34,
+      "exact": 34
+    }
+  },
+  "seconds": 245.5,
+  "ms_per_query": 1169.0,
+  "failures": [
+    {
+      "query": "whats two plus two",
+      "expected": [],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the total spend with this vendor\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Shalini Dyes and Intermediates city",
+      "expected": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Shalini Dyes and Intermediates\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Shalini Dyes\"}"
+        ]
+      ],
+      "raw": "<think>\nasks city\n</think>\n<tool_call>[{\"name\":\"vendor_city\",\"arguments\":{\"vendor\":\"Shalini Dyes\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "kitna diya Walhekar Castings ko",
+      "expected": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Walhekar Castings\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Walhekar Castings\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the invoice count for this vendor\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"Walhekar Castings\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "aaj ka mausam kaisa hai",
+      "expected": [],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"aaj kaisa hai\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the total spend with this vendor\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"aaj kaisa hai\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "invoice tally for Dhaanya Polymers",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Dhaanya Polymers\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Dhaanya Polymers\"}"
+        ]
+      ],
+      "raw": "<think>\nDhaanya Polymers -> vendor; sum spend\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Dhaanya Polymers\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Tandoori Treats Ltd ka owner kaun hai",
+      "expected": [],
+      "predicted": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Tandoori Treats Ltd\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the vendor's registered city\n</think>\n<tool_call>[{\"name\":\"vendor_city\",\"arguments\":{\"vendor\":\"Tandoori Treats Ltd\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Yaman Tools kahan ka hai",
+      "expected": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Yaman Tools\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Yaman Tools\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the total spend with this vendor\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Yaman Tools\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "help draft a franchise agreement for Sycamore Seeds",
+      "expected": [],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Sycamore Seeds\"}"
+        ]
+      ],
+      "raw": "<think>\nAggregate spend with the named vendor.\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Sycamore Seeds\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "What's the carbon footprint of Cedarwood Paper Mill?",
+      "expected": [],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Cedarwood Paper Mill\"}"
+        ]
+      ],
+      "raw": "<think>\nAggregate spend with the named vendor.\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Cedarwood Paper Mill\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "payable to Target Pack Prints",
+      "expected": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Target Pack Prints\"}"
+        ]
+      ],
+      "predicted": [],
+      "raw": "<think>\nPayment payout not vendor data\n</think>\n<tool_call>[]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Anandi Spices ka gstn kya hai",
+      "expected": [
+        [
+          "vendor_gstin",
+          "{\"vendor\": \"Anandi Spices\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "vendor_name",
+          "{\"vendor\": \"Anandi Spices\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the vendor's official registered name\n</think>\n<tool_call>[{\"name\":\"vendor_name\",\"arguments\":{\"vendor\":\"Anandi Spices\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "kitni baar Prerna Pharma Corporation se khareeda",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Prerna Pharma Corporation\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Prerna Pharma Corporation\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the total spend with this vendor\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Prerna Pharma Corporation\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Oxy Agro Pvt Ltd se kitna kharcha hua",
+      "expected": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Oxy Agro Pvt Ltd\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Oxy Agro Pvt Ltd\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the vendor's registered city\n</think>\n<tool_call>[{\"name\":\"vendor_city\",\"arguments\":{\"vendor\":\"Oxy Agro Pvt Ltd\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "sum of all invoices for Walawalkar Dairy",
+      "expected": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Walawalkar Dairy\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Walawalkar Dairy\"}"
+        ]
+      ],
+      "raw": "<think>\nCount of invoices for the named vendor.\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"Walawalkar Dairy\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "how do I file my income tax return",
+      "expected": [],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"How Do You File\"}"
+        ]
+      ],
+      "raw": "<think>\nReturn the invoice data for the vendor.\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"How Do You File\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "how many vendors do we have on file",
+      "expected": [],
+      "predicted": [
+        [
+          "count_vendors",
+          "{}"
+        ]
+      ],
+      "raw": "<think>\ncount distinct vendors in the data\n</think>\n<tool_call>[{\"name\":\"count_vendors\",\"arguments\":{}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "how do I reset my gmail password",
+      "expected": [],
+      "predicted": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"reset\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the vendor's official registered city\n</think>\n<tool_call>[{\"name\":\"vendor_city\",\"arguments\":{\"vendor\":\"reset\"}}]</tool_call><|im_end|>"
+    }
+  ]
+}

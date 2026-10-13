@@ -1,0 +1,55 @@
+{"query": "total spend across all vendors", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor named, so the total covers everything."}
+{"query": "how much have we spent in total?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Spans all vendors, so the argument stays empty."}
+{"query": "sum of all the spending", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "The question is global, so no vendor is passed."}
+{"query": "total spend in INR", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No specific vendor mentioned, so no argument is given."}
+{"query": "what is our total spend?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Ask is about everything, so the vendor slot stays empty."}
+{"query": "total amount paid out", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Covers every vendor, so the call takes no argument."}
+{"query": "combined spend overall", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Whole-dataset request, so no vendor is specified."}
+{"query": "grand total across the whole dataset", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No supplier named, so nothing fills the vendor slot."}
+{"query": "company wide spend", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Asks across all vendors, so the vendor argument is empty."}
+{"query": "spend across all suppliers", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Totals everything, so no vendor argument is needed."}
+{"query": "total across the books", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Entire ledger in scope, so no vendor is named."}
+{"query": "total spend over the ledger", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Applies to all vendors, so the argument object is empty."}
+{"query": "aggregate spend all records", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No company named, so no vendor argument is supplied."}
+{"query": "how much total money went out?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Request spans the whole dataset, so the vendor stays blank."}
+{"query": "total payouts company wide", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Global total requested, so nothing goes in the vendor slot."}
+{"query": "what did we spend altogether?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No seller mentioned, so the call has no argument."}
+{"query": "every payment added up", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Everything is included, so no vendor is specified."}
+{"query": "whole dataset spend total", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Covers the full dataset, so no vendor argument is set."}
+{"query": "all parties total spend", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "All parties in scope, so the vendor field is left empty."}
+{"query": "how much was spent overall?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No party named, so the argument object stays empty."}
+{"query": "total spend across every seller", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Asks for the grand total, so no vendor is supplied."}
+{"query": "combined spend across everything", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Every vendor counted, so no argument is passed."}
+{"query": "sum total of all data spend", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "The whole dataset is meant, so the vendor is omitted."}
+{"query": "gross spend all vendors", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor called out, so the argument stays empty."}
+{"query": "total spending company wide", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Company-wide request, so no vendor argument appears."}
+{"query": "how much have we paid out?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Nothing narrows it to a vendor, so arguments stay empty."}
+{"query": "all suppliers total spend", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "All suppliers covered, so no vendor is given."}
+{"query": "add up all the spending", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "The total is global, so no vendor argument is provided."}
+{"query": "what is the overall total spend?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Spans every record, so no vendor is passed."}
+{"query": "total money paid out to everyone", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor referenced, so the argument object is empty."}
+{"query": "spend total across all parties", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Covers all parties, so the vendor stays unnamed."}
+{"query": "the whole books total spend", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Everything is summed, so no vendor argument is set."}
+{"query": "total spend across all records", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Whole data in scope, so no vendor is named."}
+{"query": "all spending combined", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor distinguished, so the argument is empty."}
+{"query": "net total spend in the ledger", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "The request is dataset-wide, so no vendor is supplied."}
+{"query": "how much spent across the records?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "All records meant, so the vendor slot is left empty."}
+{"query": "total of the spend in the books", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor singled out, so no argument is given."}
+{"query": "total spend across the dataset", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Full dataset requested, so the vendor stays blank."}
+{"query": "company wide total spend figures", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Company-wide total, so no vendor argument is used."}
+{"query": "spend across all vendors added up", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Every vendor included, so the argument object stays empty."}
+{"query": "total amount spent overall", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Nothing points to a vendor, so arguments remain empty."}
+{"query": "total spend all sellers combined", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "All sellers counted, so no vendor is passed."}
+{"query": "summed spend across parties", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "The whole dataset considered, so the vendor is omitted."}
+{"query": "total spend everything combined", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor named specifically, so the argument stays empty."}
+{"query": "overall spending total across suppliers", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "All suppliers in scope, so the call takes no argument."}
+{"query": "total value spent in total", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "It covers everything, so no vendor is specified."}
+{"query": "running total of all spend", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Global sum requested, so no vendor argument is provided."}
+{"query": "full spend across every record", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Every record meant, so the vendor field stays empty."}
+{"query": "total spend in the whole data", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Whole dataset targeted, so no vendor is supplied."}
+{"query": "how much total spending is there?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor in the ask, so the argument object is empty."}
+{"query": "total spend across all the books", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "All the books included, so no vendor is named."}
+{"query": "every vendor combined spend", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Every vendor put together, so the argument stays empty."}
+{"query": "total spend summed over all", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "The total spans everyone, so the vendor is left out."}
+{"query": "overall total of all spending", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "No vendor identified, so no argument is passed."}
+{"query": "total spend around the whole ledger", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {}}], "reasoning": "Whole ledger in scope, so no vendor argument is given."}

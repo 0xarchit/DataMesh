@@ -1,0 +1,180 @@
+{"query": "How much total money did we spend with Wonka Industries?", "tool": "total_spend", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "Explain quantum computing in simple terms", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Give me the total amount paid to Pioneer Logistical overall", "tool": "total_spend", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Zenith Trading Company kis city me registered hai?", "tool": "vendor_city", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Count the invoices for Orion Systematics.", "tool": "count_transactions", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "Hooli Services kis city me registered hai?", "tool": "vendor_city", "vendor": "Hooli Services", "category": "positive"}
+{"query": "What is the city of registration for Acme Ltd?", "tool": "vendor_city", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "Aaj ka IPL score kya hai?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "I am not asking for the city of GLOBEX CORPORATION", "tool": "none", "vendor": "GLOBEX CORPORATION", "category": "negation"}
+{"query": "Dunder Mifflin ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Zenith Traders ka city kya hai registration me?", "tool": "vendor_city", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Which city is Nova Retail registered in?", "tool": "vendor_city", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Zenith Traders se total kitna paisa gaya?", "tool": "total_spend", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "What is the GSTIN of Initech Solutions?", "tool": "vendor_gstin", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Pioneer Logistical se kitna paisa gaya total?", "tool": "total_spend", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "VANDELAY INDUSTRIES ka city kya hai?", "tool": "vendor_city", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "What city is Nova Retail based out of?", "tool": "vendor_city", "vendor": "Nova Retail", "category": "positive"}
+{"query": "How many transactions does Sterling Cooper have in the system?", "tool": "count_transactions", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "ORION SYSTEMS ka official name kya hai?", "tool": "vendor_name", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Give me the GSTIN number for Umbrella Traders", "tool": "vendor_gstin", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "How many transactions involve Nova Retail?", "tool": "count_transactions", "vendor": "Nova Retail", "category": "positive"}
+{"query": "How many vendors are in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Zenith Traders ka GST number bata do", "tool": "vendor_gstin", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Total kitne suppliers exist karte hain data me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Initech Solutions ka tax id gstin batao", "tool": "vendor_gstin", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Daily Planet Media ke kitne invoices hain?", "tool": "count_transactions", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "Initech Solutions ke saath total kitna paisa kharch hua hai?", "tool": "total_spend", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Pioneer Logistical ke kitne invoices hain?", "tool": "count_transactions", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Count the number of invoices from Nova Retail", "tool": "count_transactions", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Soylent Foods par humne total kitna paisa spend kiya hai?", "tool": "total_spend", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "Total kitne suppliers hain is data me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Stark Industries pe total kitna kharch hua?", "tool": "total_spend", "vendor": "Stark Industries", "category": "positive"}
+{"query": "What is the official registered name of WAYNE ENTERPRISES?", "tool": "vendor_name", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "How much have we spent with WAYNE ENTERPRISES in total?", "tool": "total_spend", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "How many suppliers exist in this dataset?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Where is Pioneer Logistical based, which city exactly?", "tool": "vendor_city", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "CYBERDYNE SYSTEMS ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "Which city is Vertex Analytics registered in?", "tool": "vendor_city", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "VANDELAY INDUSTRIES ki gstin mat batao", "tool": "none", "vendor": "VANDELAY INDUSTRIES", "category": "negation"}
+{"query": "Tell me the city where ORION SYSTEMS is registered.", "tool": "vendor_city", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Can you recommend a good restaurant nearby?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Count all the invoices that mention Umbrella Traders", "tool": "count_transactions", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "What is the total spend with Soylent Foods?", "tool": "total_spend", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "What is the capital of Australia?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Tell me the cumulative amount paid to Vertex Analytics", "tool": "total_spend", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "Initech Solutions kis city me registered hai?", "tool": "vendor_city", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "What is the total number of transactions recorded for Umbrella Traders?", "tool": "count_transactions", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "Count the number of invoices from PIONEER LOGISTICS", "tool": "count_transactions", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "What city is Dunder Mifflin registered in?", "tool": "vendor_city", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "What is the official registered name of Zenith Traders?", "tool": "vendor_name", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Nova Retailers ka total spend kitna hai?", "tool": "total_spend", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Who won the football match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "CYBERDYNE SYSTEMS ka city kya hai?", "tool": "vendor_city", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "Zenith Trading Company ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Show me the total money spent with Massive Dynamic across all invoices", "tool": "total_spend", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "How many vendors are there in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What city is Tyrell Corp registered in?", "tool": "vendor_city", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "ORION SYSTEMS ka city kya hai?", "tool": "vendor_city", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Total kitne suppliers humare data me hain?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Nova Retail ka city kya hai registration me?", "tool": "vendor_city", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Give me the total amount spent with Aperture Labs.", "tool": "total_spend", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "Massive Dynamic ka GSTIN batao", "tool": "vendor_gstin", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "Sum of all payments made to Nova Retailers overall", "tool": "total_spend", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "What is the overall amount spent with Pioneer Logistical?", "tool": "total_spend", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "What GSTIN is registered for CYBERDYNE SYSTEMS?", "tool": "vendor_gstin", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "How many invoices does Zenith Trading Company have?", "tool": "count_transactions", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the GSTIN tax id?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the total spend with Acme Ltd?", "tool": "total_spend", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "Give me the registered name for Hooli Services.", "tool": "vendor_name", "vendor": "Hooli Services", "category": "positive"}
+{"query": "What is the GSTIN of Zenith Traders?", "tool": "vendor_gstin", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "I am not asking for the city of Orion Systematics.", "tool": "none", "vendor": "Orion Systematics", "category": "negation"}
+{"query": "Dunder Mifflin ka asli registered naam kya hai?", "tool": "vendor_name", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Give me the GSTIN tax id for VERTEX ANALYSIS", "tool": "vendor_gstin", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Aaj ke lunch ka menu kya hai?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "PIONEER LOGISTICS ka total spend kitna hai?", "tool": "total_spend", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Total kitne suppliers hain dataset me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Explain how photosynthesis works in plants", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "PIED PIPER ka GSTIN bata do.", "tool": "vendor_gstin", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "VERTEX ANALYSIS ka official naam kya hai?", "tool": "vendor_name", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "What is the registered name of ORION SYSTEMS?", "tool": "vendor_name", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "I am not asking for the city of VERTEX ANALYSIS", "tool": "none", "vendor": "VERTEX ANALYSIS", "category": "negation"}
+{"query": "VANDELAY INDUSTRIES ka official name kya hai?", "tool": "vendor_name", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "What is the total amount spent with Orion Systematics overall?", "tool": "total_spend", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "Number of invoices from Vertex Analytics", "tool": "count_transactions", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "Give me the GSTIN tax id for INGEN", "tool": "vendor_gstin", "vendor": "INGEN", "category": "positive"}
+{"query": "Nova Retailers ka official name kya hai?", "tool": "vendor_name", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Number of transactions billed by Zenith Trading Company", "tool": "count_transactions", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the weather in Delhi today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "OSCORP ka full registered name kya hai?", "tool": "vendor_name", "vendor": "OSCORP", "category": "positive"}
+{"query": "Zenith Trading Company ka total spend kitna hai?", "tool": "total_spend", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Aperture Labs ke saath kitne invoices hain?", "tool": "count_transactions", "vendor": "Aperture Labs", "category": "positive"}
+{"query": "sum of all payments to VERTEX ANALYSIS", "tool": "total_spend", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Where is Zenith Trading Company based, which city exactly?", "tool": "vendor_city", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the registered city of Daily Planet Media?", "tool": "vendor_city", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "Aaj ke dinner ka menu kya hai?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Tell me the registered name for Daily Planet Media", "tool": "vendor_name", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "Tell me the registered name for Sterling Cooper", "tool": "vendor_name", "vendor": "Sterling Cooper", "category": "positive"}
+{"query": "Tyrell Corp ka gstin number kya hai?", "tool": "vendor_gstin", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "city registered for Vertex Analytics vendor", "tool": "vendor_city", "vendor": "Vertex Analytics", "category": "positive"}
+{"query": "Give me the tax id for Nova Retail", "tool": "vendor_gstin", "vendor": "Nova Retail", "category": "positive"}
+{"query": "PIED PIPER ke kitne transactions hain?", "tool": "count_transactions", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "Which city is OSCORP registered in?", "tool": "vendor_city", "vendor": "OSCORP", "category": "positive"}
+{"query": "What is the GSTIN of ORION SYSTEMS?", "tool": "vendor_gstin", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "I am not asking for the city of Tyrell Corp", "tool": "none", "vendor": "Tyrell Corp", "category": "negation"}
+{"query": "I am not asking for the city of Stark Industries", "tool": "none", "vendor": "Stark Industries", "category": "negation"}
+{"query": "How many transactions involve Dunder Mifflin?", "tool": "count_transactions", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Hooli Services ke saath total kharch kitna hua?", "tool": "total_spend", "vendor": "Hooli Services", "category": "positive"}
+{"query": "Which city is Wonka Industries registered in?", "tool": "vendor_city", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "Total kitne vendors ya suppliers hain data me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "GSTIN of ORION SYSTEMS please.", "tool": "vendor_gstin", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "How much money went to ORION SYSTEMS in total?", "tool": "total_spend", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Wonka Industries ka tax id gstin batao", "tool": "vendor_gstin", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "Total kitne vendors hain dataset me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "How many transactions does Pioneer Logistical have?", "tool": "count_transactions", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "How many times did we transact with Hooli Services?", "tool": "count_transactions", "vendor": "Hooli Services", "category": "positive"}
+{"query": "Tell me the registered name for Zenith Traders", "tool": "vendor_name", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Do not tell me the total spend with ORION SYSTEMS.", "tool": "none", "vendor": "ORION SYSTEMS", "category": "negation"}
+{"query": "Nova Retailers kis city me registered hai?", "tool": "vendor_city", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Tell me the official name of GLOBEX CORPORATION as registered", "tool": "vendor_name", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "Tell me the overall spend with WAYNE ENTERPRISES please", "tool": "total_spend", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "Tell me the city for Zenith Trading Company", "tool": "vendor_city", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the GSTIN of PIONEER LOGISTICS?", "tool": "vendor_gstin", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "Tell me the overall amount spent with Wonka Industries please", "tool": "total_spend", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?", "tool": "total_spend", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "How much was spent in total?", "tool": "total_spend", "vendor": null, "category": "global_sum"}
+{"query": "What is the official registered name of PIONEER LOGISTICS?", "tool": "vendor_name", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "What is the total amount spent with Massive Dynamic this year?", "tool": "total_spend", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "What is the GSTIN?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the full official name of WAYNE ENTERPRISES?", "tool": "vendor_name", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "ORION SYSTEMS ka total spend kitna hai?", "tool": "total_spend", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "I am not asking for the city of Nova Retailers", "tool": "none", "vendor": "Nova Retailers", "category": "negation"}
+{"query": "Nova Retailers ka GSTIN mat batao", "tool": "none", "vendor": "Nova Retailers", "category": "negation"}
+{"query": "What is the GSTIN for the supplier?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "ORION SYSTEMS ke kitne transactions hain?", "tool": "count_transactions", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "What is the weather in Mumbai today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "How much did we spend with Zenith Traders in total?", "tool": "total_spend", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "How many invoices are connected to ORION SYSTEMS?", "tool": "count_transactions", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Count the number of invoices from Zenith Traders", "tool": "count_transactions", "vendor": "Zenith Traders", "category": "positive"}
+{"query": "Give me the number of transactions that involve INGEN", "tool": "count_transactions", "vendor": "INGEN", "category": "positive"}
+{"query": "Do not tell me the total spend with Acme Ltd", "tool": "none", "vendor": "Acme Ltd", "category": "negation"}
+{"query": "Is data me total kitne vendors hain?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Pioneer Logistical ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "Don't give me the GSTIN of ORION SYSTEMS.", "tool": "none", "vendor": "ORION SYSTEMS", "category": "negation"}
+{"query": "Kitni transactions Orion Systematics ke saath hui hain?", "tool": "count_transactions", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "VERTEX ANALYSIS ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Batao VERTEX ANALYSIS kis sheher me registered hai", "tool": "vendor_city", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Count the number of invoices for Wonka Industries", "tool": "count_transactions", "vendor": "Wonka Industries", "category": "positive"}
+{"query": "Tell me the number of transactions with Orion Systematics.", "tool": "count_transactions", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "PIED PIPER is registered in which city?", "tool": "vendor_city", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "I am not asking for the city of Hooli Services.", "tool": "none", "vendor": "Hooli Services", "category": "negation"}
+{"query": "Number of transactions recorded for Nova Retailers", "tool": "count_transactions", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "WAYNE ENTERPRISES ke saath kitne transactions hue hain?", "tool": "count_transactions", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "How many vendors exist in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "GLOBEX CORPORATION ka city kya hai registration me?", "tool": "vendor_city", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "Which city is Acme Ltd registered in?", "tool": "vendor_city", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "What GSTIN is registered for Zenith Trading Company?", "tool": "vendor_gstin", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "What is the official name of Dunder Mifflin as registered?", "tool": "vendor_name", "vendor": "Dunder Mifflin", "category": "positive"}
+{"query": "Do not tell me the total spend with Nova Retail", "tool": "none", "vendor": "Nova Retail", "category": "negation"}
+{"query": "What is the GSTIN of VANDELAY INDUSTRIES?", "tool": "vendor_gstin", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "Which city is Soylent Foods registered in?", "tool": "vendor_city", "vendor": "Soylent Foods", "category": "positive"}
+{"query": "Zenith Trading Company ka official name kya hai?", "tool": "vendor_name", "vendor": "Zenith Trading Company", "category": "positive"}
+{"query": "Pioneer Logistical ka official name kya hai?", "tool": "vendor_name", "vendor": "Pioneer Logistical", "category": "positive"}
+{"query": "PIED PIPER ka registered city kya hai?", "tool": "vendor_city", "vendor": "PIED PIPER", "category": "positive"}
+{"query": "I am not asking for the city of Pioneer Logistical", "tool": "none", "vendor": "Pioneer Logistical", "category": "negation"}
+{"query": "What is the total spend for that vendor?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Who won the cricket match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Count the number of invoices for CYBERDYNE SYSTEMS", "tool": "count_transactions", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "OSCORP pe kitna paisa kharch hua hai total?", "tool": "total_spend", "vendor": "OSCORP", "category": "positive"}
+{"query": "How much total spend did we have with ORION SYSTEMS?", "tool": "total_spend", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "How much money did we spend with Hooli Services in total?", "tool": "total_spend", "vendor": "Hooli Services", "category": "positive"}
+{"query": "Tell me the grand total spend with PIONEER LOGISTICS", "tool": "total_spend", "vendor": "PIONEER LOGISTICS", "category": "positive"}
+{"query": "VANDELAY INDUSTRIES ke kitne invoice generate hue?", "tool": "count_transactions", "vendor": "VANDELAY INDUSTRIES", "category": "positive"}
+{"query": "Nova Retail ka GST number bata do yaar", "tool": "vendor_gstin", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Tyrell Corp se kitne transactions hue hain total?", "tool": "count_transactions", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "count all transactions with VERTEX ANALYSIS", "tool": "count_transactions", "vendor": "VERTEX ANALYSIS", "category": "positive"}
+{"query": "Best recipe for paneer butter masala", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Tell me the registered name for Nova Retail", "tool": "vendor_name", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Recommend a good recipe for paneer butter masala.", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "What GSTIN is registered for Nova Retailers?", "tool": "vendor_gstin", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Which city is PIONEER LOGISTICS registered in?", "tool": "vendor_city", "vendor": "PIONEER LOGISTICS", "category": "positive"}

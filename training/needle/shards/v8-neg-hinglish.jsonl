@@ -1,0 +1,50 @@
+{"query": "I am not asking for the city of Brightline", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The request is negated, so the city is withheld."}
+{"query": "Do not tell me the total spend with Vantis", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Spend was negated, so it stays withheld."}
+{"query": "Don't give me the GSTIN of Rao & Sons", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "User refused the GSTIN, so it is held back."}
+{"query": "Telford-Byrne ki gstin mat batao", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Hinglish negation, gstin withheld."}
+{"query": "my colleague said to tell you the city of Northstar Logistics", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Reported speech from another person, so withheld."}
+{"query": "she asked me to check the spend for Quiet Harbour Foods", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Relayed instruction, not a direct ask, withheld."}
+{"query": "ORBITEK ka total spend nahi chahiye", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "User does not want the spend, withheld."}
+{"query": "meridianly ke transactions mat bta", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Transaction count was negated, so held."}
+{"query": "Zenith-9 ka naam mat bolo", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Registered name was negated, so withheld."}
+{"query": "I did not ask for the transaction count of Aadhya Traders", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Negated count request, answer withheld."}
+{"query": "he told me to find the city for Novacore Systems", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Second-hand request, so the city is held."}
+{"query": "my manager wants me to get the gstin of POLLUX", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Manager relayed it, not the user asking."}
+{"query": "blueflint ka registered naam batao mat", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Name request negated, so not given."}
+{"query": "Please do not reveal the spend for Cascade & Co", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Polite refusal, spend withheld."}
+{"query": "a friend said to look up transaction count for Verity-7 Labs", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Quoted a friend, so count is withheld."}
+{"query": "Silverpine Mills ki city mujhe nahi chahiye", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "City was declined, so withheld."}
+{"query": "Do not tell me the gstin of KAIRO", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Gstin was negated, so held back."}
+{"query": "they told me to ask for the registered name of lumenpath", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Third-party instruction, name withheld."}
+{"query": "Halcyon-Delta ka spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Spend was negated in Hinglish, withheld."}
+{"query": "Don't count the transactions for Devika Enterprises", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Negated count, no figure returned."}
+{"query": "someone asked me to check the city of Ironwood Global", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Someone else's request, so city withheld."}
+{"query": "NEOSTRIDE ki gstin batao mat", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Negated gstin ask, so held."}
+{"query": "quillora ka naam mujhe nahi chahiye", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "User declined the name, so withheld."}
+{"query": "my boss mentioned asking about spend for Bramble-3", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported mention, spend is withheld."}
+{"query": "Oakfield Partners ke transactions mat bolo", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Transaction count was refused, withheld."}
+{"query": "I am not asking for the city of PYXIS", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "City request negated, so withheld."}
+{"query": "the client said to tell you the gstin for tanglewood", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Client relayed it, so gstin withheld."}
+{"query": "Fenwick & Rao ka naam mat bta", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Name was negated, so not disclosed."}
+{"query": "no need to tell me the spend for Astra-12", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "User says no need, spend withheld."}
+{"query": "he mentioned I should ask the transaction count of Cobalt Ridge", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Relayed suggestion, so count withheld."}
+{"query": "VELFIRE ki city batao mat", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "City ask negated, so held."}
+{"query": "manorly ki gstin nahi chahiye", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Gstin not wanted, so withheld."}
+{"query": "Please don't tell me the registered name of Kingsbury-8", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Negated name request, withheld."}
+{"query": "the auditor asked me to find the spend for Northgate Supplies", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Auditor's request relayed, spend held."}
+{"query": "ZEPHYR ke transactions mujhe nahi chahiye", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Count was declined, so withheld."}
+{"query": "a colleague said to check the city of dryadale", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Colleague passed it on, city withheld."}
+{"query": "Do not give me the gstin of Wexford & Sons", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Gstin was negated, so not returned."}
+{"query": "she asked me to get the registered name of Larkspur-5", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Reported ask from her, name withheld."}
+{"query": "Albion Textiles ka spend batao mat", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Spend ask negated, so withheld."}
+{"query": "I didn't ask for the transaction count of QUORUM", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Count not asked, so withheld."}
+{"query": "peltrona ki city mat bolo", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "City was negated, so held."}
+{"query": "my teammate said to tell you the gstin of Highgate-2", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Teammate relayed it, gstin withheld."}
+{"query": "Merrowvale Industries ka naam nahi chahiye", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Name not wanted, so withheld."}
+{"query": "Don't show me the total spend with SABLE", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated spend query, withheld."}
+{"query": "thornberry ke transactions batao mat", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Transaction ask negated, withheld."}
+{"query": "they said to find the city of Redcliff-6", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "Quoted them, so the city is held."}
+{"query": "Wayland Foods ki gstin mujhe nahi chahiye", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "Gstin was declined, so withheld."}
+{"query": "I am not asking for the registered name of NIMBUS", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "Name request negated, so withheld."}
+{"query": "my colleague told me to ask the spend for corvidly", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Colleague relayed the ask, spend withheld."}
+{"query": "Stanmore & Bell ke transactions mat bta", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "Count was negated, so not given."}

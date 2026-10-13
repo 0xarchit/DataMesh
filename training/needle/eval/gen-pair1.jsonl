@@ -1,0 +1,40 @@
+{"query": "How much total spend did we have with ORION SYSTEMS?", "tool": "total_spend", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "ORION SYSTEMS ka total spend kitna hai?", "tool": "total_spend", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "What is the total amount spent with Orion Systematics overall?", "tool": "total_spend", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "Give me the total spend for Orion Systematics in the dataset.", "tool": "total_spend", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "How much money went to ORION SYSTEMS in total?", "tool": "total_spend", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Total spend with ORION SYSTEMS batao please.", "tool": "total_spend", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "How many transactions involve ORION SYSTEMS?", "tool": "count_transactions", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Count the invoices for Orion Systematics.", "tool": "count_transactions", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "ORION SYSTEMS ke kitne transactions hain?", "tool": "count_transactions", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "How many invoices are connected to ORION SYSTEMS?", "tool": "count_transactions", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Tell me the number of transactions with Orion Systematics.", "tool": "count_transactions", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "Kitni transactions Orion Systematics ke saath hui hain?", "tool": "count_transactions", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "Which city is ORION SYSTEMS registered in?", "tool": "vendor_city", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "What is the registered city of Orion Systematics?", "tool": "vendor_city", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "ORION SYSTEMS ka city kya hai?", "tool": "vendor_city", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "In which city is Orion Systematics based?", "tool": "vendor_city", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "Tell me the city where ORION SYSTEMS is registered.", "tool": "vendor_city", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Orion Systematics register kis city me hai?", "tool": "vendor_city", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "What is the GSTIN of ORION SYSTEMS?", "tool": "vendor_gstin", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Give me the GSTIN for Orion Systematics.", "tool": "vendor_gstin", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "ORION SYSTEMS ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "What is the tax id GSTIN of Orion Systematics?", "tool": "vendor_gstin", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "GSTIN of ORION SYSTEMS please.", "tool": "vendor_gstin", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "What is the registered name of ORION SYSTEMS?", "tool": "vendor_name", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "What is the official registered name for Orion Systematics?", "tool": "vendor_name", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "ORION SYSTEMS ka official name kya hai?", "tool": "vendor_name", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "Tell me the legal name of Orion Systematics.", "tool": "vendor_name", "vendor": "Orion Systematics", "category": "positive"}
+{"query": "Official registered name of ORION SYSTEMS kya hai?", "tool": "vendor_name", "vendor": "ORION SYSTEMS", "category": "positive"}
+{"query": "How many vendors are in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Total kitne vendors hain dataset me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai tomorrow?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Recommend a good recipe for paneer butter masala.", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "How do I install Python on Windows 11?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "What is the capital of Australia?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "What is the GSTIN number?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Which city is the vendor registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the official registered name?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with ORION SYSTEMS.", "tool": "none", "vendor": "ORION SYSTEMS", "category": "negation"}
+{"query": "I am not asking for the city of Orion Systematics.", "tool": "none", "vendor": "Orion Systematics", "category": "negation"}
+{"query": "Don't give me the GSTIN of ORION SYSTEMS.", "tool": "none", "vendor": "ORION SYSTEMS", "category": "negation"}

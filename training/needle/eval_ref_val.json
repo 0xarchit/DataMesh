@@ -1,0 +1,296 @@
+{
+  "path": "reference render_example plus python generate",
+  "adapter": "/mnt/d/B.Tech/ProjeX/DataMesh/training/needle/adapter_v5.safetensors",
+  "data": "training/needle/val.jsonl",
+  "examples": 210,
+  "exact_matches": 192,
+  "exact_accuracy": 0.9143,
+  "per_tool": {
+    "count_transactions": {
+      "total": 33,
+      "exact": 27
+    },
+    "total_spend": {
+      "total": 37,
+      "exact": 35
+    },
+    "vendor_city": {
+      "total": 33,
+      "exact": 32
+    },
+    "vendor_name": {
+      "total": 31,
+      "exact": 30
+    },
+    "vendor_gstin": {
+      "total": 40,
+      "exact": 39
+    },
+    "count_vendors": {
+      "total": 6,
+      "exact": 4
+    }
+  },
+  "seconds": 249.5,
+  "ms_per_query": 1188.0,
+  "failures": [
+    {
+      "query": "Suggest a slogan for Onyx Black Granite.",
+      "expected": [],
+      "predicted": [
+        [
+          "vendor_name",
+          "{\"vendor\": \"Onyx Black Granite\"}"
+        ]
+      ],
+      "raw": "<think>\nOnly vendor name requested.\n</think>\n<tool_call>[{\"name\":\"vendor_name\",\"arguments\":{\"vendor\":\"Onyx Black Granite\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Sarvodaya Stores wale bill kitne hain",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Sarvodaya Stores\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Sarvodaya Stores\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants money paid to the vendor, summed over invoices\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Sarvodaya Stores\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "how often did Quadrant Robotics appear",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Quadrant Robotics\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Quadrant Robotics\"}"
+        ]
+      ],
+      "raw": "<think>\nvendor question -> total_spend\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Quadrant Robotics\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Should Gingerbread Industries go public this year?",
+      "expected": [],
+      "predicted": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Gingerbread Industries\"}"
+        ]
+      ],
+      "raw": "<think>\nCity for the named vendor.\n</think>\n<tool_call>[{\"name\":\"vendor_city\",\"arguments\":{\"vendor\":\"Gingerbread Industries\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Utpala Cosmetics invoice tally",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Utpala Cosmetics\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Utpala Cosmetics\"}"
+        ]
+      ],
+      "raw": "<think>\nUtpala Cosmetics -> vendor; sum spend\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Utpala Cosmetics\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "kitni baar Paperline Softwares Trading Co se khareeda",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Paperline Softwares Trading Co\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Paperline Softwares Trading Co\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the total spend with this vendor\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Paperline Softwares Trading Co\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "how many sellers appear in our ledger",
+      "expected": [
+        [
+          "count_vendors",
+          "{}"
+        ]
+      ],
+      "predicted": [],
+      "raw": "<think>\nnot a vendor or invoice question\n</think>\n<tool_call>[]</tool_call><|im_end|>"
+    },
+    {
+      "query": "sum of all invoices for Warrier Foods",
+      "expected": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Warrier Foods\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Warrier Foods\"}"
+        ]
+      ],
+      "raw": "<think>\nCount of invoices for the named vendor.\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"Warrier Foods\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "count the bills Icon Constructions sent",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Icon Constructions\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Constructions\"}"
+        ]
+      ],
+      "raw": "<think>\nvendor question -> count_transactions\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"Constructions\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Ushasri Agencies kis shehar mein hai",
+      "expected": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Ushasri Agencies\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Ushasri Agencies\"}"
+        ]
+      ],
+      "raw": "<think>\nUshasri Agencies -> vendor; sum spend\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Ushasri Agencies\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "what is gst rate on textiles",
+      "expected": [],
+      "predicted": [
+        [
+          "vendor_gstin",
+          "{\"vendor\": \"textiles\"}"
+        ]
+      ],
+      "raw": "<think>\nvendor question -> vendor_gstin\n</think>\n<tool_call>[{\"name\":\"vendor_gstin\",\"arguments\":{\"vendor\":\"textiles\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "gst identification Sona Electricals",
+      "expected": [
+        [
+          "vendor_gstin",
+          "{\"vendor\": \"Sona Electricals\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Sona Electricals\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the vendor's official registered city\n</think>\n<tool_call>[{\"name\":\"vendor_city\",\"arguments\":{\"vendor\":\"Sona Electricals\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Mukesh Packaging registered as what",
+      "expected": [
+        [
+          "vendor_name",
+          "{\"vendor\": \"Mukesh Packaging\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "vendor_city",
+          "{\"vendor\": \"Mukesh Packaging\"}"
+        ]
+      ],
+      "raw": "<think>\nlook up registered city of the vendor\n</think>\n<tool_call>[{\"name\":\"vendor_city\",\"arguments\":{\"vendor\":\"Mukesh Packaging\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "spnt with Ulhasnagar Plastics",
+      "expected": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Ulhasnagar Plastics\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Ulhasnagar Plastics\"}"
+        ]
+      ],
+      "raw": "<think>\nUlhasnagar Plastics -> vendor; count\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"Ulhasnagar Plastics\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "distinct supplier total",
+      "expected": [
+        [
+          "count_vendors",
+          "{}"
+        ]
+      ],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"distinct supplier\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the invoice count for this vendor\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"distinct supplier\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "Which ships faster, Northwind Shipping or a local courier?",
+      "expected": [],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"Northwind Shipping\"}"
+        ]
+      ],
+      "raw": "<think>\nAggregate spend for the named vendor.\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"Northwind Shipping\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "ginti karo Devgiri Ironworks ke invoices",
+      "expected": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Devgiri Ironworks\"}"
+        ]
+      ],
+      "predicted": [
+        [
+          "count_transactions",
+          "{\"vendor\": \"Devgiri\"}"
+        ]
+      ],
+      "raw": "<think>\nuser wants the invoice count for Devgiriri\n</think>\n<tool_call>[{\"name\":\"count_transactions\",\"arguments\":{\"vendor\":\"Devgiri\"}}]</tool_call><|im_end|>"
+    },
+    {
+      "query": "whats 17 times 43",
+      "expected": [],
+      "predicted": [
+        [
+          "total_spend",
+          "{\"vendor\": \"\"}"
+        ]
+      ],
+      "raw": "<think>\nvendor question -> total_spend\n</think>\n<tool_call>[{\"name\":\"total_spend\",\"arguments\":{\"vendor\":\"\"}}]</tool_call><|im_end|>"
+    }
+  ]
+}

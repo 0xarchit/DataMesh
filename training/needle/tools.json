@@ -1,0 +1,81 @@
+[
+  {
+    "name": "total_spend",
+    "description": "Total spend in INR with a vendor, summed over that vendor's invoices. Omit the vendor to total the spend across every vendor in the data.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "description": "Vendor name exactly as the user wrote it"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "count_transactions",
+    "description": "How many transactions or invoices involve a vendor.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "description": "Vendor name exactly as the user wrote it"
+        }
+      },
+      "required": ["vendor"]
+    }
+  },
+  {
+    "name": "count_vendors",
+    "description": "How many distinct vendors exist in the data.",
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "vendor_city",
+    "description": "The city a vendor is registered in.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "description": "Vendor name exactly as the user wrote it"
+        }
+      },
+      "required": ["vendor"]
+    }
+  },
+  {
+    "name": "vendor_gstin",
+    "description": "The GSTIN tax id of a vendor.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "description": "Vendor name exactly as the user wrote it"
+        }
+      },
+      "required": ["vendor"]
+    }
+  },
+  {
+    "name": "vendor_name",
+    "description": "The official registered name of a vendor.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "description": "Vendor name exactly as the user wrote it"
+        }
+      },
+      "required": ["vendor"]
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{"query": "How much did we spend with Nova Retail in total?", "tool": "total_spend", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Nova Retailers ka total spend kitna hai?", "tool": "total_spend", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "What is the total amount paid to Nova Retail?", "tool": "total_spend", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Tell me the grand total spend with Nova Retailers please", "tool": "total_spend", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Nova Retail se kitna paisa gaya total?", "tool": "total_spend", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Sum of all payments made to Nova Retailers overall", "tool": "total_spend", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "How many transactions involve Nova Retail?", "tool": "count_transactions", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Kitne invoices hain Nova Retailers ke?", "tool": "count_transactions", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Count the number of invoices from Nova Retail", "tool": "count_transactions", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Nova Retailers ke saath kitne transactions hue hain?", "tool": "count_transactions", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "How many times did we transact with Nova Retail?", "tool": "count_transactions", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Number of transactions recorded for Nova Retailers", "tool": "count_transactions", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Which city is Nova Retail registered in?", "tool": "vendor_city", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Nova Retailers kis city me registered hai?", "tool": "vendor_city", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "What city is Nova Retail based out of?", "tool": "vendor_city", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Tell me the registered city of Nova Retailers", "tool": "vendor_city", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Nova Retail ka city kya hai registration me?", "tool": "vendor_city", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Where is Nova Retailers located, which city exactly?", "tool": "vendor_city", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "What is the GSTIN of Nova Retail?", "tool": "vendor_gstin", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Nova Retailers ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Give me the tax id for Nova Retail", "tool": "vendor_gstin", "vendor": "Nova Retail", "category": "positive"}
+{"query": "What GSTIN is registered for Nova Retailers?", "tool": "vendor_gstin", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Nova Retail ka GST number bata do yaar", "tool": "vendor_gstin", "vendor": "Nova Retail", "category": "positive"}
+{"query": "What is the official registered name of Nova Retail?", "tool": "vendor_name", "vendor": "Nova Retail", "category": "positive"}
+{"query": "Nova Retailers ka official name kya hai?", "tool": "vendor_name", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Tell me the registered name for Nova Retail", "tool": "vendor_name", "vendor": "Nova Retail", "category": "positive"}
+{"query": "What is the full official name of Nova Retailers?", "tool": "vendor_name", "vendor": "Nova Retailers", "category": "positive"}
+{"query": "Nova Retail ka registered naam kya hai?", "tool": "vendor_name", "vendor": "Nova Retail", "category": "positive"}
+{"query": "How many vendors exist in this dataset?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Is data me total kitne suppliers hain?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Explain how photosynthesis works in plants", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Best recipe for paneer butter masala", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "What city is registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the GSTIN?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "How much was spent in total?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with Nova Retail", "tool": "none", "vendor": "Nova Retail", "category": "negation"}
+{"query": "I am not asking for the city of Nova Retailers", "tool": "none", "vendor": "Nova Retailers", "category": "negation"}
+{"query": "Nova Retailers ka GSTIN mat batao", "tool": "none", "vendor": "Nova Retailers", "category": "negation"}

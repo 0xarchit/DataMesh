@@ -1,0 +1,31 @@
+{"query": "How many distinct vendors appear in the data?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "The user wants a count of all vendors."}
+{"query": "Count the distinct vendors in the dataset.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Request is to count distinct vendors."}
+{"query": "How many different vendors does the data contain?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Query needs the number of different vendors."}
+{"query": "How many unique vendors are present here?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants to know how many unique vendors exist."}
+{"query": "Tell me the number of distinct vendors.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Needs the distinct vendor figure."}
+{"query": "What is the count of unique vendors overall?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Requesting an overall unique vendor count."}
+{"query": "How many unique vendor names show up?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the number of unique vendor names."}
+{"query": "Count all the distinct vendors for me.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "User wants all distinct vendors counted."}
+{"query": "Number of unique vendors in the dataset?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Needs the unique vendor tally."}
+{"query": "How many separate vendors are listed?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants to know how many separate vendors are listed."}
+{"query": "Give the distinct vendor count.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Request is for the distinct vendor count."}
+{"query": "How many distinct vendors can you find?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks how many distinct vendors can be found."}
+{"query": "How many unique vendors are recorded?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks how many unique vendors are recorded."}
+{"query": "Count every distinct vendor in the data.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants every distinct vendor counted."}
+{"query": "What count of different vendors do we have?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Needs the count of different vendors."}
+{"query": "How many unique vendors does this data hold?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks how many unique vendors the data holds."}
+{"query": "Find the distinct count of vendors.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Request is the distinct count of vendors."}
+{"query": "How many different vendors exist here overall?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants to know how many different vendors exist."}
+{"query": "How many distinct vendor entries are there?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks how many distinct vendor entries exist."}
+{"query": "Count the unique vendors that appear.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the unique vendors counted."}
+{"query": "Give me a count of distinct vendors.", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Requests a count of distinct vendors."}
+{"query": "What is the number of unique vendors found?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Needs the number of unique vendors found."}
+{"query": "How many unique vendors does the dataset list?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks how many unique vendors the dataset lists."}
+{"query": "Distinct vendor count across the data?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Needs the distinct vendor count across the data."}
+{"query": "How many different vendor names exist?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks how many different vendor names exist."}
+{"query": "What is the weather like in Paris today?", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Weather is unrelated to vendor data."}
+{"query": "Explain how photosynthesis works in plants.", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Photosynthesis has nothing to do with vendor counts."}
+{"query": "Write a short poem about the ocean.", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Poem request is unrelated to vendor data."}
+{"query": "What is the capital of Australia?", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Capital cities are unrelated to vendor counts."}
+{"query": "How do I bake sourdough bread at home?", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Bread baking is unrelated to vendor data."}
+{"query": "Tell me a fun fact about volcanoes.", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Volcano facts are unrelated to vendor counts."}

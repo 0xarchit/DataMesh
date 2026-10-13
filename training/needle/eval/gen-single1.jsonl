@@ -1,0 +1,40 @@
+{"query": "How much have we spent with WAYNE ENTERPRISES in total?", "tool": "total_spend", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "Stark Industries pe total kitna kharch hua?", "tool": "total_spend", "vendor": "Stark Industries", "category": "positive"}
+{"query": "What is the total amount paid to Daily Planet Media?", "tool": "total_spend", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?", "tool": "total_spend", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "Tell me the overall spend with WAYNE ENTERPRISES please", "tool": "total_spend", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "Stark Industries ka grand total spend bata do", "tool": "total_spend", "vendor": "Stark Industries", "category": "positive"}
+{"query": "How many transactions involve Stark Industries?", "tool": "count_transactions", "vendor": "Stark Industries", "category": "positive"}
+{"query": "Daily Planet Media ke kitne invoices hain?", "tool": "count_transactions", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "Count the number of invoices for CYBERDYNE SYSTEMS", "tool": "count_transactions", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "WAYNE ENTERPRISES ke saath kitne transactions hue hain?", "tool": "count_transactions", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "How many bills does Daily Planet Media have in our records?", "tool": "count_transactions", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "CYBERDYNE SYSTEMS ke kitne invoice generate hue?", "tool": "count_transactions", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "Which city is WAYNE ENTERPRISES registered in?", "tool": "vendor_city", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "Stark Industries kis sheher me registered hai?", "tool": "vendor_city", "vendor": "Stark Industries", "category": "positive"}
+{"query": "What is the registered city of Daily Planet Media?", "tool": "vendor_city", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "CYBERDYNE SYSTEMS ka city kya hai?", "tool": "vendor_city", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "Tell me which city WAYNE ENTERPRISES is based in", "tool": "vendor_city", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "Daily Planet Media registration city kya hai?", "tool": "vendor_city", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "What is the GSTIN of Stark Industries?", "tool": "vendor_gstin", "vendor": "Stark Industries", "category": "positive"}
+{"query": "CYBERDYNE SYSTEMS ka GSTIN number kya hai?", "tool": "vendor_gstin", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "Give me the tax id for WAYNE ENTERPRISES please", "tool": "vendor_gstin", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "Daily Planet Media ka GST number bata do", "tool": "vendor_gstin", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "What GSTIN is registered for CYBERDYNE SYSTEMS?", "tool": "vendor_gstin", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "What is the official registered name of WAYNE ENTERPRISES?", "tool": "vendor_name", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "Stark Industries ka official name kya hai?", "tool": "vendor_name", "vendor": "Stark Industries", "category": "positive"}
+{"query": "Tell me the registered name for Daily Planet Media", "tool": "vendor_name", "vendor": "Daily Planet Media", "category": "positive"}
+{"query": "CYBERDYNE SYSTEMS ka asli registered naam kya hai?", "tool": "vendor_name", "vendor": "CYBERDYNE SYSTEMS", "category": "positive"}
+{"query": "What is the full official name of WAYNE ENTERPRISES?", "tool": "vendor_name", "vendor": "WAYNE ENTERPRISES", "category": "positive"}
+{"query": "How many vendors are there in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Data me total kitne suppliers hain?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai tomorrow?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket world cup final?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Recipe batao paneer butter masala ki", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Write me a short poem about the ocean", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Which city is the vendor registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the GSTIN number?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Tell me the total spend", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with WAYNE ENTERPRISES", "tool": "none", "vendor": "WAYNE ENTERPRISES", "category": "negation"}
+{"query": "I am not asking for the city of Stark Industries", "tool": "none", "vendor": "Stark Industries", "category": "negation"}
+{"query": "Daily Planet Media ki gstin mat batao", "tool": "none", "vendor": "Daily Planet Media", "category": "negation"}

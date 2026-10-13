@@ -1,0 +1,598 @@
+{
+  "weights": "training/needle/tuned_v6.cact",
+  "examples": 210,
+  "exact_matches": 137,
+  "exact_accuracy": 0.6524,
+  "tool_name_accuracy": 0.6571,
+  "empty_answers_total": 30,
+  "empty_answers_correct": 23,
+  "per_tool": {
+    "count_transactions": {
+      "total": 33,
+      "exact": 25
+    },
+    "total_spend": {
+      "total": 37,
+      "exact": 31
+    },
+    "vendor_detail": {
+      "total": 104,
+      "exact": 54
+    },
+    "count_vendors": {
+      "total": 6,
+      "exact": 4
+    }
+  },
+  "seconds": 27.5,
+  "ms_per_query": 131.1,
+  "failures": [
+    {
+      "query": "where is Focal Specialty Chemicals registered",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Focal Specialty Chemicals",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Bhavya Rubber ka pura naam",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Bhavya Rubber",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "how many suppliers are in the data",
+      "expected": [
+        {
+          "name": "count_vendors",
+          "arguments": {}
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Aisha Patel"
+          }
+        }
+      ]
+    },
+    {
+      "query": "where is Kaushal Electricals based",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Kaushal Electricals",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "sum all invoices for Kumar Construction Co",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Kumar Construction Co"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Kumar Construction Co"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Sarvodaya Stores wale bill kitne hain",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Sarvodaya Stores"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Sarvodaya Stores"
+          }
+        }
+      ]
+    },
+    {
+      "query": "how often did Quadrant Robotics appear",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Quadrant Robotics"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Quadrant Robotics"
+          }
+        }
+      ]
+    },
+    {
+      "query": "gstn of Trident Steel Traders",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Trident Steel Traders",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "what is Vindhya Herbals registered naam",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Vindhya Herbals",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Pony Steel Corporation se kitne invoice aaye",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Pony Steel Corporation"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Pony Steel Corporation"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Laxmi Furniture ka registered naam kya",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Laxmi Furniture",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "what's the gst number of Dvara Exports",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Dvara Exports",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Ananta Wire Mesh ka gst number kya hai",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Ananta Wire Mesh",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Ganesh Battery House kis sheher me hai",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Ganesh Battery House",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "gstn of Quantum Pharma",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Quantum Pharma",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "official registered naam of Ganga Logistics Solutions?",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Ganga Logistics Solutions",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "GST registration of Diksha Hospitality",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Diksha Hospitality",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Jaya Cosmetics ka gst number",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Jaya Cosmetics",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "kitni baar Paperline Softwares Trading Co se khareeda",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Paperline Softwares Trading Co"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Paperline Softwares Trading Co"
+          }
+        }
+      ]
+    },
+    {
+      "query": "what is the GST registration for Zoya Foods",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Zoya Foods",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "what's the gst number of Dakshin Constructions",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Dakshin Constructions",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Navdeep Agro ka GST number batao",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Navdeep Agro",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "gst id Lalitha Fabrics",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Lalitha Fabrics",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "kindly state the aggregate payable to Destiny Devices",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Destiny Devices"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Equator Shipping Agency located where",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Equator Shipping Agency",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Jai Polymers registration number",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Jai Polymers",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "who won the 2011 cricket world cup",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Cricket World Cup"
+          }
+        }
+      ]
+    },
+    {
+      "query": "recipe for masala dosa",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "masala dosa"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Kripa Timbers kaha registered hai",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Kripa Timbers",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Lakshmi Rubber ka legal naam btao",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Lakshmi Rubber",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "gst id Vikas Infrastructure",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Vikas Infrastructure",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "gst number for Quiet Waters Aqua",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Quiet Waters Aqua",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Write an SOP for the Poppy Field Farms packing line.",
+      "expected": [],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Poppy Field Farms"
+          }
+        }
+      ]
+    },
+    {
+      "query": "count the bills Icon Constructions sent",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Icon Constructions"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Constructions"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Quicksilver Cargo ko kitna diya",
+      "expected": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Quicksilver Cargo"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "where is Warse Chemicals located",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Warse Chemicals",
+            "field": "city"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Bipasha Paints ka naam kya registered hai",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Bipasha Paints",
+            "field": "name"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "Pinnacle Fruits & Sons ke kitne bill hain",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Pinnacle Fruits & Sons"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Pinnacle Fruits & Sons"
+          }
+        }
+      ]
+    },
+    {
+      "query": "Rico Plastics gstn",
+      "expected": [
+        {
+          "name": "vendor_detail",
+          "arguments": {
+            "vendor": "Rico Plastics",
+            "field": "gstin"
+          }
+        }
+      ],
+      "predicted": []
+    },
+    {
+      "query": "kitne bill Impex Overseas se aaye",
+      "expected": [
+        {
+          "name": "count_transactions",
+          "arguments": {
+            "vendor": "Impex Overseas"
+          }
+        }
+      ],
+      "predicted": [
+        {
+          "name": "total_spend",
+          "arguments": {
+            "vendor": "Impex Overseas"
+          }
+        }
+      ]
+    }
+  ]
+}

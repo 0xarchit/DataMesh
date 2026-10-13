@@ -1,0 +1,40 @@
+{"query": "What is the total spend with Acme Ltd?", "tool": "total_spend", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "How much money have we paid GLOBEX CORPORATION in total?", "tool": "total_spend", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "Initech Solutions ke saath total kitna paisa kharch hua hai?", "tool": "total_spend", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Sum up all the payments made to Umbrella Traders", "tool": "total_spend", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "What is the cumulative amount spent with Acme Ltd so far?", "tool": "total_spend", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "Batao GLOBEX CORPORATION par kitna total spend hua hai", "tool": "total_spend", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "How many transactions involve Initech Solutions?", "tool": "count_transactions", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Count all the invoices that mention Umbrella Traders", "tool": "count_transactions", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "Acme Ltd ke kitne transactions hain system me?", "tool": "count_transactions", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "Number of invoices raised against GLOBEX CORPORATION", "tool": "count_transactions", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "Kitni baar Initech Solutions humare invoices me aaya hai?", "tool": "count_transactions", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "What is the total number of transactions recorded for Umbrella Traders?", "tool": "count_transactions", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "Which city is Acme Ltd registered in?", "tool": "vendor_city", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "What city is GLOBEX CORPORATION based in?", "tool": "vendor_city", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "Initech Solutions kis city me registered hai?", "tool": "vendor_city", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Tell me the registered city of Umbrella Traders please", "tool": "vendor_city", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "What is the city of registration for Acme Ltd?", "tool": "vendor_city", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "GLOBEX CORPORATION ka city kya hai registration me?", "tool": "vendor_city", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "What is the GSTIN of Initech Solutions?", "tool": "vendor_gstin", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Give me the GSTIN number for Umbrella Traders", "tool": "vendor_gstin", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "Acme Ltd ka GSTIN kya hai?", "tool": "vendor_gstin", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "What GSTIN is registered for GLOBEX CORPORATION?", "tool": "vendor_gstin", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "Initech Solutions ka tax id gstin batao", "tool": "vendor_gstin", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "What is the official registered name of Umbrella Traders?", "tool": "vendor_name", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "Acme Ltd ka poora registered naam kya hai?", "tool": "vendor_name", "vendor": "Acme Ltd", "category": "positive"}
+{"query": "Tell me the official name of GLOBEX CORPORATION as registered", "tool": "vendor_name", "vendor": "GLOBEX CORPORATION", "category": "positive"}
+{"query": "What is the registered name for Initech Solutions?", "tool": "vendor_name", "vendor": "Initech Solutions", "category": "positive"}
+{"query": "Umbrella Traders ka official naam kya hai?", "tool": "vendor_name", "vendor": "Umbrella Traders", "category": "positive"}
+{"query": "How many vendors exist in the data overall?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Total kitne suppliers humare data me hain?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai tomorrow?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Explain quantum computing in simple terms", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Recipe batao paneer butter masala ki", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Which city is registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the gstin number?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Tell me the total spend", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with Acme Ltd", "tool": "none", "vendor": "Acme Ltd", "category": "negation"}
+{"query": "I am not asking for the city of GLOBEX CORPORATION", "tool": "none", "vendor": "GLOBEX CORPORATION", "category": "negation"}
+{"query": "Initech Solutions ki gstin mat batao", "tool": "none", "vendor": "Initech Solutions", "category": "negation"}

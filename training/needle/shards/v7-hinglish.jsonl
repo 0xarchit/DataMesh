@@ -1,0 +1,38 @@
+{"query": "Data mein kitne vendors hain?", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "User wants the distinct vendor count from the dataset."}
+{"query": "Batao kitne alag vendors data me hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asking for how many separate vendors are present."}
+{"query": "Vendor count kya hai is data ka", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Requesting the total number of vendors in the data."}
+{"query": "Mujhe data ke vendors ki sankhya chahiye", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the vendor count figure for the dataset."}
+{"query": "How many vendors are in the data batao", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Direct question about vendor quantity in the data."}
+{"query": "Data mein vendors ki ginti kitni hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the vendor count number."}
+{"query": "Kitne vendors exist karte hain database mein", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Checking how many vendors exist in the store."}
+{"query": "Data me kitne unique vendor milenge", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Interested in the unique vendor total."}
+{"query": "Ek baar bata do, data me kitne vendors hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks once, quickly, for the vendor total."}
+{"query": "Data ka vendor number kya hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Seeks the vendor number for the data."}
+{"query": "Kitne vendors ka data humare paas hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the number of vendors we hold."}
+{"query": "Data set me kitne vendors hain jaldi batao", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Requesting a fast vendor count."}
+{"query": "Data me kul kitne vendor hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Total vendor count in the data is wanted."}
+{"query": "Data me vendors kitne type ke hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asking how many vendor types exist."}
+{"query": "Batao na data mein kitne vendors hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Polite request for the vendor count."}
+{"query": "Vendor list me kitne entries hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Counting entries in the vendor list."}
+{"query": "Data ke andar kitne vendors chhupe hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Figures out how many vendors lie inside the data."}
+{"query": "Hamare paas kitne vendors ka record hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the count of recorded vendors."}
+{"query": "Data me vendor count kitna dikh raha hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Reads off the vendor count shown."}
+{"query": "Kitne vendors data me register hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asks how many vendors are registered."}
+{"query": "Vendors ki counting karo data se", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Perform a vendor count over the data."}
+{"query": "Kitne vendors hain is data file me", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Count vendors within this data file."}
+{"query": "Vendor kitne hain data me ye batao", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Tell how many vendors the data has."}
+{"query": "Data ka distinct vendor count kya hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Wants the distinct vendor count for the data."}
+{"query": "Kitne alag vendors data me hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "How many distinct vendors the data holds."}
+{"query": "Data me vendors number kitna hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Vendor number pulled from the data."}
+{"query": "Count karo kitne vendors data me hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Run a count of vendors in the data."}
+{"query": "Kitne vendors ka data store me hai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Vendors stored in the data are to be counted."}
+{"query": "Data me vendor ki ginti batao", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Vendor counting requested by the user."}
+{"query": "Vendors kitne hain data set me bhai", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Asking a friend for the vendor total."}
+{"query": "Data me jitne vendors hain unki ginti batao", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Count of all vendors the data contains."}
+{"query": "Kitne vendors hain data me, sirf number batao", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Only the raw vendor number is wanted."}
+{"query": "Aaj mausam kaisa hai", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Weather question unrelated to the data."}
+{"query": "Chai kaise banaate hain", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Asks for tea preparation steps."}
+{"query": "Cricket match ka score kya hai", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Sports score request with no data link."}
+{"query": "Mujhe ek acchi movie suggest karo", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Movie recommendation not about vendors."}
+{"query": "Do aur teen ka jod kitna hota hai", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Simple arithmetic question, off topic."}
+{"query": "Kal subah alarm kis time lagaun", "tools": [{"name": "count_vendors"}], "answers": [], "reasoning": "Alarm timing question, unrelated topic."}

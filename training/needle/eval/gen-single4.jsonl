@@ -1,0 +1,40 @@
+{"query": "How much total spend do we have with OSCORP?", "tool": "total_spend", "vendor": "OSCORP", "category": "positive"}
+{"query": "OSCORP pe kitna paisa kharch hua hai total?", "tool": "total_spend", "vendor": "OSCORP", "category": "positive"}
+{"query": "What is the total amount spent with Massive Dynamic this year?", "tool": "total_spend", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "Sum up everything we paid to Tyrell Corp so far", "tool": "total_spend", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "INGEN ke saath humara total spend kitna hai?", "tool": "total_spend", "vendor": "INGEN", "category": "positive"}
+{"query": "Show me the total money spent with Massive Dynamic across all invoices", "tool": "total_spend", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "How many transactions involve OSCORP?", "tool": "count_transactions", "vendor": "OSCORP", "category": "positive"}
+{"query": "Massive Dynamic ke kitne invoices hain?", "tool": "count_transactions", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "Count the number of transactions with Tyrell Corp", "tool": "count_transactions", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "How many invoices has INGEN raised?", "tool": "count_transactions", "vendor": "INGEN", "category": "positive"}
+{"query": "Tyrell Corp se kitne transactions hue hain total?", "tool": "count_transactions", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "Give me the number of transactions that involve INGEN", "tool": "count_transactions", "vendor": "INGEN", "category": "positive"}
+{"query": "Which city is OSCORP registered in?", "tool": "vendor_city", "vendor": "OSCORP", "category": "positive"}
+{"query": "Massive Dynamic ka registered city kya hai?", "tool": "vendor_city", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "What city is Tyrell Corp registered in?", "tool": "vendor_city", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "INGEN kis shahar me registered hai?", "tool": "vendor_city", "vendor": "INGEN", "category": "positive"}
+{"query": "Where is OSCORP registered?", "tool": "vendor_city", "vendor": "OSCORP", "category": "positive"}
+{"query": "Tell me the city of registration for Massive Dynamic", "tool": "vendor_city", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "What is the GSTIN of OSCORP?", "tool": "vendor_gstin", "vendor": "OSCORP", "category": "positive"}
+{"query": "Tyrell Corp ka gstin number kya hai?", "tool": "vendor_gstin", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "Give me the GSTIN tax id for INGEN", "tool": "vendor_gstin", "vendor": "INGEN", "category": "positive"}
+{"query": "Massive Dynamic ka GSTIN batao", "tool": "vendor_gstin", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "What is INGEN's GSTIN?", "tool": "vendor_gstin", "vendor": "INGEN", "category": "positive"}
+{"query": "What is the official registered name of OSCORP?", "tool": "vendor_name", "vendor": "OSCORP", "category": "positive"}
+{"query": "Tyrell Corp ka official registered name kya hai?", "tool": "vendor_name", "vendor": "Tyrell Corp", "category": "positive"}
+{"query": "Tell me the official name of INGEN", "tool": "vendor_name", "vendor": "INGEN", "category": "positive"}
+{"query": "What is Massive Dynamic's registered name?", "tool": "vendor_name", "vendor": "Massive Dynamic", "category": "positive"}
+{"query": "OSCORP ka full registered name kya hai?", "tool": "vendor_name", "vendor": "OSCORP", "category": "positive"}
+{"query": "How many vendors exist in the data?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "Total kitne vendors ya suppliers hain data me?", "tool": "count_vendors", "vendor": null, "category": "count_vendors"}
+{"query": "What is the weather in Mumbai today?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Can you recommend a good restaurant nearby?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Who won the cricket match last night?", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Explain how a transformer model works", "tool": "none", "vendor": null, "category": "off_topic"}
+{"query": "Which city is registered in?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the GSTIN number?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "What is the official registered name?", "tool": "none", "vendor": null, "category": "missing_arg"}
+{"query": "Do not tell me the total spend with OSCORP", "tool": "none", "vendor": "OSCORP", "category": "negation"}
+{"query": "I am not asking for the city of Tyrell Corp", "tool": "none", "vendor": "Tyrell Corp", "category": "negation"}
+{"query": "Don't give me the GSTIN of INGEN", "tool": "none", "vendor": "INGEN", "category": "negation"}
