@@ -1,0 +1,69 @@
+model: .\weights\qwen-3.8-27B.gguf
+vendors: 30
+unique invoices: 294
+raw transaction rows written (xlsx+pdf): 441
+receipts: 8
+duplicate transactions: 147
+gold total spend: 9921800
+consolidation seconds: 49.02
+questions: 42
+retrieval: k=15 over 479 raw chunks, 324 consolidated chunks, index 59.2s
+What is the total spend with PIONEER LOGISTI   gold 298100    ours 298100    rag 233800    ragc 288600   
+What is the total spend with Soylent Foods i   gold 308500    ours 308500    rag 248000    ragc 286200   
+What is the total spend with Globex Corporat   gold 348600    ours 348600    rag 1284000   ragc 258900   
+What city is Soylent Foods registered in?      gold Noida     ours noida     rag noida     ragc noida    
+What city is Pioneer Logistics registered in   gold Gurugram  ours gurugram  rag gurgaon   ragc gurugram 
+What is the total spend with Zenith Trading    gold 192500    ours 192500    rag 15800+15  ragc 179600   
+What is the total spend with GLOBEX CORPORAT   gold 348600    ours 348600    rag 15800+12  ragc 258900   
+What city is Pioneer Logistical registered i   gold Bengalur  ours bengalur  rag bangalor  ragc bengalur 
+What is the total spend with Nova Retailers    gold 417200    ours 417200    rag 388100    ragc 233400   
+What is the GSTIN of Pioneer Logistics?        gold 06AAJZP8  ours 06aajzp8  rag 06aajzp8  ragc 06aajzp8 
+How many transactions involve Nova Retailers   gold 12        ours 12        rag 8         ragc 10       
+What is the total spend with HOOLI SERVICES    gold 292300    ours 292300    rag 24800+15  ragc 24800+34 
+How many transactions involve Umbrella Trade   gold 12        ours 12        rag 14        ragc 13       
+What city is Nova Retailers registered in?     gold Thane     ours thane     rag thana     ragc thane    
+What is the GSTIN of Pioneer Logistical?       gold 27AAKZP1  ours 27aakzp1  rag 27aakzp1  ragc 27aakzp1 
+What is the total spend with UMBRELLA TRADER   gold 371000    ours 371000    rag 398800    ragc 331700   
+What is the GSTIN of Hooli Services?           gold 27AAGCH5  ours 27aagch5  rag 27aagch5  ragc 27aagch5 
+What is the total spend across all vendors i   gold 9921800   ours 9921800   rag 333800    ragc 333100   
+What is the GSTIN of Soylent Foods?            gold 09AAFCS1  ours 09aafcs1  rag 09aafcs1  ragc 09aafcs1 
+What is the GSTIN of Globex Corporation?       gold 29AAGCG1  ours 29aagcg1  rag 29aagcg1  ragc 29aagcg1 
+What city is Globex Corporation registered i   gold Bengalur  ours bengalur  rag bangalor  ragc bengalur 
+What is the total spend with ZENITH TRADING    gold 192500    ours 192500    rag 15800+15  ragc 189600   
+How many transactions involve Soylent Foods?   gold 12        ours 12        rag 14        ragc 14       
+What city is Zenith Trading Company register   gold Pune      ours pune      rag poona     ragc pune     
+What is the total spend with NOVA RETAILERS    gold 417200    ours 417200    rag 533100    ragc 233400   
+What is the total spend with PIONEER LOGISTI   gold 331200    ours 331200    rag 393600    ragc 185400   
+What city is Hooli Services registered in?     gold Thane     ours thane     rag thana     ragc thane    
+What is the GSTIN of Zenith Trading Company?   gold 29AACZL3  ours 29aaczl3  rag 29aaczl3  ragc 29aaczl3 
+What is the total spend with Hooli Services    gold 292300    ours 292300    rag 24800+15  ragc 24800+34 
+What is the GSTIN of Umbrella Traders?         gold 19AAFCU9  ours 19aafcu9  rag 19aafcu9  ragc 19aafcu9 
+What is the total spend with Pioneer Logisti   gold 331200    ours 331200    rag 331100    ragc 283400   
+What is the total spend with SOYLENT FOODS i   gold 308500    ours 308500    rag 248000    ragc 286200   
+How many transactions involve Hooli Services   gold 8         ours 8         rag 12        ragc 9        
+What city is Umbrella Traders registered in?   gold Kolkata   ours kolkata   rag calcutta  ragc kolkata  
+How many transactions involve Globex Corpora   gold 8         ours 8         rag 4         ragc 9        
+What is the total spend with Umbrella Trader   gold 371000    ours 371000    rag 398800    ragc 338700   
+How many transactions involve Zenith Trading   gold 9         ours 9         rag 6         ragc 6        
+How many transactions involve Pioneer Logist   gold 9         ours 9         rag 10        ragc 13       
+How many transactions involve Pioneer Logist   gold 10        ours 10        rag 12        ragc 10       
+What is the total spend with Pioneer Logisti   gold 298100    ours 298100    rag 198800    ragc 238600   
+What is the GSTIN of Nova Retailers?           gold 09AAIZN6  ours 09aaizn6  rag 09aaizn6  ragc 09aaizn6 
+How many distinct vendors appear in the data   gold 30        ours 30        rag 15        ragc 7        
+
+arm                                  accuracy total_tokens  mean_tokens    total_s
+ours_consolidated_engine             42/42           11901        283.4     143.42
+rag_over_raw_records                  9/42           41940        998.6     191.12
+rag_over_consolidated_table          17/42           30003        714.4     168.59
+
+accuracy by question type
+type                           ours    rag_raw  rag_canon
+city                            8/8        1/8        8/8
+count                           8/8        0/8        1/8
+global_count                    1/1        0/1        0/1
+global_sum                      1/1        0/1        0/1
+sum                             8/8        0/8        0/8
+sum_upper_variant               8/8        0/8        0/8
+tax                             8/8        8/8        8/8
+
+wrote research\results\benchmark_7.json

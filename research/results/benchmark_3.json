@@ -1,0 +1,1616 @@
+{
+  "model": ".\\weights\\qwen-3.8-27B.gguf",
+  "seed": 3,
+  "questions_file": "questions_bench.json",
+  "retrieval_k": 15,
+  "corpus_chunks": {
+    "raw": 485,
+    "consolidated": 328
+  },
+  "consolidation_seconds": 49.41,
+  "rag_index_seconds": 59.44,
+  "reconciliation": {
+    "raw_records": 485,
+    "source_counts": {
+      "csv": 30,
+      "xlsx": 149,
+      "pdf": 298,
+      "receipt": 8
+    },
+    "receipts_parsed": 8,
+    "vendor_clusters": 30,
+    "raw_transactions": 455,
+    "unique_transactions": 298,
+    "duplicates_removed": 157,
+    "conflicts_detected": 20,
+    "conflicts_resolved": 20,
+    "conflicts_for_review": 0,
+    "load_order_baseline_wrong": 7,
+    "total_spend_inr": 11340500,
+    "generated_from": "raw"
+  },
+  "arms": {
+    "ours_consolidated_engine": {
+      "questions": 42,
+      "correct": 42,
+      "accuracy": 1.0,
+      "prompt_tokens": 10905,
+      "completion_tokens": 946,
+      "total_tokens": 11851,
+      "mean_tokens_per_question": 282.2,
+      "total_seconds": 143.73,
+      "mean_seconds_per_question": 3.422,
+      "consolidation_seconds_amortized": 1.176,
+      "total_seconds_including_consolidation": 193.14
+    },
+    "rag_over_raw_records": {
+      "questions": 42,
+      "correct": 11,
+      "accuracy": 0.2619,
+      "prompt_tokens": 41110,
+      "completion_tokens": 540,
+      "total_tokens": 41650,
+      "mean_tokens_per_question": 991.7,
+      "total_seconds": 193.04,
+      "mean_seconds_per_question": 4.596,
+      "consolidation_seconds_amortized": 1.176,
+      "total_seconds_including_consolidation": 242.45
+    },
+    "rag_over_consolidated_table": {
+      "questions": 42,
+      "correct": 19,
+      "accuracy": 0.4524,
+      "prompt_tokens": 29822,
+      "completion_tokens": 368,
+      "total_tokens": 30190,
+      "mean_tokens_per_question": 718.8,
+      "total_seconds": 170.69,
+      "mean_seconds_per_question": 4.064,
+      "consolidation_seconds_amortized": 1.176,
+      "total_seconds_including_consolidation": 220.1
+    }
+  },
+  "by_type": {
+    "ours_consolidated_engine": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      }
+    },
+    "rag_over_raw_records": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 1,
+        "accuracy": 0.125
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 2,
+        "accuracy": 0.25
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "rag_over_consolidated_table": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 3,
+        "accuracy": 0.375
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "per_question": [
+    {
+      "question": "What is the total spend with PIONEER LOGISTICAL in INR?",
+      "gold": 497000,
+      "ours": {
+        "answer": 497000,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 265,
+        "completion_tokens": 26,
+        "total_tokens": 291,
+        "estimated": false,
+        "seconds": 3.538
+      },
+      "rag_raw": {
+        "answer": "50000+24800+50000+50000+34200+96000+96000+96000 = 497000",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1043,
+        "completion_tokens": 56,
+        "total_tokens": 1099,
+        "estimated": false,
+        "seconds": 5.982
+      },
+      "rag_canonical": {
+        "answer": "50000+34200+50000+96000+24800+50000+96000+96000+24800=475800",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 746,
+        "completion_tokens": 61,
+        "total_tokens": 807,
+        "estimated": false,
+        "seconds": 5.741
+      }
+    },
+    {
+      "question": "What city is Globex Corporation registered in?",
+      "gold": "Bengaluru",
+      "ours": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.3
+      },
+      "rag_raw": {
+        "answer": "bangalore",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 919,
+        "completion_tokens": 3,
+        "total_tokens": 922,
+        "estimated": false,
+        "seconds": 4.239
+      },
+      "rag_canonical": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 582,
+        "completion_tokens": 5,
+        "total_tokens": 587,
+        "estimated": false,
+        "seconds": 3.754
+      }
+    },
+    {
+      "question": "What is the total spend with INITECH SOLUTIONS in INR?",
+      "gold": 350500,
+      "ours": {
+        "answer": 350500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.448
+      },
+      "rag_raw": {
+        "answer": 384200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1011,
+        "completion_tokens": 7,
+        "total_tokens": 1018,
+        "estimated": false,
+        "seconds": 4.499
+      },
+      "rag_canonical": {
+        "answer": 129200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 740,
+        "completion_tokens": 7,
+        "total_tokens": 747,
+        "estimated": false,
+        "seconds": 4.018
+      }
+    },
+    {
+      "question": "What city is Pioneer Logistical registered in?",
+      "gold": "Bengaluru",
+      "ours": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.398
+      },
+      "rag_raw": {
+        "answer": "bangalore",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1036,
+        "completion_tokens": 3,
+        "total_tokens": 1039,
+        "estimated": false,
+        "seconds": 4.409
+      },
+      "rag_canonical": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 657,
+        "completion_tokens": 5,
+        "total_tokens": 662,
+        "estimated": false,
+        "seconds": 3.891
+      }
+    },
+    {
+      "question": "What city is Orion Systematics registered in?",
+      "gold": "Chennai",
+      "ours": {
+        "answer": "chennai",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.439
+      },
+      "rag_raw": {
+        "answer": "madras",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1020,
+        "completion_tokens": 3,
+        "total_tokens": 1023,
+        "estimated": false,
+        "seconds": 4.389
+      },
+      "rag_canonical": {
+        "answer": "chennai",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 675,
+        "completion_tokens": 3,
+        "total_tokens": 678,
+        "estimated": false,
+        "seconds": 3.758
+      }
+    },
+    {
+      "question": "What is the total spend with ORION SYSTEMATICS in INR?",
+      "gold": 375000,
+      "ours": {
+        "answer": 375000,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.555
+      },
+      "rag_raw": {
+        "answer": 339500,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1025,
+        "completion_tokens": 7,
+        "total_tokens": 1032,
+        "estimated": false,
+        "seconds": 4.599
+      },
+      "rag_canonical": {
+        "answer": 283400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 732,
+        "completion_tokens": 7,
+        "total_tokens": 739,
+        "estimated": false,
+        "seconds": 3.999
+      }
+    },
+    {
+      "question": "What city is Nova Retail registered in?",
+      "gold": "Noida",
+      "ours": {
+        "answer": "noida",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 20,
+        "total_tokens": 277,
+        "estimated": false,
+        "seconds": 3.324
+      },
+      "rag_raw": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 995,
+        "completion_tokens": 4,
+        "total_tokens": 999,
+        "estimated": false,
+        "seconds": 4.323
+      },
+      "rag_canonical": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 635,
+        "completion_tokens": 4,
+        "total_tokens": 639,
+        "estimated": false,
+        "seconds": 3.857
+      }
+    },
+    {
+      "question": "What is the GSTIN of Orion Systematics?",
+      "gold": "33AAEZO7788Q1Z5",
+      "ours": {
+        "answer": "33aaezo7788q1z5",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.379
+      },
+      "rag_raw": {
+        "answer": "33aaezo7788q1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1021,
+        "completion_tokens": 14,
+        "total_tokens": 1035,
+        "estimated": false,
+        "seconds": 4.716
+      },
+      "rag_canonical": {
+        "answer": "33aaezo7788q1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 713,
+        "completion_tokens": 14,
+        "total_tokens": 727,
+        "estimated": false,
+        "seconds": 4.327
+      }
+    },
+    {
+      "question": "How many distinct vendors appear in the data?",
+      "gold": 30,
+      "ours": {
+        "answer": 30,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 20,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.357
+      },
+      "rag_raw": {
+        "answer": 15,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 528,
+        "completion_tokens": 3,
+        "total_tokens": 531,
+        "estimated": false,
+        "seconds": 3.552
+      },
+      "rag_canonical": {
+        "answer": 4,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 724,
+        "completion_tokens": 2,
+        "total_tokens": 726,
+        "estimated": false,
+        "seconds": 3.928
+      }
+    },
+    {
+      "question": "What is the total spend with Globex Corporation in INR?",
+      "gold": 330200,
+      "ours": {
+        "answer": 330200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.524
+      },
+      "rag_raw": {
+        "answer": 288000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 982,
+        "completion_tokens": 7,
+        "total_tokens": 989,
+        "estimated": false,
+        "seconds": 4.457
+      },
+      "rag_canonical": {
+        "answer": 342000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 754,
+        "completion_tokens": 7,
+        "total_tokens": 761,
+        "estimated": false,
+        "seconds": 4.053
+      }
+    },
+    {
+      "question": "What city is Daily Planet Media registered in?",
+      "gold": "Gurugram",
+      "ours": {
+        "answer": "gurugram",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.4
+      },
+      "rag_raw": {
+        "answer": "gurgaon",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 896,
+        "completion_tokens": 4,
+        "total_tokens": 900,
+        "estimated": false,
+        "seconds": 4.276
+      },
+      "rag_canonical": {
+        "answer": "gurugram",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 678,
+        "completion_tokens": 5,
+        "total_tokens": 683,
+        "estimated": false,
+        "seconds": 4.012
+      }
+    },
+    {
+      "question": "What is the total spend with ORION SYSTEMS in INR?",
+      "gold": 208700,
+      "ours": {
+        "answer": 208700,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.535
+      },
+      "rag_raw": {
+        "answer": "15800+15800+7300+12500+7300+50000+50000+50000 = 198700",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1008,
+        "completion_tokens": 54,
+        "total_tokens": 1062,
+        "estimated": false,
+        "seconds": 5.838
+      },
+      "rag_canonical": {
+        "answer": 144200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 731,
+        "completion_tokens": 7,
+        "total_tokens": 738,
+        "estimated": false,
+        "seconds": 4.067
+      }
+    },
+    {
+      "question": "What is the GSTIN of Initech Solutions?",
+      "gold": "07AAECI5678Q1Z2",
+      "ours": {
+        "answer": "07aaeci5678q1z2",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.414
+      },
+      "rag_raw": {
+        "answer": "07aaeci5678q1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1028,
+        "completion_tokens": 14,
+        "total_tokens": 1042,
+        "estimated": false,
+        "seconds": 4.7
+      },
+      "rag_canonical": {
+        "answer": "07aaeci5678q1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 612,
+        "completion_tokens": 14,
+        "total_tokens": 626,
+        "estimated": false,
+        "seconds": 3.978
+      }
+    },
+    {
+      "question": "How many transactions involve Globex Corporation?",
+      "gold": 9,
+      "ours": {
+        "answer": 9,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.345
+      },
+      "rag_raw": {
+        "answer": 4,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 863,
+        "completion_tokens": 2,
+        "total_tokens": 865,
+        "estimated": false,
+        "seconds": 4.036
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 756,
+        "completion_tokens": 3,
+        "total_tokens": 759,
+        "estimated": false,
+        "seconds": 3.949
+      }
+    },
+    {
+      "question": "What is the GSTIN of Daily Planet Media?",
+      "gold": "06AAECD2345U1Z7",
+      "ours": {
+        "answer": "06aaecd2345u1z7",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.471
+      },
+      "rag_raw": {
+        "answer": "06aaecd2345u1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 927,
+        "completion_tokens": 13,
+        "total_tokens": 940,
+        "estimated": false,
+        "seconds": 4.506
+      },
+      "rag_canonical": {
+        "answer": "06aaecd2345u1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 700,
+        "completion_tokens": 13,
+        "total_tokens": 713,
+        "estimated": false,
+        "seconds": 4.205
+      }
+    },
+    {
+      "question": "What is the total spend with Pied Piper in INR?",
+      "gold": 465100,
+      "ours": {
+        "answer": 465100,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 23,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.353
+      },
+      "rag_raw": {
+        "answer": 373400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1003,
+        "completion_tokens": 7,
+        "total_tokens": 1010,
+        "estimated": false,
+        "seconds": 4.514
+      },
+      "rag_canonical": {
+        "answer": 373400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 762,
+        "completion_tokens": 7,
+        "total_tokens": 769,
+        "estimated": false,
+        "seconds": 4.207
+      }
+    },
+    {
+      "question": "What is the total spend with Daily Planet Media in INR?",
+      "gold": 624600,
+      "ours": {
+        "answer": 624600,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.415
+      },
+      "rag_raw": {
+        "answer": 1480000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 996,
+        "completion_tokens": 8,
+        "total_tokens": 1004,
+        "estimated": false,
+        "seconds": 4.63
+      },
+      "rag_canonical": {
+        "answer": 638000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 741,
+        "completion_tokens": 7,
+        "total_tokens": 748,
+        "estimated": false,
+        "seconds": 3.91
+      }
+    },
+    {
+      "question": "What city is Initech Solutions registered in?",
+      "gold": "New Delhi",
+      "ours": {
+        "answer": "new delhi",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.442
+      },
+      "rag_raw": {
+        "answer": "delhi",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 986,
+        "completion_tokens": 3,
+        "total_tokens": 989,
+        "estimated": false,
+        "seconds": 4.481
+      },
+      "rag_canonical": {
+        "answer": "new delhi",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 564,
+        "completion_tokens": 3,
+        "total_tokens": 567,
+        "estimated": false,
+        "seconds": 3.687
+      }
+    },
+    {
+      "question": "What is the GSTIN of Nova Retail?",
+      "gold": "24AAHZN4455T1Z4",
+      "ours": {
+        "answer": "24aahzn4455t1z4",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.306
+      },
+      "rag_raw": {
+        "answer": "24aahzn4455t1z4",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 960,
+        "completion_tokens": 14,
+        "total_tokens": 974,
+        "estimated": false,
+        "seconds": 4.502
+      },
+      "rag_canonical": {
+        "answer": "24aahzn4455t1z4",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 658,
+        "completion_tokens": 14,
+        "total_tokens": 672,
+        "estimated": false,
+        "seconds": 4.263
+      }
+    },
+    {
+      "question": "What is the total spend with Pioneer Logistical in INR?",
+      "gold": 497000,
+      "ours": {
+        "answer": 497000,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 24,
+        "total_tokens": 286,
+        "estimated": false,
+        "seconds": 3.49
+      },
+      "rag_raw": {
+        "answer": "50000\n24800\n50000\n50000\n34200\n96000\n96000\n96000\ntotal: 50000+24800+5",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1040,
+        "completion_tokens": 64,
+        "total_tokens": 1104,
+        "estimated": false,
+        "seconds": 6.23
+      },
+      "rag_canonical": {
+        "answer": 491100,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 743,
+        "completion_tokens": 7,
+        "total_tokens": 750,
+        "estimated": false,
+        "seconds": 4.106
+      }
+    },
+    {
+      "question": "What is the GSTIN of Globex Corporation?",
+      "gold": "29AAGCG1234P1Z5",
+      "ours": {
+        "answer": "29aagcg1234p1z5",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.388
+      },
+      "rag_raw": {
+        "answer": "29aagcg1234p1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 930,
+        "completion_tokens": 14,
+        "total_tokens": 944,
+        "estimated": false,
+        "seconds": 4.588
+      },
+      "rag_canonical": {
+        "answer": "29aagcg1234p1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 596,
+        "completion_tokens": 14,
+        "total_tokens": 610,
+        "estimated": false,
+        "seconds": 3.983
+      }
+    },
+    {
+      "question": "What city is Pied Piper registered in?",
+      "gold": "Bengaluru",
+      "ours": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 21,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.398
+      },
+      "rag_raw": {
+        "answer": "bangalore",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 872,
+        "completion_tokens": 3,
+        "total_tokens": 875,
+        "estimated": false,
+        "seconds": 4.02
+      },
+      "rag_canonical": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 619,
+        "completion_tokens": 5,
+        "total_tokens": 624,
+        "estimated": false,
+        "seconds": 3.764
+      }
+    },
+    {
+      "question": "How many transactions involve Nova Retail?",
+      "gold": 10,
+      "ours": {
+        "answer": 10,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 21,
+        "total_tokens": 277,
+        "estimated": false,
+        "seconds": 3.381
+      },
+      "rag_raw": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1026,
+        "completion_tokens": 3,
+        "total_tokens": 1029,
+        "estimated": false,
+        "seconds": 4.387
+      },
+      "rag_canonical": {
+        "answer": 8,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 728,
+        "completion_tokens": 2,
+        "total_tokens": 730,
+        "estimated": false,
+        "seconds": 3.956
+      }
+    },
+    {
+      "question": "What is the total spend with NOVA RETAIL in INR?",
+      "gold": 301200,
+      "ours": {
+        "answer": 301200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.428
+      },
+      "rag_raw": {
+        "answer": "15800+15800+24800+15800+96000=168200",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1035,
+        "completion_tokens": 37,
+        "total_tokens": 1072,
+        "estimated": false,
+        "seconds": 5.419
+      },
+      "rag_canonical": {
+        "answer": 34200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 722,
+        "completion_tokens": 6,
+        "total_tokens": 728,
+        "estimated": false,
+        "seconds": 4.033
+      }
+    },
+    {
+      "question": "What city is Orion Systems registered in?",
+      "gold": "New Delhi",
+      "ours": {
+        "answer": "new delhi",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 21,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.391
+      },
+      "rag_raw": {
+        "answer": "delhi",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 968,
+        "completion_tokens": 3,
+        "total_tokens": 971,
+        "estimated": false,
+        "seconds": 4.418
+      },
+      "rag_canonical": {
+        "answer": "new delhi",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 655,
+        "completion_tokens": 3,
+        "total_tokens": 658,
+        "estimated": false,
+        "seconds": 3.933
+      }
+    },
+    {
+      "question": "How many transactions involve Initech Solutions?",
+      "gold": 9,
+      "ours": {
+        "answer": 9,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.447
+      },
+      "rag_raw": {
+        "answer": 8,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 957,
+        "completion_tokens": 2,
+        "total_tokens": 959,
+        "estimated": false,
+        "seconds": 4.294
+      },
+      "rag_canonical": {
+        "answer": 9,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 753,
+        "completion_tokens": 2,
+        "total_tokens": 755,
+        "estimated": false,
+        "seconds": 3.962
+      }
+    },
+    {
+      "question": "What is the total spend with Nova Retail in INR?",
+      "gold": 301200,
+      "ours": {
+        "answer": 301200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 22,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.431
+      },
+      "rag_raw": {
+        "answer": "15800+15800+24800+15800+96000=168200",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1033,
+        "completion_tokens": 37,
+        "total_tokens": 1070,
+        "estimated": false,
+        "seconds": 3.942
+      },
+      "rag_canonical": {
+        "answer": 34200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 720,
+        "completion_tokens": 6,
+        "total_tokens": 726,
+        "estimated": false,
+        "seconds": 2.928
+      }
+    },
+    {
+      "question": "How many transactions involve Orion Systematics?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 23,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.508
+      },
+      "rag_raw": {
+        "answer": 12,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1019,
+        "completion_tokens": 3,
+        "total_tokens": 1022,
+        "estimated": false,
+        "seconds": 4.601
+      },
+      "rag_canonical": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 738,
+        "completion_tokens": 3,
+        "total_tokens": 741,
+        "estimated": false,
+        "seconds": 3.977
+      }
+    },
+    {
+      "question": "What is the GSTIN of Pied Piper?",
+      "gold": "29AAHCP1122Y1Z1",
+      "ours": {
+        "answer": "29aahcp1122y1z1",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.444
+      },
+      "rag_raw": {
+        "answer": "29aahcp1122y1z1",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 985,
+        "completion_tokens": 14,
+        "total_tokens": 999,
+        "estimated": false,
+        "seconds": 4.784
+      },
+      "rag_canonical": {
+        "answer": "29aahcp1122y1z1",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 737,
+        "completion_tokens": 14,
+        "total_tokens": 751,
+        "estimated": false,
+        "seconds": 4.325
+      }
+    },
+    {
+      "question": "What is the total spend with Initech Solutions in INR?",
+      "gold": 350500,
+      "ours": {
+        "answer": 350500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.405
+      },
+      "rag_raw": {
+        "answer": 354200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1009,
+        "completion_tokens": 7,
+        "total_tokens": 1016,
+        "estimated": false,
+        "seconds": 4.458
+      },
+      "rag_canonical": {
+        "answer": 103200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 738,
+        "completion_tokens": 7,
+        "total_tokens": 745,
+        "estimated": false,
+        "seconds": 4.049
+      }
+    },
+    {
+      "question": "How many transactions involve Daily Planet Media?",
+      "gold": 11,
+      "ours": {
+        "answer": 11,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.437
+      },
+      "rag_raw": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 964,
+        "completion_tokens": 3,
+        "total_tokens": 967,
+        "estimated": false,
+        "seconds": 4.371
+      },
+      "rag_canonical": {
+        "answer": 11,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 735,
+        "completion_tokens": 3,
+        "total_tokens": 738,
+        "estimated": false,
+        "seconds": 4.029
+      }
+    },
+    {
+      "question": "What is the total spend with Orion Systems in INR?",
+      "gold": 208700,
+      "ours": {
+        "answer": 208700,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 23,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.411
+      },
+      "rag_raw": {
+        "answer": "15800+15800+7300+12500+7300+50000+50000+50000 = 208700",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1006,
+        "completion_tokens": 54,
+        "total_tokens": 1060,
+        "estimated": false,
+        "seconds": 5.881
+      },
+      "rag_canonical": {
+        "answer": "15800+15800+50000+50000+7300=138900",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 729,
+        "completion_tokens": 36,
+        "total_tokens": 765,
+        "estimated": false,
+        "seconds": 4.876
+      }
+    },
+    {
+      "question": "What is the total spend across all vendors in INR?",
+      "gold": 11340500,
+      "ours": {
+        "answer": 11340500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 20,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.29
+      },
+      "rag_raw": {
+        "answer": 783900,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1028,
+        "completion_tokens": 7,
+        "total_tokens": 1035,
+        "estimated": false,
+        "seconds": 4.685
+      },
+      "rag_canonical": {
+        "answer": 333700,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 752,
+        "completion_tokens": 7,
+        "total_tokens": 759,
+        "estimated": false,
+        "seconds": 4.268
+      }
+    },
+    {
+      "question": "What is the GSTIN of Pioneer Logistical?",
+      "gold": "27AAKZP1122W1Z6",
+      "ours": {
+        "answer": "27aakzp1122w1z6",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.485
+      },
+      "rag_raw": {
+        "answer": "27aakzp1122w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1037,
+        "completion_tokens": 15,
+        "total_tokens": 1052,
+        "estimated": false,
+        "seconds": 4.738
+      },
+      "rag_canonical": {
+        "answer": "27aakzp1122w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 740,
+        "completion_tokens": 15,
+        "total_tokens": 755,
+        "estimated": false,
+        "seconds": 4.34
+      }
+    },
+    {
+      "question": "What is the total spend with PIED PIPER in INR?",
+      "gold": 465100,
+      "ours": {
+        "answer": 465100,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.394
+      },
+      "rag_raw": {
+        "answer": 458400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1006,
+        "completion_tokens": 7,
+        "total_tokens": 1013,
+        "estimated": false,
+        "seconds": 4.458
+      },
+      "rag_canonical": {
+        "answer": 373400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 765,
+        "completion_tokens": 7,
+        "total_tokens": 772,
+        "estimated": false,
+        "seconds": 4.169
+      }
+    },
+    {
+      "question": "How many transactions involve Pioneer Logistical?",
+      "gold": 8,
+      "ours": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 23,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.474
+      },
+      "rag_raw": {
+        "answer": 9,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1035,
+        "completion_tokens": 2,
+        "total_tokens": 1037,
+        "estimated": false,
+        "seconds": 4.403
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 738,
+        "completion_tokens": 3,
+        "total_tokens": 741,
+        "estimated": false,
+        "seconds": 3.931
+      }
+    },
+    {
+      "question": "What is the total spend with GLOBEX CORPORATION in INR?",
+      "gold": 330200,
+      "ours": {
+        "answer": 330200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.404
+      },
+      "rag_raw": {
+        "answer": 15800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 983,
+        "completion_tokens": 6,
+        "total_tokens": 989,
+        "estimated": false,
+        "seconds": 4.497
+      },
+      "rag_canonical": {
+        "answer": 342000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 755,
+        "completion_tokens": 7,
+        "total_tokens": 762,
+        "estimated": false,
+        "seconds": 4.093
+      }
+    },
+    {
+      "question": "What is the total spend with Orion Systematics in INR?",
+      "gold": 375000,
+      "ours": {
+        "answer": 375000,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 24,
+        "total_tokens": 286,
+        "estimated": false,
+        "seconds": 3.475
+      },
+      "rag_raw": {
+        "answer": 339500,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1023,
+        "completion_tokens": 7,
+        "total_tokens": 1030,
+        "estimated": false,
+        "seconds": 4.491
+      },
+      "rag_canonical": {
+        "answer": 283800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 730,
+        "completion_tokens": 7,
+        "total_tokens": 737,
+        "estimated": false,
+        "seconds": 4.122
+      }
+    },
+    {
+      "question": "What is the total spend with DAILY PLANET MEDIA in INR?",
+      "gold": 624600,
+      "ours": {
+        "answer": 624600,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.464
+      },
+      "rag_raw": {
+        "answer": 1480000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 998,
+        "completion_tokens": 8,
+        "total_tokens": 1006,
+        "estimated": false,
+        "seconds": 4.477
+      },
+      "rag_canonical": {
+        "answer": 580000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 743,
+        "completion_tokens": 7,
+        "total_tokens": 750,
+        "estimated": false,
+        "seconds": 4.045
+      }
+    },
+    {
+      "question": "What is the GSTIN of Orion Systems?",
+      "gold": "07AADZO5566P1Z2",
+      "ours": {
+        "answer": "07aadzo5566p1z2",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.374
+      },
+      "rag_raw": {
+        "answer": "07aadzo5566p1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1007,
+        "completion_tokens": 13,
+        "total_tokens": 1020,
+        "estimated": false,
+        "seconds": 4.71
+      },
+      "rag_canonical": {
+        "answer": "07aadzo5566p1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 728,
+        "completion_tokens": 13,
+        "total_tokens": 741,
+        "estimated": false,
+        "seconds": 4.178
+      }
+    },
+    {
+      "question": "How many transactions involve Pied Piper?",
+      "gold": 10,
+      "ours": {
+        "answer": 10,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 22,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.445
+      },
+      "rag_raw": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 935,
+        "completion_tokens": 3,
+        "total_tokens": 938,
+        "estimated": false,
+        "seconds": 4.24
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 759,
+        "completion_tokens": 3,
+        "total_tokens": 762,
+        "estimated": false,
+        "seconds": 4.018
+      }
+    },
+    {
+      "question": "How many transactions involve Orion Systems?",
+      "gold": 8,
+      "ours": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 22,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.426
+      },
+      "rag_raw": {
+        "answer": 8,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 967,
+        "completion_tokens": 2,
+        "total_tokens": 969,
+        "estimated": false,
+        "seconds": 4.305
+      },
+      "rag_canonical": {
+        "answer": 14,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 739,
+        "completion_tokens": 3,
+        "total_tokens": 742,
+        "estimated": false,
+        "seconds": 4.008
+      }
+    }
+  ]
+}

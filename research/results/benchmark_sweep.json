@@ -1,0 +1,168 @@
+{
+  "runs": 4,
+  "seeds": [
+    1,
+    2,
+    3,
+    7
+  ],
+  "questions_per_run": 42,
+  "model": ".\\weights\\qwen-3.8-27B.gguf",
+  "arms": {
+    "ours_consolidated_engine": {
+      "accuracy_mean": 1.0,
+      "accuracy_stdev": 0.0,
+      "accuracy_min": 1.0,
+      "accuracy_max": 1.0,
+      "tokens_mean": 11869.2,
+      "seconds_mean": 143.44,
+      "per_seed_accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "rag_over_raw_records": {
+      "accuracy_mean": 0.244,
+      "accuracy_stdev": 0.0309,
+      "accuracy_min": 0.2143,
+      "accuracy_max": 0.2857,
+      "tokens_mean": 41827.5,
+      "seconds_mean": 193.68,
+      "per_seed_accuracy": [
+        0.2857,
+        0.2143,
+        0.2619,
+        0.2143
+      ]
+    },
+    "rag_over_consolidated_table": {
+      "accuracy_mean": 0.4345,
+      "accuracy_stdev": 0.0197,
+      "accuracy_min": 0.4048,
+      "accuracy_max": 0.4524,
+      "tokens_mean": 29794.8,
+      "seconds_mean": 168.76,
+      "per_seed_accuracy": [
+        0.4524,
+        0.4286,
+        0.4524,
+        0.4048
+      ]
+    }
+  },
+  "by_type": {
+    "ours_consolidated_engine": {
+      "sum": {
+        "correct": 32,
+        "questions": 32,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "correct": 32,
+        "questions": 32,
+        "accuracy": 1.0
+      },
+      "sum_upper_variant": {
+        "correct": 32,
+        "questions": 32,
+        "accuracy": 1.0
+      },
+      "city": {
+        "correct": 32,
+        "questions": 32,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "correct": 4,
+        "questions": 4,
+        "accuracy": 1.0
+      },
+      "count": {
+        "correct": 32,
+        "questions": 32,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "correct": 4,
+        "questions": 4,
+        "accuracy": 1.0
+      }
+    },
+    "rag_over_raw_records": {
+      "sum": {
+        "correct": 0,
+        "questions": 32,
+        "accuracy": 0.0
+      },
+      "tax": {
+        "correct": 32,
+        "questions": 32,
+        "accuracy": 1.0
+      },
+      "sum_upper_variant": {
+        "correct": 0,
+        "questions": 32,
+        "accuracy": 0.0
+      },
+      "city": {
+        "correct": 4,
+        "questions": 32,
+        "accuracy": 0.125
+      },
+      "global_count": {
+        "correct": 0,
+        "questions": 4,
+        "accuracy": 0.0
+      },
+      "count": {
+        "correct": 5,
+        "questions": 32,
+        "accuracy": 0.1562
+      },
+      "global_sum": {
+        "correct": 0,
+        "questions": 4,
+        "accuracy": 0.0
+      }
+    },
+    "rag_over_consolidated_table": {
+      "sum": {
+        "correct": 0,
+        "questions": 32,
+        "accuracy": 0.0
+      },
+      "tax": {
+        "correct": 31,
+        "questions": 32,
+        "accuracy": 0.9688
+      },
+      "sum_upper_variant": {
+        "correct": 0,
+        "questions": 32,
+        "accuracy": 0.0
+      },
+      "city": {
+        "correct": 31,
+        "questions": 32,
+        "accuracy": 0.9688
+      },
+      "global_count": {
+        "correct": 0,
+        "questions": 4,
+        "accuracy": 0.0
+      },
+      "count": {
+        "correct": 11,
+        "questions": 32,
+        "accuracy": 0.3438
+      },
+      "global_sum": {
+        "correct": 0,
+        "questions": 4,
+        "accuracy": 0.0
+      }
+    }
+  }
+}

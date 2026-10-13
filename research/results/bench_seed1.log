@@ -1,0 +1,69 @@
+model: .\weights\qwen-3.8-27B.gguf
+vendors: 30
+unique invoices: 294
+raw transaction rows written (xlsx+pdf): 441
+receipts: 8
+duplicate transactions: 147
+gold total spend: 10440700
+consolidation seconds: 49.59
+questions: 42
+retrieval: k=15 over 479 raw chunks, 324 consolidated chunks, index 59.2s
+What is the total spend with Soylent Foods i   gold 239600    ours 239600    rag 15800+15  ragc 198100   
+What is the GSTIN of Tyrell Corp?              gold 27AAPCT3  ours 27aapct3  rag 27aapct3  ragc 27aapct3 
+What is the total spend with INITECH SOLUTIO   gold 418200    ours 418200    rag 1000000   ragc 221900   
+What city is Orion Systematics registered in   gold Chennai   ours chennai   rag madras    ragc chennai  
+What is the GSTIN of Vandelay Industries?      gold 33AAKCV7  ours 33aakcv7  rag 33aakcv7  ragc 33aakcv7 
+What is the GSTIN of Oscorp?                   gold 36AANCO5  ours 36aanco5  rag 36aanco5  ragc 36aanco5 
+How many distinct vendors appear in the data   gold 30        ours 30        rag 15        ragc 7        
+What city is Soylent Foods registered in?      gold Noida     ours noida     rag noida     ragc noida    
+What is the total spend with Orion Systemati   gold 257100    ours 257100    rag 15800+12  ragc 199700   
+How many transactions involve Aperture Labs?   gold 12        ours 12        rag 12        ragc 12       
+What is the total spend with VANDELAY INDUST   gold 294800    ours 294800    rag 239300    ragc 273800   
+How many transactions involve Umbrella Trade   gold 11        ours 11        rag 13        ragc 12       
+What is the total spend with Tyrell Corp in    gold 400300    ours 400300    rag 34200+34  ragc 34200+12 
+How many transactions involve Vandelay Indus   gold 8         ours 8         rag 8         ragc 8        
+What is the total spend across all vendors i   gold 10440700  ours 10440700  rag 338900    ragc 15800+15 
+What is the total spend with Aperture Labs i   gold 351900    ours 351900    rag 288800    ragc 333400   
+What is the GSTIN of Aperture Labs?            gold 07AAICA3  ours 07aaica3  rag 07aaica3  ragc 07aaica3 
+What city is Initech Solutions registered in   gold New Delh  ours new delh  rag delhi     ragc new delh 
+What city is Tyrell Corp registered in?        gold Thane     ours thane     rag thana     ragc thane    
+What is the GSTIN of Umbrella Traders?         gold 19AAFCU9  ours 19aafcu9  rag 19aafcu9  ragc 19aafcu9 
+What is the total spend with UMBRELLA TRADER   gold 352100    ours 352100    rag 73000+15  ragc 342000   
+What is the total spend with TYRELL CORP in    gold 400300    ours 400300    rag 34200+34  ragc 34200+12 
+What is the total spend with Initech Solutio   gold 418200    ours 418200    rag 1000000   ragc 221000   
+How many transactions involve Tyrell Corp?     gold 9         ours 9         rag 15        ragc 10       
+What is the GSTIN of Initech Solutions?        gold 07AAECI5  ours 07aaeci5  rag 07aaeci5  ragc 07aaeci5 
+How many transactions involve Soylent Foods?   gold 11        ours 11        rag 13        ragc 12       
+What city is Oscorp registered in?             gold Hyderaba  ours hyderaba  rag secunder  ragc hyderaba 
+What is the total spend with APERTURE LABS i   gold 351900    ours 351900    rag 288800    ragc 333400   
+How many transactions involve Oscorp?          gold 12        ours 12        rag 16        ragc 13       
+What is the total spend with OSCORP in INR?    gold 447800    ours 447800    rag 388800    ragc 482800   
+What is the total spend with ORION SYSTEMATI   gold 257100    ours 257100    rag 15800+12  ragc 198700   
+What city is Umbrella Traders registered in?   gold Kolkata   ours kolkata   rag calcutta  ragc kolkata  
+What is the GSTIN of Orion Systematics?        gold 33AAEZO7  ours 33aaezo7  rag 33aaezo7  ragc 33aaezo7 
+How many transactions involve Orion Systemat   gold 10        ours 10        rag 10        ragc 10       
+What is the total spend with Vandelay Indust   gold 294800    ours 294800    rag 239300    ragc 273800   
+What is the total spend with Oscorp in INR?    gold 447800    ours 447800    rag 388800    ragc 399800   
+What city is Aperture Labs registered in?      gold New Delh  ours new delh  rag delhi     ragc new delh 
+How many transactions involve Initech Soluti   gold 11        ours 11        rag 8         ragc 12       
+What is the total spend with Umbrella Trader   gold 352100    ours 352100    rag 73000+15  ragc 342000   
+What is the total spend with SOYLENT FOODS i   gold 239600    ours 239600    rag 15800+15  ragc 198100   
+What city is Vandelay Industries registered    gold Pune      ours pune      rag poona     ragc pune     
+What is the GSTIN of Soylent Foods?            gold 09AAFCS1  ours 09aafcs1  rag 09aafcs1  ragc 09aafcs1 
+
+arm                                  accuracy total_tokens  mean_tokens    total_s
+ours_consolidated_engine             42/42           11886        283.0     143.43
+rag_over_raw_records                 12/42           42162       1003.9     198.98
+rag_over_consolidated_table          19/42           29670        706.4     170.75
+
+accuracy by question type
+type                           ours    rag_raw  rag_canon
+city                            8/8        1/8        8/8
+count                           8/8        3/8        3/8
+global_count                    1/1        0/1        0/1
+global_sum                      1/1        0/1        0/1
+sum                             8/8        0/8        0/8
+sum_upper_variant               8/8        0/8        0/8
+tax                             8/8        8/8        8/8
+
+wrote research\results\benchmark_1.json

@@ -1,0 +1,837 @@
+{
+  "weights": "training/needle/tuned_v7.cact",
+  "data": "training\\needle\\planner_holdout.jsonl",
+  "cases": 180,
+  "model_only": {
+    "label": "model only",
+    "examples": 180,
+    "correct": 145,
+    "accuracy": 0.8056,
+    "by_category": {
+      "count_vendors": {
+        "correct": 9,
+        "total": 11,
+        "accuracy": 0.8182
+      },
+      "global_sum": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "missing_arg": {
+        "correct": 0,
+        "total": 4,
+        "accuracy": 0.0
+      },
+      "negation": {
+        "correct": 4,
+        "total": 14,
+        "accuracy": 0.2857
+      },
+      "off_topic": {
+        "correct": 12,
+        "total": 13,
+        "accuracy": 0.9231
+      },
+      "positive": {
+        "correct": 119,
+        "total": 137,
+        "accuracy": 0.8686
+      }
+    },
+    "failures": [
+      {
+        "query": "Give me the total amount paid to Pioneer Logistical overall",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C030"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Aaj ka IPL score kya hai?",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of GLOBEX CORPORATION",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C002"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Which city is Nova Retail registered in?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C027"
+        ],
+        "got": [
+          "lookup",
+          "city",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "VANDELAY INDUSTRIES ka city kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C014"
+        ],
+        "got": [
+          "lookup",
+          "city",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ka official name kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C023"
+        ],
+        "got": [
+          "lookup",
+          "name",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers exist karte hain data me?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ka GSTIN number kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C008"
+        ],
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Which city is Vertex Analytics registered in?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C025"
+        ],
+        "got": [
+          "lookup",
+          "city",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "VANDELAY INDUSTRIES ki gstin mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ka city kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C008"
+        ],
+        "got": [
+          "lookup",
+          "city",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ka city kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C023"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers humare data me hain?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What GSTIN is registered for CYBERDYNE SYSTEMS?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C008"
+        ],
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the GSTIN tax id?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of VERTEX ANALYSIS",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C026"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Tyrell Corp",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C019"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Stark Industries",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C006"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with ORION SYSTEMS.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C008"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total amount spent with Massive Dynamic this year?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C018"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C018"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the GSTIN?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ka total spend kitna hai?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka GSTIN mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C028"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the GSTIN for the supplier?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ke kitne transactions hain?",
+        "category": "positive",
+        "want": [
+          "count",
+          "invoice_id",
+          "C023"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "How much did we spend with Zenith Traders in total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C021"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C021"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with Acme Ltd",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          "C001"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Don't give me the GSTIN of ORION SYSTEMS.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Batao VERTEX ANALYSIS kis sheher me registered hai",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C026"
+        ],
+        "got": [
+          "lookup",
+          "city",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Hooli Services.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C010"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the GSTIN of VANDELAY INDUSTRIES?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C014"
+        ],
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total spend for that vendor?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "OSCORP pe kitna paisa kharch hua hai total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C017"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C017"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "VANDELAY INDUSTRIES ke kitne invoice generate hue?",
+        "category": "positive",
+        "want": [
+          "count",
+          "invoice_id",
+          "C014"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  "integrated": {
+    "label": "integrated planner chain",
+    "examples": 180,
+    "correct": 155,
+    "accuracy": 0.8611,
+    "by_category": {
+      "count_vendors": {
+        "correct": 9,
+        "total": 11,
+        "accuracy": 0.8182
+      },
+      "global_sum": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "missing_arg": {
+        "correct": 1,
+        "total": 4,
+        "accuracy": 0.25
+      },
+      "negation": {
+        "correct": 0,
+        "total": 14,
+        "accuracy": 0.0
+      },
+      "off_topic": {
+        "correct": 12,
+        "total": 13,
+        "accuracy": 0.9231
+      },
+      "positive": {
+        "correct": 132,
+        "total": 137,
+        "accuracy": 0.9635
+      }
+    },
+    "failures": [
+      {
+        "query": "Aaj ka IPL score kya hai?",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of GLOBEX CORPORATION",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C002"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers exist karte hain data me?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "VANDELAY INDUSTRIES ki gstin mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C014"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers humare data me hain?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the GSTIN tax id?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Orion Systematics.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C024"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of VERTEX ANALYSIS",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C026"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Tyrell Corp",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C019"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Stark Industries",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C006"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with ORION SYSTEMS.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C008"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C008"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total amount spent with Massive Dynamic this year?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C018"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C018"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the GSTIN?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Nova Retailers",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C028"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka GSTIN mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C028"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ke kitne transactions hain?",
+        "category": "positive",
+        "want": [
+          "count",
+          "invoice_id",
+          "C023"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "How much did we spend with Zenith Traders in total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C021"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C021"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with Acme Ltd",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          "C001"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Don't give me the GSTIN of ORION SYSTEMS.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Hooli Services.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C010"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with Nova Retail",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          "C027"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "I am not asking for the city of Pioneer Logistical",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "city",
+          "C030"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total spend for that vendor?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "OSCORP pe kitna paisa kharch hua hai total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C017"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C017"
+        ],
+        "correct": 0
+      }
+    ]
+  }
+}

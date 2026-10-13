@@ -1,0 +1,69 @@
+model: .\weights\qwen-3.8-27B.gguf
+vendors: 30
+unique invoices: 296
+raw transaction rows written (xlsx+pdf): 444
+receipts: 8
+duplicate transactions: 148
+gold total spend: 10449900
+consolidation seconds: 47.63
+questions: 42
+retrieval: k=15 over 482 raw chunks, 326 consolidated chunks, index 58.2s
+What is the total spend with VANDELAY INDUST   gold 384800    ours 384800    rag 34200+50  ragc 386000   
+What city is Wayne Enterprises registered in   gold Pune      ours pune      rag poona     ragc pune     
+What is the GSTIN of Hooli Services?           gold 27AAGCH5  ours 27aagch5  rag 27aagch5  ragc 27aagch5 
+What is the GSTIN of Nova Retail?              gold 24AAHZN4  ours 24aahzn4  rag 24aahzn4  ragc 24aahzn4 
+What is the total spend across all vendors i   gold 10449900  ours 10449900  rag 458900    ragc 398500   
+What is the total spend with Vandelay Indust   gold 384800    ours 384800    rag 34200+50  ragc 386000   
+What is the total spend with Hooli Services    gold 330500    ours 330500    rag 298900    ragc 228700   
+What is the total spend with PIED PIPER in I   gold 269800    ours 269800    rag 12500+34  ragc 279400   
+What city is Hooli Services registered in?     gold Thane     ours thane     rag thana     ragc thane    
+What is the total spend with WONKA INDUSTRIE   gold 327800    ours 327800    rag 34200+73  ragc 232300   
+How many transactions involve Nova Retail?     gold 10        ours 10        rag 11        ragc 10       
+What is the total spend with NOVA RETAIL in    gold 403300    ours 403300    rag 34200     ragc 12500    
+What is the GSTIN of Pied Piper?               gold 29AAHCP1  ours 29aahcp1  rag 29aahcp1  ragc 29aahcp1 
+How many transactions involve Daily Planet M   gold 12        ours 12        rag 5         ragc 12       
+What is the total spend with Pied Piper in I   gold 269800    ours 269800    rag 12500+34  ragc 224400   
+What is the total spend with DAILY PLANET ME   gold 445500    ours 445500    rag 1448800   ragc 388400   
+How many transactions involve Pied Piper?      gold 8         ours 8         rag 10        ragc 8        
+What is the GSTIN of Vertex Analysis?          gold 36AAGZV2  ours 36aagzv2  rag 36aagzv2  ragc 19aafzv9 
+What is the GSTIN of Wayne Enterprises?        gold 33AABCW3  ours 33aabcw3  rag 33aabcw3  ragc 33aabcw3 
+How many transactions involve Wonka Industri   gold 11        ours 11        rag 13        ragc 12       
+What is the total spend with Nova Retail in    gold 403300    ours 403300    rag 34200     ragc 300000   
+How many distinct vendors appear in the data   gold 30        ours 30        rag 15        ragc 7        
+What is the total spend with Daily Planet Me   gold 445500    ours 445500    rag 1448800   ragc 342000   
+What city is Daily Planet Media registered i   gold Gurugram  ours gurugram  rag gurgaon   ragc gurugram 
+What is the total spend with WAYNE ENTERPRIS   gold 315800    ours 315800    rag 1000000   ragc 330000   
+How many transactions involve Vertex Analysi   gold 9         ours 9         rag 10        ragc 15       
+What city is Nova Retail registered in?        gold Noida     ours noida     rag noida     ragc noida    
+What is the GSTIN of Daily Planet Media?       gold 06AAECD2  ours 06aaecd2  rag 06aaecd2  ragc 06aaecd2 
+How many transactions involve Wayne Enterpri   gold 12        ours 12        rag 14        ragc 13       
+What city is Pied Piper registered in?         gold Bengalur  ours bengalur  rag bangalor  ragc bengalur 
+How many transactions involve Hooli Services   gold 11        ours 11        rag 13        ragc 12       
+What city is Wonka Industries registered in?   gold Kolkata   ours kolkata   rag calcutta  ragc kolkata  
+What is the total spend with VERTEX ANALYSIS   gold 220300    ours 220300    rag 248600    ragc 146600   
+What city is Vertex Analysis registered in?    gold Hyderaba  ours hyderaba  rag secunder  ragc kolkata  
+What city is Vandelay Industries registered    gold Pune      ours pune      rag poona     ragc pune     
+How many transactions involve Vandelay Indus   gold 8         ours 8         rag 10        ragc 8        
+What is the total spend with Vertex Analysis   gold 220300    ours 220300    rag 248600    ragc 348400   
+What is the GSTIN of Wonka Industries?         gold 19AAJCW5  ours 19aajcw5  rag 19aajcw5  ragc 19aajcw5 
+What is the total spend with Wonka Industrie   gold 327800    ours 327800    rag 34200+73  ragc 232300   
+What is the total spend with HOOLI SERVICES    gold 330500    ours 330500    rag 233900    ragc 228700   
+What is the GSTIN of Vandelay Industries?      gold 33AAKCV7  ours 33aakcv7  rag 33aakcv7  ragc 33aakcv7 
+What is the total spend with Wayne Enterpris   gold 315800    ours 315800    rag 1000000   ragc 330000   
+
+arm                                  accuracy total_tokens  mean_tokens    total_s
+ours_consolidated_engine             42/42           11839        281.9      143.2
+rag_over_raw_records                  9/42           41558        989.5     191.57
+rag_over_consolidated_table          18/42           29316        698.0      165.0
+
+accuracy by question type
+type                           ours    rag_raw  rag_canon
+city                            8/8        1/8        7/8
+count                           8/8        0/8        4/8
+global_count                    1/1        0/1        0/1
+global_sum                      1/1        0/1        0/1
+sum                             8/8        0/8        0/8
+sum_upper_variant               8/8        0/8        0/8
+tax                             8/8        8/8        7/8
+
+wrote research\results\benchmark_2.json

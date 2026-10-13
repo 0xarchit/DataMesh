@@ -1,0 +1,507 @@
+{
+  "weights": "training/needle/tuned_v10.cact",
+  "data": "training\\needle\\planner_holdout.jsonl",
+  "cases": 180,
+  "model_only": {
+    "label": "model only",
+    "examples": 180,
+    "correct": 163,
+    "accuracy": 0.9056,
+    "by_category": {
+      "count_vendors": {
+        "correct": 8,
+        "total": 11,
+        "accuracy": 0.7273
+      },
+      "global_sum": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "missing_arg": {
+        "correct": 3,
+        "total": 4,
+        "accuracy": 0.75
+      },
+      "negation": {
+        "correct": 11,
+        "total": 14,
+        "accuracy": 0.7857
+      },
+      "off_topic": {
+        "correct": 11,
+        "total": 13,
+        "accuracy": 0.8462
+      },
+      "positive": {
+        "correct": 129,
+        "total": 137,
+        "accuracy": 0.9416
+      }
+    },
+    "failures": [
+      {
+        "query": "Aaj ka IPL score kya hai?",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers hain is data me?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "VANDELAY INDUSTRIES ki gstin mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C014"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers humare data me hain?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers hain dataset me?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Give me the GSTIN tax id for INGEN",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C020"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka official name kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C028"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "OSCORP ka full registered name kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C017"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Give me the tax id for Nova Retail",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C027"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "How much money went to ORION SYSTEMS in total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with ORION SYSTEMS.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C008"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C008"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Kitni transactions Orion Systematics ke saath hui hain?",
+        "category": "positive",
+        "want": [
+          "count",
+          "invoice_id",
+          "C024"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with Nova Retail",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total spend for that vendor?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "OSCORP pe kitna paisa kharch hua hai total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C017"
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Best recipe for paneer butter masala",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  "integrated": {
+    "label": "integrated planner chain",
+    "examples": 180,
+    "correct": 163,
+    "accuracy": 0.9056,
+    "by_category": {
+      "count_vendors": {
+        "correct": 8,
+        "total": 11,
+        "accuracy": 0.7273
+      },
+      "global_sum": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "missing_arg": {
+        "correct": 3,
+        "total": 4,
+        "accuracy": 0.75
+      },
+      "negation": {
+        "correct": 11,
+        "total": 14,
+        "accuracy": 0.7857
+      },
+      "off_topic": {
+        "correct": 11,
+        "total": 13,
+        "accuracy": 0.8462
+      },
+      "positive": {
+        "correct": 129,
+        "total": 137,
+        "accuracy": 0.9416
+      }
+    },
+    "failures": [
+      {
+        "query": "Aaj ka IPL score kya hai?",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers hain is data me?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "VANDELAY INDUSTRIES ki gstin mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C014"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers humare data me hain?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Total kitne suppliers hain dataset me?",
+        "category": "count_vendors",
+        "want": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Give me the GSTIN tax id for INGEN",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C020"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka official name kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C028"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "OSCORP ka full registered name kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C017"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Give me the tax id for Nova Retail",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C027"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "How much money went to ORION SYSTEMS in total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with ORION SYSTEMS.",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C008"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C008"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Kitni transactions Orion Systematics ke saath hui hain?",
+        "category": "positive",
+        "want": [
+          "count",
+          "invoice_id",
+          "C024"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Do not tell me the total spend with Nova Retail",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total spend for that vendor?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "OSCORP pe kitna paisa kharch hua hai total?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C017"
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Best recipe for paneer butter masala",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      }
+    ]
+  }
+}

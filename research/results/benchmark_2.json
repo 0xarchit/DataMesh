@@ -1,0 +1,1616 @@
+{
+  "model": ".\\weights\\qwen-3.8-27B.gguf",
+  "seed": 2,
+  "questions_file": "questions_bench.json",
+  "retrieval_k": 15,
+  "corpus_chunks": {
+    "raw": 482,
+    "consolidated": 326
+  },
+  "consolidation_seconds": 47.63,
+  "rag_index_seconds": 58.18,
+  "reconciliation": {
+    "raw_records": 482,
+    "source_counts": {
+      "csv": 30,
+      "xlsx": 148,
+      "pdf": 296,
+      "receipt": 8
+    },
+    "receipts_parsed": 8,
+    "vendor_clusters": 30,
+    "raw_transactions": 452,
+    "unique_transactions": 296,
+    "duplicates_removed": 156,
+    "conflicts_detected": 20,
+    "conflicts_resolved": 20,
+    "conflicts_for_review": 0,
+    "load_order_baseline_wrong": 7,
+    "total_spend_inr": 10449900,
+    "generated_from": "raw"
+  },
+  "arms": {
+    "ours_consolidated_engine": {
+      "questions": 42,
+      "correct": 42,
+      "accuracy": 1.0,
+      "prompt_tokens": 10901,
+      "completion_tokens": 938,
+      "total_tokens": 11839,
+      "mean_tokens_per_question": 281.9,
+      "total_seconds": 143.2,
+      "mean_seconds_per_question": 3.41,
+      "consolidation_seconds_amortized": 1.134,
+      "total_seconds_including_consolidation": 190.83
+    },
+    "rag_over_raw_records": {
+      "questions": 42,
+      "correct": 9,
+      "accuracy": 0.2143,
+      "prompt_tokens": 40965,
+      "completion_tokens": 593,
+      "total_tokens": 41558,
+      "mean_tokens_per_question": 989.5,
+      "total_seconds": 191.57,
+      "mean_seconds_per_question": 4.561,
+      "consolidation_seconds_amortized": 1.134,
+      "total_seconds_including_consolidation": 239.2
+    },
+    "rag_over_consolidated_table": {
+      "questions": 42,
+      "correct": 18,
+      "accuracy": 0.4286,
+      "prompt_tokens": 29034,
+      "completion_tokens": 282,
+      "total_tokens": 29316,
+      "mean_tokens_per_question": 698.0,
+      "total_seconds": 165.0,
+      "mean_seconds_per_question": 3.929,
+      "consolidation_seconds_amortized": 1.134,
+      "total_seconds_including_consolidation": 212.63
+    }
+  },
+  "by_type": {
+    "ours_consolidated_engine": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      }
+    },
+    "rag_over_raw_records": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 1,
+        "accuracy": 0.125
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "rag_over_consolidated_table": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 7,
+        "accuracy": 0.875
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 7,
+        "accuracy": 0.875
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 4,
+        "accuracy": 0.5
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "per_question": [
+    {
+      "question": "What is the total spend with VANDELAY INDUSTRIES in INR?",
+      "gold": 384800,
+      "ours": {
+        "answer": 384800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.384
+      },
+      "rag_raw": {
+        "answer": "34200+50000+96000+24800+34200+24800+24800+96000 = 384800",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1040,
+        "completion_tokens": 56,
+        "total_tokens": 1096,
+        "estimated": false,
+        "seconds": 5.813
+      },
+      "rag_canonical": {
+        "answer": 386000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 683,
+        "completion_tokens": 7,
+        "total_tokens": 690,
+        "estimated": false,
+        "seconds": 3.968
+      }
+    },
+    {
+      "question": "What city is Wayne Enterprises registered in?",
+      "gold": "Pune",
+      "ours": {
+        "answer": "pune",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 21,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.362
+      },
+      "rag_raw": {
+        "answer": "poona",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 919,
+        "completion_tokens": 3,
+        "total_tokens": 922,
+        "estimated": false,
+        "seconds": 4.208
+      },
+      "rag_canonical": {
+        "answer": "pune",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 561,
+        "completion_tokens": 3,
+        "total_tokens": 564,
+        "estimated": false,
+        "seconds": 3.59
+      }
+    },
+    {
+      "question": "What is the GSTIN of Hooli Services?",
+      "gold": "27AAGCH5678X1Z9",
+      "ours": {
+        "answer": "27aagch5678x1z9",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 260,
+        "completion_tokens": 23,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.421
+      },
+      "rag_raw": {
+        "answer": "27aagch5678x1z9",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 982,
+        "completion_tokens": 14,
+        "total_tokens": 996,
+        "estimated": false,
+        "seconds": 4.676
+      },
+      "rag_canonical": {
+        "answer": "27aagch5678x1z9",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 690,
+        "completion_tokens": 14,
+        "total_tokens": 704,
+        "estimated": false,
+        "seconds": 4.079
+      }
+    },
+    {
+      "question": "What is the GSTIN of Nova Retail?",
+      "gold": "24AAHZN4455T1Z4",
+      "ours": {
+        "answer": "24aahzn4455t1z4",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.376
+      },
+      "rag_raw": {
+        "answer": "24aahzn4455t1z4",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 959,
+        "completion_tokens": 14,
+        "total_tokens": 973,
+        "estimated": false,
+        "seconds": 4.541
+      },
+      "rag_canonical": {
+        "answer": "24aahzn4455t1z4",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 653,
+        "completion_tokens": 14,
+        "total_tokens": 667,
+        "estimated": false,
+        "seconds": 4.196
+      }
+    },
+    {
+      "question": "What is the total spend across all vendors in INR?",
+      "gold": 10449900,
+      "ours": {
+        "answer": 10449900,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 20,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.261
+      },
+      "rag_raw": {
+        "answer": 458900,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1025,
+        "completion_tokens": 7,
+        "total_tokens": 1032,
+        "estimated": false,
+        "seconds": 4.504
+      },
+      "rag_canonical": {
+        "answer": 398500,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 746,
+        "completion_tokens": 7,
+        "total_tokens": 753,
+        "estimated": false,
+        "seconds": 4.027
+      }
+    },
+    {
+      "question": "What is the total spend with Vandelay Industries in INR?",
+      "gold": 384800,
+      "ours": {
+        "answer": 384800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 24,
+        "total_tokens": 286,
+        "estimated": false,
+        "seconds": 3.441
+      },
+      "rag_raw": {
+        "answer": "34200+50000+96000+24800+34200+24800+24800+96000 = 384800",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1039,
+        "completion_tokens": 56,
+        "total_tokens": 1095,
+        "estimated": false,
+        "seconds": 4.412
+      },
+      "rag_canonical": {
+        "answer": 386000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 682,
+        "completion_tokens": 7,
+        "total_tokens": 689,
+        "estimated": false,
+        "seconds": 2.908
+      }
+    },
+    {
+      "question": "What is the total spend with Hooli Services in INR?",
+      "gold": 330500,
+      "ours": {
+        "answer": 330500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.368
+      },
+      "rag_raw": {
+        "answer": 298900,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1011,
+        "completion_tokens": 7,
+        "total_tokens": 1018,
+        "estimated": false,
+        "seconds": 4.384
+      },
+      "rag_canonical": {
+        "answer": 228700,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 731,
+        "completion_tokens": 7,
+        "total_tokens": 738,
+        "estimated": false,
+        "seconds": 4.038
+      }
+    },
+    {
+      "question": "What is the total spend with PIED PIPER in INR?",
+      "gold": 269800,
+      "ours": {
+        "answer": 269800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.543
+      },
+      "rag_raw": {
+        "answer": "12500+34200+12500+50000+7300+50000+7300+96000 = 263800",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1004,
+        "completion_tokens": 54,
+        "total_tokens": 1058,
+        "estimated": false,
+        "seconds": 5.803
+      },
+      "rag_canonical": {
+        "answer": 279400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 762,
+        "completion_tokens": 7,
+        "total_tokens": 769,
+        "estimated": false,
+        "seconds": 4.068
+      }
+    },
+    {
+      "question": "What city is Hooli Services registered in?",
+      "gold": "Thane",
+      "ours": {
+        "answer": "thane",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.431
+      },
+      "rag_raw": {
+        "answer": "thana",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 934,
+        "completion_tokens": 3,
+        "total_tokens": 937,
+        "estimated": false,
+        "seconds": 4.146
+      },
+      "rag_canonical": {
+        "answer": "thane",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 607,
+        "completion_tokens": 3,
+        "total_tokens": 610,
+        "estimated": false,
+        "seconds": 3.768
+      }
+    },
+    {
+      "question": "What is the total spend with WONKA INDUSTRIES in INR?",
+      "gold": 327800,
+      "ours": {
+        "answer": 327800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 25,
+        "total_tokens": 288,
+        "estimated": false,
+        "seconds": 3.474
+      },
+      "rag_raw": {
+        "answer": "34200+7300+15800+96000+7300+50000+7300+7300+34200+34200+34200 = 3",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1003,
+        "completion_tokens": 64,
+        "total_tokens": 1067,
+        "estimated": false,
+        "seconds": 6.087
+      },
+      "rag_canonical": {
+        "answer": 232300,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 703,
+        "completion_tokens": 7,
+        "total_tokens": 710,
+        "estimated": false,
+        "seconds": 3.926
+      }
+    },
+    {
+      "question": "How many transactions involve Nova Retail?",
+      "gold": 10,
+      "ours": {
+        "answer": 10,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 21,
+        "total_tokens": 277,
+        "estimated": false,
+        "seconds": 3.381
+      },
+      "rag_raw": {
+        "answer": 11,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 991,
+        "completion_tokens": 3,
+        "total_tokens": 994,
+        "estimated": false,
+        "seconds": 4.412
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 724,
+        "completion_tokens": 3,
+        "total_tokens": 727,
+        "estimated": false,
+        "seconds": 3.975
+      }
+    },
+    {
+      "question": "What is the total spend with NOVA RETAIL in INR?",
+      "gold": 403300,
+      "ours": {
+        "answer": 403300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.458
+      },
+      "rag_raw": {
+        "answer": 34200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1031,
+        "completion_tokens": 6,
+        "total_tokens": 1037,
+        "estimated": false,
+        "seconds": 4.42
+      },
+      "rag_canonical": {
+        "answer": 12500,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 719,
+        "completion_tokens": 6,
+        "total_tokens": 725,
+        "estimated": false,
+        "seconds": 3.891
+      }
+    },
+    {
+      "question": "What is the GSTIN of Pied Piper?",
+      "gold": "29AAHCP1122Y1Z1",
+      "ours": {
+        "answer": "29aahcp1122y1z1",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.427
+      },
+      "rag_raw": {
+        "answer": "29aahcp1122y1z1",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 996,
+        "completion_tokens": 14,
+        "total_tokens": 1010,
+        "estimated": false,
+        "seconds": 4.619
+      },
+      "rag_canonical": {
+        "answer": "29aahcp1122y1z1",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 693,
+        "completion_tokens": 14,
+        "total_tokens": 707,
+        "estimated": false,
+        "seconds": 4.256
+      }
+    },
+    {
+      "question": "How many transactions involve Daily Planet Media?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.384
+      },
+      "rag_raw": {
+        "answer": 5,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 861,
+        "completion_tokens": 2,
+        "total_tokens": 863,
+        "estimated": false,
+        "seconds": 4.049
+      },
+      "rag_canonical": {
+        "answer": 12,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 736,
+        "completion_tokens": 3,
+        "total_tokens": 739,
+        "estimated": false,
+        "seconds": 3.895
+      }
+    },
+    {
+      "question": "What is the total spend with Pied Piper in INR?",
+      "gold": 269800,
+      "ours": {
+        "answer": 269800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 23,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.404
+      },
+      "rag_raw": {
+        "answer": "12500+34200+12500+50000+7300+50000+7300+96000 = 279800",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1001,
+        "completion_tokens": 54,
+        "total_tokens": 1055,
+        "estimated": false,
+        "seconds": 5.936
+      },
+      "rag_canonical": {
+        "answer": 224400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 759,
+        "completion_tokens": 7,
+        "total_tokens": 766,
+        "estimated": false,
+        "seconds": 4.108
+      }
+    },
+    {
+      "question": "What is the total spend with DAILY PLANET MEDIA in INR?",
+      "gold": 445500,
+      "ours": {
+        "answer": 445500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.423
+      },
+      "rag_raw": {
+        "answer": 1448800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 995,
+        "completion_tokens": 8,
+        "total_tokens": 1003,
+        "estimated": false,
+        "seconds": 4.471
+      },
+      "rag_canonical": {
+        "answer": 388400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 741,
+        "completion_tokens": 7,
+        "total_tokens": 748,
+        "estimated": false,
+        "seconds": 4.071
+      }
+    },
+    {
+      "question": "How many transactions involve Pied Piper?",
+      "gold": 8,
+      "ours": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 22,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.376
+      },
+      "rag_raw": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 962,
+        "completion_tokens": 3,
+        "total_tokens": 965,
+        "estimated": false,
+        "seconds": 4.313
+      },
+      "rag_canonical": {
+        "answer": 8,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 753,
+        "completion_tokens": 2,
+        "total_tokens": 755,
+        "estimated": false,
+        "seconds": 3.848
+      }
+    },
+    {
+      "question": "What is the GSTIN of Vertex Analysis?",
+      "gold": "36AAGZV2233S1Z1",
+      "ours": {
+        "answer": "36aagzv2233s1z1",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.309
+      },
+      "rag_raw": {
+        "answer": "36aagzv2233s1z1",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1037,
+        "completion_tokens": 15,
+        "total_tokens": 1052,
+        "estimated": false,
+        "seconds": 4.731
+      },
+      "rag_canonical": {
+        "answer": "19aafzv9900r1z8",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 722,
+        "completion_tokens": 14,
+        "total_tokens": 736,
+        "estimated": false,
+        "seconds": 4.167
+      }
+    },
+    {
+      "question": "What is the GSTIN of Wayne Enterprises?",
+      "gold": "33AABCW3456S1Z1",
+      "ours": {
+        "answer": "33aabcw3456s1z1",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.2
+      },
+      "rag_raw": {
+        "answer": "33aabcw3456s1z1",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 917,
+        "completion_tokens": 14,
+        "total_tokens": 931,
+        "estimated": false,
+        "seconds": 4.495
+      },
+      "rag_canonical": {
+        "answer": "33aabcw3456s1z1",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 562,
+        "completion_tokens": 14,
+        "total_tokens": 576,
+        "estimated": false,
+        "seconds": 3.908
+      }
+    },
+    {
+      "question": "How many transactions involve Wonka Industries?",
+      "gold": 11,
+      "ours": {
+        "answer": 11,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.415
+      },
+      "rag_raw": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 973,
+        "completion_tokens": 3,
+        "total_tokens": 976,
+        "estimated": false,
+        "seconds": 4.308
+      },
+      "rag_canonical": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 729,
+        "completion_tokens": 3,
+        "total_tokens": 732,
+        "estimated": false,
+        "seconds": 3.974
+      }
+    },
+    {
+      "question": "What is the total spend with Nova Retail in INR?",
+      "gold": 403300,
+      "ours": {
+        "answer": 403300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 22,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.362
+      },
+      "rag_raw": {
+        "answer": 34200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1029,
+        "completion_tokens": 6,
+        "total_tokens": 1035,
+        "estimated": false,
+        "seconds": 4.503
+      },
+      "rag_canonical": {
+        "answer": 300000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 717,
+        "completion_tokens": 7,
+        "total_tokens": 724,
+        "estimated": false,
+        "seconds": 4.012
+      }
+    },
+    {
+      "question": "How many distinct vendors appear in the data?",
+      "gold": 30,
+      "ours": {
+        "answer": 30,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 20,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.402
+      },
+      "rag_raw": {
+        "answer": 15,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 528,
+        "completion_tokens": 3,
+        "total_tokens": 531,
+        "estimated": false,
+        "seconds": 3.708
+      },
+      "rag_canonical": {
+        "answer": 7,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 725,
+        "completion_tokens": 2,
+        "total_tokens": 727,
+        "estimated": false,
+        "seconds": 3.928
+      }
+    },
+    {
+      "question": "What is the total spend with Daily Planet Media in INR?",
+      "gold": 445500,
+      "ours": {
+        "answer": 445500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.648
+      },
+      "rag_raw": {
+        "answer": 1448800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 993,
+        "completion_tokens": 8,
+        "total_tokens": 1001,
+        "estimated": false,
+        "seconds": 4.516
+      },
+      "rag_canonical": {
+        "answer": 342000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 739,
+        "completion_tokens": 7,
+        "total_tokens": 746,
+        "estimated": false,
+        "seconds": 4.208
+      }
+    },
+    {
+      "question": "What city is Daily Planet Media registered in?",
+      "gold": "Gurugram",
+      "ours": {
+        "answer": "gurugram",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.467
+      },
+      "rag_raw": {
+        "answer": "gurgaon",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 927,
+        "completion_tokens": 4,
+        "total_tokens": 931,
+        "estimated": false,
+        "seconds": 4.275
+      },
+      "rag_canonical": {
+        "answer": "gurugram",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 675,
+        "completion_tokens": 5,
+        "total_tokens": 680,
+        "estimated": false,
+        "seconds": 3.85
+      }
+    },
+    {
+      "question": "What is the total spend with WAYNE ENTERPRISES in INR?",
+      "gold": 315800,
+      "ours": {
+        "answer": 315800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.458
+      },
+      "rag_raw": {
+        "answer": 1000000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1022,
+        "completion_tokens": 8,
+        "total_tokens": 1030,
+        "estimated": false,
+        "seconds": 4.53
+      },
+      "rag_canonical": {
+        "answer": 330000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 756,
+        "completion_tokens": 7,
+        "total_tokens": 763,
+        "estimated": false,
+        "seconds": 4.103
+      }
+    },
+    {
+      "question": "How many transactions involve Vertex Analysis?",
+      "gold": 9,
+      "ours": {
+        "answer": 9,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 21,
+        "total_tokens": 277,
+        "estimated": false,
+        "seconds": 3.487
+      },
+      "rag_raw": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1035,
+        "completion_tokens": 3,
+        "total_tokens": 1038,
+        "estimated": false,
+        "seconds": 4.424
+      },
+      "rag_canonical": {
+        "answer": 15,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 746,
+        "completion_tokens": 3,
+        "total_tokens": 749,
+        "estimated": false,
+        "seconds": 3.926
+      }
+    },
+    {
+      "question": "What city is Nova Retail registered in?",
+      "gold": "Noida",
+      "ours": {
+        "answer": "noida",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 20,
+        "total_tokens": 277,
+        "estimated": false,
+        "seconds": 3.429
+      },
+      "rag_raw": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 959,
+        "completion_tokens": 4,
+        "total_tokens": 963,
+        "estimated": false,
+        "seconds": 4.352
+      },
+      "rag_canonical": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 631,
+        "completion_tokens": 4,
+        "total_tokens": 635,
+        "estimated": false,
+        "seconds": 3.74
+      }
+    },
+    {
+      "question": "What is the GSTIN of Daily Planet Media?",
+      "gold": "06AAECD2345U1Z7",
+      "ours": {
+        "answer": "06aaecd2345u1z7",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.401
+      },
+      "rag_raw": {
+        "answer": "06aaecd2345u1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 925,
+        "completion_tokens": 13,
+        "total_tokens": 938,
+        "estimated": false,
+        "seconds": 4.497
+      },
+      "rag_canonical": {
+        "answer": "06aaecd2345u1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 712,
+        "completion_tokens": 13,
+        "total_tokens": 725,
+        "estimated": false,
+        "seconds": 4.283
+      }
+    },
+    {
+      "question": "How many transactions involve Wayne Enterprises?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 22,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.445
+      },
+      "rag_raw": {
+        "answer": 14,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 964,
+        "completion_tokens": 3,
+        "total_tokens": 967,
+        "estimated": false,
+        "seconds": 4.28
+      },
+      "rag_canonical": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 759,
+        "completion_tokens": 3,
+        "total_tokens": 762,
+        "estimated": false,
+        "seconds": 4.048
+      }
+    },
+    {
+      "question": "What city is Pied Piper registered in?",
+      "gold": "Bengaluru",
+      "ours": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 21,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.414
+      },
+      "rag_raw": {
+        "answer": "bangalore",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 877,
+        "completion_tokens": 3,
+        "total_tokens": 880,
+        "estimated": false,
+        "seconds": 4.087
+      },
+      "rag_canonical": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 620,
+        "completion_tokens": 5,
+        "total_tokens": 625,
+        "estimated": false,
+        "seconds": 3.713
+      }
+    },
+    {
+      "question": "How many transactions involve Hooli Services?",
+      "gold": 11,
+      "ours": {
+        "answer": 11,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 23,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.461
+      },
+      "rag_raw": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 980,
+        "completion_tokens": 3,
+        "total_tokens": 983,
+        "estimated": false,
+        "seconds": 4.402
+      },
+      "rag_canonical": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 750,
+        "completion_tokens": 3,
+        "total_tokens": 753,
+        "estimated": false,
+        "seconds": 3.99
+      }
+    },
+    {
+      "question": "What city is Wonka Industries registered in?",
+      "gold": "Kolkata",
+      "ours": {
+        "answer": "kolkata",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.337
+      },
+      "rag_raw": {
+        "answer": "calcutta",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 903,
+        "completion_tokens": 4,
+        "total_tokens": 907,
+        "estimated": false,
+        "seconds": 4.206
+      },
+      "rag_canonical": {
+        "answer": "kolkata",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 563,
+        "completion_tokens": 3,
+        "total_tokens": 566,
+        "estimated": false,
+        "seconds": 3.731
+      }
+    },
+    {
+      "question": "What is the total spend with VERTEX ANALYSIS in INR?",
+      "gold": 220300,
+      "ours": {
+        "answer": 220300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 23,
+        "total_tokens": 286,
+        "estimated": false,
+        "seconds": 3.403
+      },
+      "rag_raw": {
+        "answer": 248600,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1042,
+        "completion_tokens": 7,
+        "total_tokens": 1049,
+        "estimated": false,
+        "seconds": 4.61
+      },
+      "rag_canonical": {
+        "answer": 146600,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 753,
+        "completion_tokens": 7,
+        "total_tokens": 760,
+        "estimated": false,
+        "seconds": 4.151
+      }
+    },
+    {
+      "question": "What city is Vertex Analysis registered in?",
+      "gold": "Hyderabad",
+      "ours": {
+        "answer": "hyderabad",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 20,
+        "total_tokens": 277,
+        "estimated": false,
+        "seconds": 3.344
+      },
+      "rag_raw": {
+        "answer": "secunderabad",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1035,
+        "completion_tokens": 4,
+        "total_tokens": 1039,
+        "estimated": false,
+        "seconds": 4.364
+      },
+      "rag_canonical": {
+        "answer": "kolkata",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 561,
+        "completion_tokens": 3,
+        "total_tokens": 564,
+        "estimated": false,
+        "seconds": 3.77
+      }
+    },
+    {
+      "question": "What city is Vandelay Industries registered in?",
+      "gold": "Pune",
+      "ours": {
+        "answer": "pune",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.433
+      },
+      "rag_raw": {
+        "answer": "poona",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1003,
+        "completion_tokens": 3,
+        "total_tokens": 1006,
+        "estimated": false,
+        "seconds": 4.334
+      },
+      "rag_canonical": {
+        "answer": "pune",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 562,
+        "completion_tokens": 3,
+        "total_tokens": 565,
+        "estimated": false,
+        "seconds": 3.593
+      }
+    },
+    {
+      "question": "How many transactions involve Vandelay Industries?",
+      "gold": 8,
+      "ours": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 23,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.425
+      },
+      "rag_raw": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 990,
+        "completion_tokens": 3,
+        "total_tokens": 993,
+        "estimated": false,
+        "seconds": 4.421
+      },
+      "rag_canonical": {
+        "answer": 8,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 740,
+        "completion_tokens": 2,
+        "total_tokens": 742,
+        "estimated": false,
+        "seconds": 4.0
+      }
+    },
+    {
+      "question": "What is the total spend with Vertex Analysis in INR?",
+      "gold": 220300,
+      "ours": {
+        "answer": 220300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 22,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.315
+      },
+      "rag_raw": {
+        "answer": 248600,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1040,
+        "completion_tokens": 7,
+        "total_tokens": 1047,
+        "estimated": false,
+        "seconds": 2.964
+      },
+      "rag_canonical": {
+        "answer": 348400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 751,
+        "completion_tokens": 7,
+        "total_tokens": 758,
+        "estimated": false,
+        "seconds": 2.924
+      }
+    },
+    {
+      "question": "What is the GSTIN of Wonka Industries?",
+      "gold": "19AAJCW5566A1Z7",
+      "ours": {
+        "answer": "19aajcw5566a1z7",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.359
+      },
+      "rag_raw": {
+        "answer": "19aajcw5566a1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 999,
+        "completion_tokens": 14,
+        "total_tokens": 1013,
+        "estimated": false,
+        "seconds": 4.749
+      },
+      "rag_canonical": {
+        "answer": "19aajcw5566a1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 573,
+        "completion_tokens": 14,
+        "total_tokens": 587,
+        "estimated": false,
+        "seconds": 4.04
+      }
+    },
+    {
+      "question": "What is the total spend with Wonka Industries in INR?",
+      "gold": 327800,
+      "ours": {
+        "answer": 327800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.467
+      },
+      "rag_raw": {
+        "answer": "34200+7300+15800+96000+7300+50000+7300+7300+34200+34200+34200 = 3",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1002,
+        "completion_tokens": 64,
+        "total_tokens": 1066,
+        "estimated": false,
+        "seconds": 6.139
+      },
+      "rag_canonical": {
+        "answer": 232300,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 702,
+        "completion_tokens": 7,
+        "total_tokens": 709,
+        "estimated": false,
+        "seconds": 4.159
+      }
+    },
+    {
+      "question": "What is the total spend with HOOLI SERVICES in INR?",
+      "gold": 330500,
+      "ours": {
+        "answer": 330500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.446
+      },
+      "rag_raw": {
+        "answer": 233900,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1010,
+        "completion_tokens": 7,
+        "total_tokens": 1017,
+        "estimated": false,
+        "seconds": 4.582
+      },
+      "rag_canonical": {
+        "answer": 228700,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 730,
+        "completion_tokens": 7,
+        "total_tokens": 737,
+        "estimated": false,
+        "seconds": 4.046
+      }
+    },
+    {
+      "question": "What is the GSTIN of Vandelay Industries?",
+      "gold": "33AAKCV7788B1Z2",
+      "ours": {
+        "answer": "33aakcv7788b1z2",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.438
+      },
+      "rag_raw": {
+        "answer": "33aakcv7788b1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1003,
+        "completion_tokens": 14,
+        "total_tokens": 1017,
+        "estimated": false,
+        "seconds": 4.674
+      },
+      "rag_canonical": {
+        "answer": "33aakcv7788b1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 560,
+        "completion_tokens": 14,
+        "total_tokens": 574,
+        "estimated": false,
+        "seconds": 3.982
+      }
+    },
+    {
+      "question": "What is the total spend with Wayne Enterprises in INR?",
+      "gold": 315800,
+      "ours": {
+        "answer": 315800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 23,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.423
+      },
+      "rag_raw": {
+        "answer": 1000000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1019,
+        "completion_tokens": 8,
+        "total_tokens": 1027,
+        "estimated": false,
+        "seconds": 4.628
+      },
+      "rag_canonical": {
+        "answer": 330000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 753,
+        "completion_tokens": 7,
+        "total_tokens": 760,
+        "estimated": false,
+        "seconds": 4.146
+      }
+    }
+  ]
+}

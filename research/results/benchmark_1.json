@@ -1,0 +1,1616 @@
+{
+  "model": ".\\weights\\qwen-3.8-27B.gguf",
+  "seed": 1,
+  "questions_file": "questions_bench.json",
+  "retrieval_k": 15,
+  "corpus_chunks": {
+    "raw": 479,
+    "consolidated": 324
+  },
+  "consolidation_seconds": 49.59,
+  "rag_index_seconds": 59.24,
+  "reconciliation": {
+    "raw_records": 479,
+    "source_counts": {
+      "csv": 30,
+      "xlsx": 147,
+      "pdf": 294,
+      "receipt": 8
+    },
+    "receipts_parsed": 8,
+    "vendor_clusters": 30,
+    "raw_transactions": 449,
+    "unique_transactions": 294,
+    "duplicates_removed": 155,
+    "conflicts_detected": 20,
+    "conflicts_resolved": 20,
+    "conflicts_for_review": 0,
+    "load_order_baseline_wrong": 7,
+    "total_spend_inr": 10440700,
+    "generated_from": "raw"
+  },
+  "arms": {
+    "ours_consolidated_engine": {
+      "questions": 42,
+      "correct": 42,
+      "accuracy": 1.0,
+      "prompt_tokens": 10923,
+      "completion_tokens": 963,
+      "total_tokens": 11886,
+      "mean_tokens_per_question": 283.0,
+      "total_seconds": 143.43,
+      "mean_seconds_per_question": 3.415,
+      "consolidation_seconds_amortized": 1.181,
+      "total_seconds_including_consolidation": 193.02
+    },
+    "rag_over_raw_records": {
+      "questions": 42,
+      "correct": 12,
+      "accuracy": 0.2857,
+      "prompt_tokens": 41428,
+      "completion_tokens": 734,
+      "total_tokens": 42162,
+      "mean_tokens_per_question": 1003.9,
+      "total_seconds": 198.98,
+      "mean_seconds_per_question": 4.738,
+      "consolidation_seconds_amortized": 1.181,
+      "total_seconds_including_consolidation": 248.57
+    },
+    "rag_over_consolidated_table": {
+      "questions": 42,
+      "correct": 19,
+      "accuracy": 0.4524,
+      "prompt_tokens": 29225,
+      "completion_tokens": 445,
+      "total_tokens": 29670,
+      "mean_tokens_per_question": 706.4,
+      "total_seconds": 170.75,
+      "mean_seconds_per_question": 4.066,
+      "consolidation_seconds_amortized": 1.181,
+      "total_seconds_including_consolidation": 220.34
+    }
+  },
+  "by_type": {
+    "ours_consolidated_engine": {
+      "sum": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      }
+    },
+    "rag_over_raw_records": {
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 1,
+        "accuracy": 0.125
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 3,
+        "accuracy": 0.375
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "rag_over_consolidated_table": {
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 3,
+        "accuracy": 0.375
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "per_question": [
+    {
+      "question": "What is the total spend with Soylent Foods in INR?",
+      "gold": 239600,
+      "ours": {
+        "answer": 239600,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.407
+      },
+      "rag_raw": {
+        "answer": "15800+15800+12500+7300+50000+12500+34200+15800+7300+34200+34200 =",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1011,
+        "completion_tokens": 64,
+        "total_tokens": 1075,
+        "estimated": false,
+        "seconds": 6.269
+      },
+      "rag_canonical": {
+        "answer": 198100,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 756,
+        "completion_tokens": 7,
+        "total_tokens": 763,
+        "estimated": false,
+        "seconds": 4.091
+      }
+    },
+    {
+      "question": "What is the GSTIN of Tyrell Corp?",
+      "gold": "27AAPCT3456G1Z9",
+      "ours": {
+        "answer": "27aapct3456g1z9",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.394
+      },
+      "rag_raw": {
+        "answer": "27aapct3456g1z9",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 985,
+        "completion_tokens": 13,
+        "total_tokens": 998,
+        "estimated": false,
+        "seconds": 4.682
+      },
+      "rag_canonical": {
+        "answer": "27aapct3456g1z9",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 567,
+        "completion_tokens": 13,
+        "total_tokens": 580,
+        "estimated": false,
+        "seconds": 4.009
+      }
+    },
+    {
+      "question": "What is the total spend with INITECH SOLUTIONS in INR?",
+      "gold": 418200,
+      "ours": {
+        "answer": 418200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.498
+      },
+      "rag_raw": {
+        "answer": 1000000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1014,
+        "completion_tokens": 8,
+        "total_tokens": 1022,
+        "estimated": false,
+        "seconds": 4.49
+      },
+      "rag_canonical": {
+        "answer": 221900,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 741,
+        "completion_tokens": 7,
+        "total_tokens": 748,
+        "estimated": false,
+        "seconds": 3.987
+      }
+    },
+    {
+      "question": "What city is Orion Systematics registered in?",
+      "gold": "Chennai",
+      "ours": {
+        "answer": "chennai",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.43
+      },
+      "rag_raw": {
+        "answer": "madras",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1012,
+        "completion_tokens": 3,
+        "total_tokens": 1015,
+        "estimated": false,
+        "seconds": 4.311
+      },
+      "rag_canonical": {
+        "answer": "chennai",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 663,
+        "completion_tokens": 3,
+        "total_tokens": 666,
+        "estimated": false,
+        "seconds": 3.913
+      }
+    },
+    {
+      "question": "What is the GSTIN of Vandelay Industries?",
+      "gold": "33AAKCV7788B1Z2",
+      "ours": {
+        "answer": "33aakcv7788b1z2",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.434
+      },
+      "rag_raw": {
+        "answer": "33aakcv7788b1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1036,
+        "completion_tokens": 14,
+        "total_tokens": 1050,
+        "estimated": false,
+        "seconds": 4.837
+      },
+      "rag_canonical": {
+        "answer": "33aakcv7788b1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 560,
+        "completion_tokens": 14,
+        "total_tokens": 574,
+        "estimated": false,
+        "seconds": 4.081
+      }
+    },
+    {
+      "question": "What is the GSTIN of Oscorp?",
+      "gold": "36AANCO5678E1Z3",
+      "ours": {
+        "answer": "36aanco5678e1z3",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.402
+      },
+      "rag_raw": {
+        "answer": "36aanco5678e1z3",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1000,
+        "completion_tokens": 14,
+        "total_tokens": 1014,
+        "estimated": false,
+        "seconds": 4.751
+      },
+      "rag_canonical": {
+        "answer": "36aanco5678e1z3",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 678,
+        "completion_tokens": 14,
+        "total_tokens": 692,
+        "estimated": false,
+        "seconds": 4.28
+      }
+    },
+    {
+      "question": "How many distinct vendors appear in the data?",
+      "gold": 30,
+      "ours": {
+        "answer": 30,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 20,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.484
+      },
+      "rag_raw": {
+        "answer": 15,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 528,
+        "completion_tokens": 3,
+        "total_tokens": 531,
+        "estimated": false,
+        "seconds": 3.661
+      },
+      "rag_canonical": {
+        "answer": 7,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 729,
+        "completion_tokens": 2,
+        "total_tokens": 731,
+        "estimated": false,
+        "seconds": 3.897
+      }
+    },
+    {
+      "question": "What city is Soylent Foods registered in?",
+      "gold": "Noida",
+      "ours": {
+        "answer": "noida",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.614
+      },
+      "rag_raw": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 975,
+        "completion_tokens": 4,
+        "total_tokens": 979,
+        "estimated": false,
+        "seconds": 4.337
+      },
+      "rag_canonical": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 713,
+        "completion_tokens": 4,
+        "total_tokens": 717,
+        "estimated": false,
+        "seconds": 3.915
+      }
+    },
+    {
+      "question": "What is the total spend with Orion Systematics in INR?",
+      "gold": 257100,
+      "ours": {
+        "answer": 257100,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 24,
+        "total_tokens": 286,
+        "estimated": false,
+        "seconds": 3.453
+      },
+      "rag_raw": {
+        "answer": "15800+12500+24800+7300+34200+7300+12500+34200+96000+12500 = 26160",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1016,
+        "completion_tokens": 64,
+        "total_tokens": 1080,
+        "estimated": false,
+        "seconds": 6.296
+      },
+      "rag_canonical": {
+        "answer": 199700,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 730,
+        "completion_tokens": 7,
+        "total_tokens": 737,
+        "estimated": false,
+        "seconds": 4.069
+      }
+    },
+    {
+      "question": "How many transactions involve Aperture Labs?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.407
+      },
+      "rag_raw": {
+        "answer": 12,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 969,
+        "completion_tokens": 3,
+        "total_tokens": 972,
+        "estimated": false,
+        "seconds": 4.412
+      },
+      "rag_canonical": {
+        "answer": 12,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 733,
+        "completion_tokens": 3,
+        "total_tokens": 736,
+        "estimated": false,
+        "seconds": 3.917
+      }
+    },
+    {
+      "question": "What is the total spend with VANDELAY INDUSTRIES in INR?",
+      "gold": 294800,
+      "ours": {
+        "answer": 294800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.472
+      },
+      "rag_raw": {
+        "answer": 239300,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1039,
+        "completion_tokens": 7,
+        "total_tokens": 1046,
+        "estimated": false,
+        "seconds": 4.537
+      },
+      "rag_canonical": {
+        "answer": 273800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 681,
+        "completion_tokens": 7,
+        "total_tokens": 688,
+        "estimated": false,
+        "seconds": 4.021
+      }
+    },
+    {
+      "question": "How many transactions involve Umbrella Traders?",
+      "gold": 11,
+      "ours": {
+        "answer": 11,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 24,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.449
+      },
+      "rag_raw": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 982,
+        "completion_tokens": 3,
+        "total_tokens": 985,
+        "estimated": false,
+        "seconds": 4.486
+      },
+      "rag_canonical": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 750,
+        "completion_tokens": 3,
+        "total_tokens": 753,
+        "estimated": false,
+        "seconds": 4.026
+      }
+    },
+    {
+      "question": "What is the total spend with Tyrell Corp in INR?",
+      "gold": 400300,
+      "ours": {
+        "answer": 400300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.411
+      },
+      "rag_raw": {
+        "answer": "34200+34200+34200+24800+34200+12500+34200+96000+96000 = 360300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1024,
+        "completion_tokens": 62,
+        "total_tokens": 1086,
+        "estimated": false,
+        "seconds": 6.144
+      },
+      "rag_canonical": {
+        "answer": "34200+12500+24800+34200+34200+96000+34200+96000+34200 = 304300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 741,
+        "completion_tokens": 62,
+        "total_tokens": 803,
+        "estimated": false,
+        "seconds": 5.714
+      }
+    },
+    {
+      "question": "How many transactions involve Vandelay Industries?",
+      "gold": 8,
+      "ours": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 23,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.34
+      },
+      "rag_raw": {
+        "answer": 8,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 989,
+        "completion_tokens": 2,
+        "total_tokens": 991,
+        "estimated": false,
+        "seconds": 4.421
+      },
+      "rag_canonical": {
+        "answer": 8,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 737,
+        "completion_tokens": 2,
+        "total_tokens": 739,
+        "estimated": false,
+        "seconds": 3.86
+      }
+    },
+    {
+      "question": "What is the total spend across all vendors in INR?",
+      "gold": 10440700,
+      "ours": {
+        "answer": 10440700,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 20,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.302
+      },
+      "rag_raw": {
+        "answer": 338900,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1025,
+        "completion_tokens": 7,
+        "total_tokens": 1032,
+        "estimated": false,
+        "seconds": 4.457
+      },
+      "rag_canonical": {
+        "answer": "15800+15800+15800+15800+24800+7300+24800+7300+24800+7300+15800+1",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 749,
+        "completion_tokens": 64,
+        "total_tokens": 813,
+        "estimated": false,
+        "seconds": 5.827
+      }
+    },
+    {
+      "question": "What is the total spend with Aperture Labs in INR?",
+      "gold": 351900,
+      "ours": {
+        "answer": 351900,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.403
+      },
+      "rag_raw": {
+        "answer": 288800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 970,
+        "completion_tokens": 7,
+        "total_tokens": 977,
+        "estimated": false,
+        "seconds": 4.521
+      },
+      "rag_canonical": {
+        "answer": 333400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 738,
+        "completion_tokens": 7,
+        "total_tokens": 745,
+        "estimated": false,
+        "seconds": 4.082
+      }
+    },
+    {
+      "question": "What is the GSTIN of Aperture Labs?",
+      "gold": "07AAICA3344Z1Z4",
+      "ours": {
+        "answer": "07aaica3344z1z4",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.517
+      },
+      "rag_raw": {
+        "answer": "07aaica3344z1z4",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 945,
+        "completion_tokens": 13,
+        "total_tokens": 958,
+        "estimated": false,
+        "seconds": 4.701
+      },
+      "rag_canonical": {
+        "answer": "07aaica3344z1z4",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 688,
+        "completion_tokens": 13,
+        "total_tokens": 701,
+        "estimated": false,
+        "seconds": 4.141
+      }
+    },
+    {
+      "question": "What city is Initech Solutions registered in?",
+      "gold": "New Delhi",
+      "ours": {
+        "answer": "new delhi",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.374
+      },
+      "rag_raw": {
+        "answer": "delhi",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 983,
+        "completion_tokens": 3,
+        "total_tokens": 986,
+        "estimated": false,
+        "seconds": 4.292
+      },
+      "rag_canonical": {
+        "answer": "new delhi",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 564,
+        "completion_tokens": 3,
+        "total_tokens": 567,
+        "estimated": false,
+        "seconds": 3.642
+      }
+    },
+    {
+      "question": "What city is Tyrell Corp registered in?",
+      "gold": "Thane",
+      "ours": {
+        "answer": "thane",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.32
+      },
+      "rag_raw": {
+        "answer": "thana",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 983,
+        "completion_tokens": 3,
+        "total_tokens": 986,
+        "estimated": false,
+        "seconds": 4.248
+      },
+      "rag_canonical": {
+        "answer": "thane",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 572,
+        "completion_tokens": 3,
+        "total_tokens": 575,
+        "estimated": false,
+        "seconds": 3.632
+      }
+    },
+    {
+      "question": "What is the GSTIN of Umbrella Traders?",
+      "gold": "19AAFCU9012R1Z8",
+      "ours": {
+        "answer": "19aafcu9012r1z8",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 260,
+        "completion_tokens": 24,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.402
+      },
+      "rag_raw": {
+        "answer": "19aafcu9012r1z8",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 957,
+        "completion_tokens": 14,
+        "total_tokens": 971,
+        "estimated": false,
+        "seconds": 4.739
+      },
+      "rag_canonical": {
+        "answer": "19aafcu9012r1z8",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 677,
+        "completion_tokens": 14,
+        "total_tokens": 691,
+        "estimated": false,
+        "seconds": 4.114
+      }
+    },
+    {
+      "question": "What is the total spend with UMBRELLA TRADERS in INR?",
+      "gold": 352100,
+      "ours": {
+        "answer": 352100,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 267,
+        "completion_tokens": 27,
+        "total_tokens": 294,
+        "estimated": false,
+        "seconds": 3.552
+      },
+      "rag_raw": {
+        "answer": "73000+15800+34200+158000+34200+96000+7300+50000+342000+50000+730",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1032,
+        "completion_tokens": 64,
+        "total_tokens": 1096,
+        "estimated": false,
+        "seconds": 6.223
+      },
+      "rag_canonical": {
+        "answer": 342000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 758,
+        "completion_tokens": 7,
+        "total_tokens": 765,
+        "estimated": false,
+        "seconds": 4.088
+      }
+    },
+    {
+      "question": "What is the total spend with TYRELL CORP in INR?",
+      "gold": 400300,
+      "ours": {
+        "answer": 400300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.473
+      },
+      "rag_raw": {
+        "answer": "34200+34200+34200+24800+34200+12500+34200+96000+96000 = 360300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1026,
+        "completion_tokens": 62,
+        "total_tokens": 1088,
+        "estimated": false,
+        "seconds": 6.091
+      },
+      "rag_canonical": {
+        "answer": "34200+12500+24800+34200+34200+96000+34200+96000+34200 = 304300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 743,
+        "completion_tokens": 62,
+        "total_tokens": 805,
+        "estimated": false,
+        "seconds": 5.744
+      }
+    },
+    {
+      "question": "What is the total spend with Initech Solutions in INR?",
+      "gold": 418200,
+      "ours": {
+        "answer": 418200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.335
+      },
+      "rag_raw": {
+        "answer": 1000000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1012,
+        "completion_tokens": 8,
+        "total_tokens": 1020,
+        "estimated": false,
+        "seconds": 4.522
+      },
+      "rag_canonical": {
+        "answer": 221000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 739,
+        "completion_tokens": 7,
+        "total_tokens": 746,
+        "estimated": false,
+        "seconds": 4.035
+      }
+    },
+    {
+      "question": "How many transactions involve Tyrell Corp?",
+      "gold": 9,
+      "ours": {
+        "answer": 9,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.398
+      },
+      "rag_raw": {
+        "answer": 15,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 958,
+        "completion_tokens": 3,
+        "total_tokens": 961,
+        "estimated": false,
+        "seconds": 4.215
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 733,
+        "completion_tokens": 3,
+        "total_tokens": 736,
+        "estimated": false,
+        "seconds": 3.874
+      }
+    },
+    {
+      "question": "What is the GSTIN of Initech Solutions?",
+      "gold": "07AAECI5678Q1Z2",
+      "ours": {
+        "answer": "07aaeci5678q1z2",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.342
+      },
+      "rag_raw": {
+        "answer": "07aaeci5678q1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1029,
+        "completion_tokens": 14,
+        "total_tokens": 1043,
+        "estimated": false,
+        "seconds": 4.676
+      },
+      "rag_canonical": {
+        "answer": "07aaeci5678q1z2",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 628,
+        "completion_tokens": 14,
+        "total_tokens": 642,
+        "estimated": false,
+        "seconds": 3.997
+      }
+    },
+    {
+      "question": "How many transactions involve Soylent Foods?",
+      "gold": 11,
+      "ours": {
+        "answer": 11,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 23,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.381
+      },
+      "rag_raw": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 976,
+        "completion_tokens": 3,
+        "total_tokens": 979,
+        "estimated": false,
+        "seconds": 4.283
+      },
+      "rag_canonical": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 752,
+        "completion_tokens": 3,
+        "total_tokens": 755,
+        "estimated": false,
+        "seconds": 3.902
+      }
+    },
+    {
+      "question": "What city is Oscorp registered in?",
+      "gold": "Hyderabad",
+      "ours": {
+        "answer": "hyderabad",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 21,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.327
+      },
+      "rag_raw": {
+        "answer": "secunderabad",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 976,
+        "completion_tokens": 4,
+        "total_tokens": 980,
+        "estimated": false,
+        "seconds": 4.366
+      },
+      "rag_canonical": {
+        "answer": "hyderabad",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 629,
+        "completion_tokens": 3,
+        "total_tokens": 632,
+        "estimated": false,
+        "seconds": 3.739
+      }
+    },
+    {
+      "question": "What is the total spend with APERTURE LABS in INR?",
+      "gold": 351900,
+      "ours": {
+        "answer": 351900,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.417
+      },
+      "rag_raw": {
+        "answer": 288800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 972,
+        "completion_tokens": 7,
+        "total_tokens": 979,
+        "estimated": false,
+        "seconds": 4.364
+      },
+      "rag_canonical": {
+        "answer": 333400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 740,
+        "completion_tokens": 7,
+        "total_tokens": 747,
+        "estimated": false,
+        "seconds": 4.083
+      }
+    },
+    {
+      "question": "How many transactions involve Oscorp?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 256,
+        "completion_tokens": 22,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.392
+      },
+      "rag_raw": {
+        "answer": 16,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 988,
+        "completion_tokens": 3,
+        "total_tokens": 991,
+        "estimated": false,
+        "seconds": 4.3
+      },
+      "rag_canonical": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 736,
+        "completion_tokens": 3,
+        "total_tokens": 739,
+        "estimated": false,
+        "seconds": 3.864
+      }
+    },
+    {
+      "question": "What is the total spend with OSCORP in INR?",
+      "gold": 447800,
+      "ours": {
+        "answer": 447800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.42
+      },
+      "rag_raw": {
+        "answer": 388800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1034,
+        "completion_tokens": 7,
+        "total_tokens": 1041,
+        "estimated": false,
+        "seconds": 4.553
+      },
+      "rag_canonical": {
+        "answer": 482800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 742,
+        "completion_tokens": 7,
+        "total_tokens": 749,
+        "estimated": false,
+        "seconds": 4.038
+      }
+    },
+    {
+      "question": "What is the total spend with ORION SYSTEMATICS in INR?",
+      "gold": 257100,
+      "ours": {
+        "answer": 257100,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.47
+      },
+      "rag_raw": {
+        "answer": "15800+12500+24800+7300+34200+7300+12500+34200+96000+12500 = 26160",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1018,
+        "completion_tokens": 64,
+        "total_tokens": 1082,
+        "estimated": false,
+        "seconds": 6.113
+      },
+      "rag_canonical": {
+        "answer": 198700,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 732,
+        "completion_tokens": 7,
+        "total_tokens": 739,
+        "estimated": false,
+        "seconds": 4.022
+      }
+    },
+    {
+      "question": "What city is Umbrella Traders registered in?",
+      "gold": "Kolkata",
+      "ours": {
+        "answer": "kolkata",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.41
+      },
+      "rag_raw": {
+        "answer": "calcutta",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 922,
+        "completion_tokens": 4,
+        "total_tokens": 926,
+        "estimated": false,
+        "seconds": 4.381
+      },
+      "rag_canonical": {
+        "answer": "kolkata",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 572,
+        "completion_tokens": 3,
+        "total_tokens": 575,
+        "estimated": false,
+        "seconds": 3.623
+      }
+    },
+    {
+      "question": "What is the GSTIN of Orion Systematics?",
+      "gold": "33AAEZO7788Q1Z5",
+      "ours": {
+        "answer": "33aaezo7788q1z5",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.414
+      },
+      "rag_raw": {
+        "answer": "33aaezo7788q1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1014,
+        "completion_tokens": 14,
+        "total_tokens": 1028,
+        "estimated": false,
+        "seconds": 4.718
+      },
+      "rag_canonical": {
+        "answer": "33aaezo7788q1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 701,
+        "completion_tokens": 14,
+        "total_tokens": 715,
+        "estimated": false,
+        "seconds": 4.206
+      }
+    },
+    {
+      "question": "How many transactions involve Orion Systematics?",
+      "gold": 10,
+      "ours": {
+        "answer": 10,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 23,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.339
+      },
+      "rag_raw": {
+        "answer": 10,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1011,
+        "completion_tokens": 3,
+        "total_tokens": 1014,
+        "estimated": false,
+        "seconds": 4.349
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 725,
+        "completion_tokens": 3,
+        "total_tokens": 728,
+        "estimated": false,
+        "seconds": 3.911
+      }
+    },
+    {
+      "question": "What is the total spend with Vandelay Industries in INR?",
+      "gold": 294800,
+      "ours": {
+        "answer": 294800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 24,
+        "total_tokens": 286,
+        "estimated": false,
+        "seconds": 3.419
+      },
+      "rag_raw": {
+        "answer": 239300,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1038,
+        "completion_tokens": 7,
+        "total_tokens": 1045,
+        "estimated": false,
+        "seconds": 4.585
+      },
+      "rag_canonical": {
+        "answer": 273800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 680,
+        "completion_tokens": 7,
+        "total_tokens": 687,
+        "estimated": false,
+        "seconds": 3.918
+      }
+    },
+    {
+      "question": "What is the total spend with Oscorp in INR?",
+      "gold": 447800,
+      "ours": {
+        "answer": 447800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 23,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.364
+      },
+      "rag_raw": {
+        "answer": 388800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1033,
+        "completion_tokens": 7,
+        "total_tokens": 1040,
+        "estimated": false,
+        "seconds": 2.841
+      },
+      "rag_canonical": {
+        "answer": 399800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 741,
+        "completion_tokens": 7,
+        "total_tokens": 748,
+        "estimated": false,
+        "seconds": 2.917
+      }
+    },
+    {
+      "question": "What city is Aperture Labs registered in?",
+      "gold": "New Delhi",
+      "ours": {
+        "answer": "new delhi",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 21,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.35
+      },
+      "rag_raw": {
+        "answer": "delhi",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 967,
+        "completion_tokens": 3,
+        "total_tokens": 970,
+        "estimated": false,
+        "seconds": 4.292
+      },
+      "rag_canonical": {
+        "answer": "new delhi",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 559,
+        "completion_tokens": 3,
+        "total_tokens": 562,
+        "estimated": false,
+        "seconds": 3.591
+      }
+    },
+    {
+      "question": "How many transactions involve Initech Solutions?",
+      "gold": 11,
+      "ours": {
+        "answer": 11,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.377
+      },
+      "rag_raw": {
+        "answer": 8,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 960,
+        "completion_tokens": 2,
+        "total_tokens": 962,
+        "estimated": false,
+        "seconds": 4.179
+      },
+      "rag_canonical": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 757,
+        "completion_tokens": 3,
+        "total_tokens": 760,
+        "estimated": false,
+        "seconds": 3.972
+      }
+    },
+    {
+      "question": "What is the total spend with Umbrella Traders in INR?",
+      "gold": 352100,
+      "ours": {
+        "answer": 352100,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 25,
+        "total_tokens": 288,
+        "estimated": false,
+        "seconds": 3.482
+      },
+      "rag_raw": {
+        "answer": "73000+15800+34200+158000+34200+96000+7300+50000+342000+50000+730",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1028,
+        "completion_tokens": 64,
+        "total_tokens": 1092,
+        "estimated": false,
+        "seconds": 6.109
+      },
+      "rag_canonical": {
+        "answer": 342000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 754,
+        "completion_tokens": 7,
+        "total_tokens": 761,
+        "estimated": false,
+        "seconds": 4.017
+      }
+    },
+    {
+      "question": "What is the total spend with SOYLENT FOODS in INR?",
+      "gold": 239600,
+      "ours": {
+        "answer": 239600,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.486
+      },
+      "rag_raw": {
+        "answer": "15800+15800+12500+7300+50000+12500+34200+15800+7300+34200+34200 =",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1012,
+        "completion_tokens": 64,
+        "total_tokens": 1076,
+        "estimated": false,
+        "seconds": 6.099
+      },
+      "rag_canonical": {
+        "answer": 198100,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 757,
+        "completion_tokens": 7,
+        "total_tokens": 764,
+        "estimated": false,
+        "seconds": 4.101
+      }
+    },
+    {
+      "question": "What city is Vandelay Industries registered in?",
+      "gold": "Pune",
+      "ours": {
+        "answer": "pune",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.365
+      },
+      "rag_raw": {
+        "answer": "poona",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1001,
+        "completion_tokens": 3,
+        "total_tokens": 1004,
+        "estimated": false,
+        "seconds": 4.438
+      },
+      "rag_canonical": {
+        "answer": "pune",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 562,
+        "completion_tokens": 3,
+        "total_tokens": 565,
+        "estimated": false,
+        "seconds": 3.619
+      }
+    },
+    {
+      "question": "What is the GSTIN of Soylent Foods?",
+      "gold": "09AAFCS1234W1Z6",
+      "ours": {
+        "answer": "09aafcs1234w1z6",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 260,
+        "completion_tokens": 23,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.406
+      },
+      "rag_raw": {
+        "answer": "09aafcs1234w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 978,
+        "completion_tokens": 13,
+        "total_tokens": 991,
+        "estimated": false,
+        "seconds": 4.686
+      },
+      "rag_canonical": {
+        "answer": "09aafcs1234w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 718,
+        "completion_tokens": 13,
+        "total_tokens": 731,
+        "estimated": false,
+        "seconds": 4.273
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "model": "GradientBoostingClassifier",
+  "task": "classify whether a vendor is high-value from its aggregated transaction features",
+  "raw_table": {
+    "rows": 38,
+    "high_value_share": 0.4211,
+    "accuracy": 0.7632,
+    "balanced_accuracy": 0.7699,
+    "f1": 0.7429,
+    "f1_macro": 0.7617
+  },
+  "consolidated_table": {
+    "rows": 20,
+    "high_value_share": 0.45,
+    "accuracy": 0.9,
+    "balanced_accuracy": 0.899,
+    "f1": 0.8889,
+    "f1_macro": 0.899
+  }
+}

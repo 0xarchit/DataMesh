@@ -1,0 +1,70 @@
+model: .\weights\qwen-3.8-27B.gguf
+vendors: 30
+unique invoices: 298
+raw transaction rows written (xlsx+pdf): 447
+receipts: 8
+duplicate transactions: 149
+gold total spend: 11340500
+consolidation seconds: 49.41
+questions: 42
+retrieval: k=15 over 485 raw chunks, 328 consolidated chunks, index 59.4s
+What is the total spend with PIONEER LOGISTI   gold 497000    ours 497000    rag 50000+24  ragc 50000+34 
+What city is Globex Corporation registered i   gold Bengalur  ours bengalur  rag bangalor  ragc bengalur 
+What is the total spend with INITECH SOLUTIO   gold 350500    ours 350500    rag 384200    ragc 129200   
+What city is Pioneer Logistical registered i   gold Bengalur  ours bengalur  rag bangalor  ragc bengalur 
+What city is Orion Systematics registered in   gold Chennai   ours chennai   rag madras    ragc chennai  
+What is the total spend with ORION SYSTEMATI   gold 375000    ours 375000    rag 339500    ragc 283400   
+What city is Nova Retail registered in?        gold Noida     ours noida     rag noida     ragc noida    
+What is the GSTIN of Orion Systematics?        gold 33AAEZO7  ours 33aaezo7  rag 33aaezo7  ragc 33aaezo7 
+How many distinct vendors appear in the data   gold 30        ours 30        rag 15        ragc 4        
+What is the total spend with Globex Corporat   gold 330200    ours 330200    rag 288000    ragc 342000   
+What city is Daily Planet Media registered i   gold Gurugram  ours gurugram  rag gurgaon   ragc gurugram 
+What is the total spend with ORION SYSTEMS i   gold 208700    ours 208700    rag 15800+15  ragc 144200   
+What is the GSTIN of Initech Solutions?        gold 07AAECI5  ours 07aaeci5  rag 07aaeci5  ragc 07aaeci5 
+How many transactions involve Globex Corpora   gold 9         ours 9         rag 4         ragc 10       
+What is the GSTIN of Daily Planet Media?       gold 06AAECD2  ours 06aaecd2  rag 06aaecd2  ragc 06aaecd2 
+What is the total spend with Pied Piper in I   gold 465100    ours 465100    rag 373400    ragc 373400   
+What is the total spend with Daily Planet Me   gold 624600    ours 624600    rag 1480000   ragc 638000   
+What city is Initech Solutions registered in   gold New Delh  ours new delh  rag delhi     ragc new delh 
+What is the GSTIN of Nova Retail?              gold 24AAHZN4  ours 24aahzn4  rag 24aahzn4  ragc 24aahzn4 
+What is the total spend with Pioneer Logisti   gold 497000    ours 497000    rag 50000
+24  ragc 491100   
+What is the GSTIN of Globex Corporation?       gold 29AAGCG1  ours 29aagcg1  rag 29aagcg1  ragc 29aagcg1 
+What city is Pied Piper registered in?         gold Bengalur  ours bengalur  rag bangalor  ragc bengalur 
+How many transactions involve Nova Retail?     gold 10        ours 10        rag 12        ragc 8        
+What is the total spend with NOVA RETAIL in    gold 301200    ours 301200    rag 15800+15  ragc 34200    
+What city is Orion Systems registered in?      gold New Delh  ours new delh  rag delhi     ragc new delh 
+How many transactions involve Initech Soluti   gold 9         ours 9         rag 8         ragc 9        
+What is the total spend with Nova Retail in    gold 301200    ours 301200    rag 15800+15  ragc 34200    
+How many transactions involve Orion Systemat   gold 12        ours 12        rag 12        ragc 13       
+What is the GSTIN of Pied Piper?               gold 29AAHCP1  ours 29aahcp1  rag 29aahcp1  ragc 29aahcp1 
+What is the total spend with Initech Solutio   gold 350500    ours 350500    rag 354200    ragc 103200   
+How many transactions involve Daily Planet M   gold 11        ours 11        rag 12        ragc 11       
+What is the total spend with Orion Systems i   gold 208700    ours 208700    rag 15800+15  ragc 15800+15 
+What is the total spend across all vendors i   gold 11340500  ours 11340500  rag 783900    ragc 333700   
+What is the GSTIN of Pioneer Logistical?       gold 27AAKZP1  ours 27aakzp1  rag 27aakzp1  ragc 27aakzp1 
+What is the total spend with PIED PIPER in I   gold 465100    ours 465100    rag 458400    ragc 373400   
+How many transactions involve Pioneer Logist   gold 8         ours 8         rag 9         ragc 10       
+What is the total spend with GLOBEX CORPORAT   gold 330200    ours 330200    rag 15800     ragc 342000   
+What is the total spend with Orion Systemati   gold 375000    ours 375000    rag 339500    ragc 283800   
+What is the total spend with DAILY PLANET ME   gold 624600    ours 624600    rag 1480000   ragc 580000   
+What is the GSTIN of Orion Systems?            gold 07AADZO5  ours 07aadzo5  rag 07aadzo5  ragc 07aadzo5 
+How many transactions involve Pied Piper?      gold 10        ours 10        rag 12        ragc 10       
+How many transactions involve Orion Systems?   gold 8         ours 8         rag 8         ragc 14       
+
+arm                                  accuracy total_tokens  mean_tokens    total_s
+ours_consolidated_engine             42/42           11851        282.2     143.73
+rag_over_raw_records                 11/42           41650        991.7     193.04
+rag_over_consolidated_table          19/42           30190        718.8     170.69
+
+accuracy by question type
+type                           ours    rag_raw  rag_canon
+city                            8/8        1/8        8/8
+count                           8/8        2/8        3/8
+global_count                    1/1        0/1        0/1
+global_sum                      1/1        0/1        0/1
+sum                             8/8        0/8        0/8
+sum_upper_variant               8/8        0/8        0/8
+tax                             8/8        8/8        8/8
+
+wrote research\results\benchmark_3.json
