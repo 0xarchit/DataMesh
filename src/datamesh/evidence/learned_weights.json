@@ -1,0 +1,55 @@
+{
+  "source": "model comparison on ground-truth-labeled candidate pairs, 5-fold stratified CV",
+  "records": 470,
+  "clusters": 30,
+  "pairs": 14100,
+  "positives": 470,
+  "comparison": {
+    "logistic_regression": {
+      "auc": 0.9995,
+      "accuracy": 0.9967,
+      "f1": 0.9524
+    },
+    "random_forest": {
+      "auc": 0.9986,
+      "accuracy": 0.9966,
+      "f1": 0.9508
+    },
+    "gradient_boosting": {
+      "auc": 0.9995,
+      "accuracy": 0.9966,
+      "f1": 0.9507
+    },
+    "xgboost": {
+      "auc": 0.9995,
+      "accuracy": 0.9955,
+      "f1": 0.9335
+    },
+    "lightgbm": {
+      "auc": 0.9994,
+      "accuracy": 0.9952,
+      "f1": 0.9278
+    },
+    "neural_mlp": {
+      "auc": 0.9995,
+      "accuracy": 0.9967,
+      "f1": 0.9524
+    }
+  },
+  "selected_model": "logistic_regression",
+  "selected_metrics": {
+    "auc": 0.9995,
+    "accuracy": 0.9967,
+    "f1": 0.9524
+  },
+  "handset_baseline_auc": 0.9995,
+  "weights": {
+    "E1_semantic_name": 0.3574,
+    "E2_tax_id_match": 0.0936,
+    "E4_coreference": 0.3413,
+    "E3_city_agreement": 0.0407,
+    "E5_provenance_confidence": 0.0779,
+    "E6_temporal_freshness": 0.0033,
+    "E7_cross_source_consensus": 0.0858
+  }
+}

@@ -1,12 +1,5 @@
-"""The evidence vector: seven signals for one merge decision.
-
-E1..E7 are deliberately cheap and interpretable. They are correlated with each
-other (a name match usually drags E4 along too) and the weights in `combine`
-are hand-set, not learned - SMUTF fuses the same family of signals with a
-trained combiner, and learning these is the next step, not this demo. Every
-signal returns 0..1.
-"""
-
+import json
+import os
 from datetime import date
 from difflib import SequenceMatcher
 
@@ -15,7 +8,6 @@ from datamesh.core.schema import canon_city, normalize_name
 SOURCE_RELIABILITY = {"csv": 1.0, "xlsx": 1.0, "pdf": 0.95, "receipt": 0.8}
 KNOWN_SOURCE_TYPES = ("csv", "xlsx", "pdf", "receipt")
 
-# a missing date or an unseen source type gets a neutral half rather than a zero
 NEUTRAL = 0.5
 
 
@@ -34,11 +26,6 @@ def name_similarity(a, b):
 
 
 def coreference(a, b):
-    """E4: is one name a shortened form of the other?
-
-    E1 measures how alike two strings look; this asks the different question of
-    whether one is contained in the other as whole words, or is its acronym.
-    """
     ta, tb = set(normalize_name(a).split()), set(normalize_name(b).split())
     if not ta or not tb:
         return 0.0
@@ -60,7 +47,6 @@ def _as_date(value):
 
 
 def freshness(record_date, cluster_date):
-    """E6: how close the record's date is to the newest date already seen."""
     a, b = _as_date(record_date), _as_date(cluster_date)
     if a is None or b is None:
         return NEUTRAL
@@ -68,7 +54,6 @@ def freshness(record_date, cluster_date):
 
 
 def cross_source_consensus(source_type, seen_types):
-    """E7: how many distinct source types end up agreeing on this identity."""
     seen = set(seen_types or ())
     seen.add(source_type)
     return round(len(seen & set(KNOWN_SOURCE_TYPES)) / float(len(KNOWN_SOURCE_TYPES)), 4)
@@ -89,9 +74,6 @@ def evidence_vector(record, cluster):
 
 
 WEIGHTS = {
-    # E1 carries the decision: the other six are there to confirm or veto it.
-    # The threshold in resolver.MERGE_THRESHOLD was tuned against this split,
-    # so changing these weights means re-checking the cluster count.
     "E1_semantic_name": 0.60,
     "E2_tax_id_match": 0.15,
     "E4_coreference": 0.10,
@@ -102,12 +84,28 @@ WEIGHTS = {
 }
 
 
+_LEARNED_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "learned_weights.json")
+_active_weights = None
+
+
+def active_weights():
+    global _active_weights
+    if _active_weights is None:
+        try:
+            with open(_LEARNED_PATH, encoding="utf-8") as f:
+                learned = {k: float(v) for k, v in json.load(f)["weights"].items()}
+            _active_weights = learned if abs(sum(learned.values()) - 1.0) < 1e-6 else WEIGHTS
+        except Exception:
+            _active_weights = WEIGHTS
+    return _active_weights
+
+
 def combine(ev):
-    return round(sum(w * ev.get(k, 0.0) for k, w in WEIGHTS.items()), 4)
+    weights = active_weights()
+    return round(sum(weights.get(k, 0.0) * ev.get(k, 0.0) for k in WEIGHTS), 4)
 
 
 def demo():
-    """Self-check that each signal does what its docstring claims."""
     assert name_similarity("Acme Ltd", "ACME") == 1.0
     assert coreference("Hooli", "Hooli Services") == 1.0
     assert coreference("Acme Ltd", "Globex Corporation") == 0.0
