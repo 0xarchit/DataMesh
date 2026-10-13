@@ -42,6 +42,7 @@ def load_excel(path):
                 vendor=str(row.get("vendor", "")).strip(),
                 amount=parse_amount(row.get("amount_inr")),
                 date=str(row.get("date", "")).strip(),
+                tax_id=str(row.get("gstin", "")).strip(),
                 confidence=1.0,
             )
         )

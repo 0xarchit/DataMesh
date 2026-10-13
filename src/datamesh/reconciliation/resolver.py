@@ -39,7 +39,6 @@ class VendorResolver:
             best["tax_id"] = record.tax_id
         if record.city:
             best["city_votes"][canon_city(record.city)] += 1
-        # E6 and E7 read these back, so they have to advance as the cluster grows
         if record.date > best["last_date"]:
             best["last_date"] = record.date
         if record.source_type not in best["source_types"]:
@@ -64,6 +63,13 @@ class VendorResolver:
             if score > best_score:
                 best, best_score = cluster, score
         return best, best_score
+
+    def cluster_for_record(self, record):
+        if record.tax_id:
+            for cluster in self.clusters:
+                if cluster.get("tax_id") and cluster["tax_id"] == record.tax_id:
+                    return cluster, 1.0
+        return self.best_cluster_for_name(record.vendor)
 
 
 def dedupe_transactions(transactions):

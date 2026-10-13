@@ -43,7 +43,7 @@ def run(raw_dir, canonical_dir, intermediate_dir, use_llm=True, emit=None, on_to
     for r in records:
         if not (r.invoice_id and r.amount):
             continue
-        cluster, score = resolver.best_cluster_for_name(r.vendor)
+        cluster, score = resolver.cluster_for_record(r)
         ev = evidence_vector(r, cluster) if cluster else {}
         txn = SimpleNamespace(
             invoice_id=r.invoice_id,
