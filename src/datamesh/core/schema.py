@@ -1,4 +1,7 @@
+import re
 from dataclasses import dataclass, field, asdict
+
+DROP_TOKENS = {"ltd", "limited", "pvt", "private", "corporation", "corp", "inc", "co", "company"}
 
 CITY_ALIASES = {
     "bombay": "Mumbai",
@@ -44,10 +47,8 @@ class Record:
 def normalize_name(name):
     if not name:
         return ""
-    text = name.lower().strip()
-    for token in ("ltd.", "ltd", "limited", "pvt", "private", "corporation", "corp", "inc", "co", "company", "&", "."):
-        text = text.replace(token, " ")
-    return " ".join(text.split())
+    words = re.split(r"[^a-z0-9]+", name.lower())
+    return " ".join(word for word in words if word and word not in DROP_TOKENS)
 
 
 def canon_city(city):
