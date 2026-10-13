@@ -13,6 +13,9 @@ data/chroma/
 # Copyrighted journal papers, not redistributed
 academic/literature/*.pdf
 
+# Third-party benchmark downloads, not redistributed
+data/external/
+
 # Build and generated artifacts
 *.egg-info/
 data/chroma_canonical/
