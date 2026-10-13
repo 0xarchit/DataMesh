@@ -16,3 +16,6 @@ academic/literature/*.pdf
 # Build and generated artifacts
 *.egg-info/
 data/chroma_canonical/
+
+results
+Agents/*
