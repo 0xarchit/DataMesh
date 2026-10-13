@@ -34,6 +34,16 @@ VENDORS = [
     ("Massive Dynamic", "09AAOCM9012F1Z6", "Noida", "Noida"),
     ("Tyrell Corp", "27AAPCT3456G1Z9", "Thane", "Thana"),
     ("InGen", "29AAQCI7890H1Z1", "Mumbai", "Bombay"),
+    ("Zenith Traders", "27AABZK1122M1Z5", "Mumbai", "Bombay"),
+    ("Zenith Trading Company", "29AACZL3344N1Z8", "Pune", "Poona"),
+    ("Orion Systems", "07AADZO5566P1Z2", "New Delhi", "Delhi"),
+    ("Orion Systematics", "33AAEZO7788Q1Z5", "Chennai", "Madras"),
+    ("Vertex Analytics", "19AAFZV9900R1Z8", "Kolkata", "Calcutta"),
+    ("Vertex Analysis", "36AAGZV2233S1Z1", "Hyderabad", "Secunderabad"),
+    ("Nova Retail", "24AAHZN4455T1Z4", "Noida", "Noida"),
+    ("Nova Retailers", "09AAIZN6677U1Z7", "Thane", "Thana"),
+    ("Pioneer Logistics", "06AAJZP8899V1Z3", "Gurugram", "Gurgaon"),
+    ("Pioneer Logistical", "27AAKZP1122W1Z6", "Bengaluru", "Bangalore"),
 ]
 
 VARIANT_RULES = [
@@ -65,15 +75,75 @@ def variant(name, mode):
     return name
 
 
-def build(emit=None):
+def bench_questions(canonical, unique, vendors_per_type=8):
+    by_vendor = {}
+    for t in unique.values():
+        by_vendor.setdefault(t["vendor_id"], []).append(t)
+
+    def spend(vid):
+        return sum(t["amount"] for t in by_vendor.get(vid, []))
+
+    selected = random.sample(canonical, min(vendors_per_type, len(canonical)))
+    questions = []
+    for v in selected:
+        questions.append(
+            {
+                "q": "What is the total spend with {} in INR?".format(v["name"]),
+                "answer": spend(v["vendor_id"]),
+                "type": "sum",
+            }
+        )
+        questions.append(
+            {
+                "q": "What is the total spend with {} in INR?".format(v["name"].upper()),
+                "answer": spend(v["vendor_id"]),
+                "type": "sum_upper_variant",
+            }
+        )
+        questions.append(
+            {
+                "q": "How many transactions involve {}?".format(v["name"]),
+                "answer": len(by_vendor.get(v["vendor_id"], [])),
+                "type": "count",
+            }
+        )
+        questions.append(
+            {
+                "q": "What city is {} registered in?".format(v["name"]),
+                "answer": v["city"],
+                "type": "city",
+            }
+        )
+        questions.append(
+            {
+                "q": "What is the GSTIN of {}?".format(v["name"]),
+                "answer": v["tax_id"],
+                "type": "tax",
+            }
+        )
+    questions.append(
+        {"q": "How many distinct vendors appear in the data?", "answer": len(canonical), "type": "global_count"}
+    )
+    questions.append(
+        {
+            "q": "What is the total spend across all vendors in INR?",
+            "answer": sum(t["amount"] for t in unique.values()),
+            "type": "global_sum",
+        }
+    )
+    random.shuffle(questions)
+    return questions
+
+
+def build(emit=None, seed=None):
     say = emit or (lambda s: None)
-    random.seed(42)
+    if seed is None:
+        seed = random.randrange(1, 1000000)
+    random.seed(seed)
+    say("generator seed {}".format(seed))
     os.makedirs(RAW, exist_ok=True)
     os.makedirs(GOLD, exist_ok=True)
 
-    # The set of invoices that get a document changes when the plan changes, so
-    # clear the generated documents first. Leftover files would be ingested as
-    # extra records and silently shift every count downstream.
     for sub, pattern in (("invoices", "*.pdf"), ("receipts", "*.png")):
         folder = os.path.join(RAW, sub)
         os.makedirs(folder, exist_ok=True)
@@ -117,10 +187,6 @@ def build(emit=None):
     for t in dup_targets:
         t["second"] = "pdf" if used_sources[t["invoice_id"]] == "xlsx" else "xlsx"
 
-    # Cross-source disagreements. The same invoice is written into two or three
-    # sources, but one copy carries a digit-scale error (a scanner reading 24800
-    # as 248000, or dropping a digit). This is what a reconciliation layer has to
-    # catch: load order alone silently keeps whichever copy was read first.
     conflicts = []
 
     by_vendor = {}
@@ -128,28 +194,11 @@ def build(emit=None):
         by_vendor.setdefault(t["vendor_id"], []).append(t["amount"])
 
     def amount_repeats(t):
-        """Another invoice of this vendor bills the same amount.
-
-        Resolving a conflict needs evidence, so conflicts are only planted where
-        the true amount is a value the vendor actually repeats. Every planted
-        conflict then stays resolvable whether or not the receipt copy arrives,
-        and where the copies really are indistinguishable the honest output is a
-        review flag - that branch is covered by the unit check in
-        datamesh.fusion.consensus rather than by this dataset.
-        """
         return sum(1 for a in by_vendor[t["vendor_id"]] if a == t["amount"]) > 1
 
-    # the invoices that also get a receipt image: three copies, so agreement
-    # across copies can outvote a single bad one
     claimed = set()
 
     def pick(candidates, n):
-        """Take up to n conflicts, at most one per (vendor, amount).
-
-        Planting the same misread value twice under one vendor would make the
-        two conflicts indistinguishable from each other, which is a harder
-        problem than this dataset is meant to pose.
-        """
         out = []
         for t in candidates:
             key = (t["vendor_id"], t["amount"])
@@ -182,13 +231,10 @@ def build(emit=None):
             }
         )
 
-    # wrong copy in the less reliable source -> naive source-priority still wins
     for t in two_copy[:8]:
         inject(t, "pdf", 10)
-    # wrong copy in the MOST reliable source -> source-priority gets these wrong
     for t in two_copy[8:12]:
         inject(t, "xlsx", 10)
-    # three copies, so agreement across copies can outvote the wrong one
     for i, t in enumerate(three_copy):
         inject(t, "xlsx" if i % 3 == 0 else "pdf", 10)
 
@@ -201,7 +247,6 @@ def build(emit=None):
     say("seed {} unique invoices, {} duplicate targets".format(len({t["invoice_id"] for t in transactions}), len(dup_targets)))
 
     def amount_for(t, source):
-        """The amount this source actually carries, wrong copy included."""
         wrong = t.get("wrong")
         return wrong[1] if wrong and wrong[0] == source else t["amount"]
 
@@ -215,11 +260,11 @@ def build(emit=None):
     wb = Workbook()
     ws = wb.active
     ws.title = "ledger"
-    ws.append(["invoice_id", "vendor", "amount_inr", "date"])
+    ws.append(["invoice_id", "vendor", "gstin", "amount_inr", "date"])
     for t in transactions:
         if used_sources[t["invoice_id"]] == "xlsx" or t.get("second") == "xlsx":
             v = canonical[int(t["vendor_id"][1:]) - 1]
-            ws.append([t["invoice_id"], variant(v["name"], 3), amount_for(t, "xlsx"), t["date"]])
+            ws.append([t["invoice_id"], variant(v["name"], 3), v["tax_id"], amount_for(t, "xlsx"), t["date"]])
     wb.save(os.path.join(RAW, "transactions.xlsx"))
     say("wrote transactions.xlsx ledger")
 
@@ -293,6 +338,8 @@ def build(emit=None):
         json.dump(gold_vendors, f, indent=2)
     with open(os.path.join(GOLD, "questions.json"), "w", encoding="utf-8") as f:
         json.dump(questions, f, indent=2)
+    with open(os.path.join(GOLD, "questions_bench.json"), "w", encoding="utf-8") as f:
+        json.dump(bench_questions(canonical, unique), f, indent=2)
     with open(os.path.join(GOLD, "conflicts.json"), "w", encoding="utf-8") as f:
         json.dump(conflicts, f, indent=2)
     with open(os.path.join(GOLD, "invoice_truth.json"), "w", encoding="utf-8") as f:
@@ -326,6 +373,12 @@ def build(emit=None):
 
     raw_rows = sum(1 for t in transactions if used_sources[t["invoice_id"]] == "xlsx" or t.get("second") == "xlsx")
     pdf_rows = sum(1 for t in transactions if used_sources[t["invoice_id"]] == "pdf" or t.get("second") == "pdf")
+    with open(os.path.join(GOLD, "meta.json"), "w", encoding="utf-8") as f:
+        json.dump(
+            {"seed": seed, "vendors": len(canonical), "unique_invoices": len(unique), "raw_rows": raw_rows + pdf_rows},
+            f,
+            indent=2,
+        )
     print("vendors:", len(canonical))
     print("unique invoices:", len(unique))
     print("raw transaction rows written (xlsx+pdf):", raw_rows + pdf_rows)
