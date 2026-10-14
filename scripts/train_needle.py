@@ -8,7 +8,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRAIN_DIR = os.path.join(ROOT, "training", "needle")
 DISTRO = "Ubuntu"
 VENV = "/home/archit/needle-venv"
-LOG = os.path.join(TRAIN_DIR, "finetune.log")
 
 
 def wsl_path(path):
@@ -53,6 +52,11 @@ def main():
     parser.add_argument("--lora-alpha", type=int, default=64)
     parser.add_argument("--data", default=os.path.join(TRAIN_DIR, "train.jsonl"))
     parser.add_argument("--out", default=os.path.join(TRAIN_DIR, "adapter.safetensors"))
+    parser.add_argument(
+        "--checkpoint",
+        default=None,
+        help="Warm-start base from scripts/make_warmstart.py. Defaults to the stock base.",
+    )
     parser.add_argument("--skip-check", action="store_true")
     args = parser.parse_args()
 
@@ -72,7 +76,7 @@ def main():
 
     command = (
         "PYTHONUNBUFFERED=1 {venv}/bin/needle finetune {data} --epochs {epochs} --max-len {max_len} "
-        "--batch-size {batch} --lora-rank {rank} --lora-alpha {alpha} --val-split 0.1 --out {out}"
+        "--batch-size {batch} --lora-rank {rank} --lora-alpha {alpha} --val-split 0.1 {warm}--out {out}"
     ).format(
         venv=VENV,
         data=data,
@@ -81,10 +85,12 @@ def main():
         batch=args.batch_size,
         rank=args.lora_rank,
         alpha=args.lora_alpha,
+        warm="--checkpoint {} ".format(wsl_path(args.checkpoint)) if args.checkpoint else "",
         out=out,
     )
-    print("logging to {}".format(os.path.relpath(LOG, ROOT)), flush=True)
-    return wsl(command, stream=True, log_path=LOG)
+    log_path = os.path.splitext(os.path.abspath(args.out))[0] + ".log"
+    print("logging to {}".format(os.path.relpath(log_path, ROOT)), flush=True)
+    return wsl(command, stream=True, log_path=log_path)
 
 
 if __name__ == "__main__":

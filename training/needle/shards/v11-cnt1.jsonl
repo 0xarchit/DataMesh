@@ -1,0 +1,50 @@
+{"query": "total number of vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "asks for the overall number of vendors in the data"}
+{"query": "what is the total vendor count", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "wants the aggregate vendor count, not a spend figure"}
+{"query": "total kitne vendors hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Hinglish phrasing for the total vendor tally"}
+{"query": "give me the total count of suppliers", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "requests the summed count of suppliers"}
+{"query": "total vendors in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "counts every vendor present in the dataset"}
+{"query": "how many vendors in total", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "inverted wording of the same vendor total"}
+{"query": "what is the total supplier count", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "asks the total supplier number directly"}
+{"query": "total count of distinct parties", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "total parties means distinct vendor entities"}
+{"query": "total sellers in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "sellers total, a vendor-counting noun"}
+{"query": "total merchants in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "merchants are vendors, so count them all"}
+{"query": "total entities in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "entities count as vendors in this schema"}
+{"query": "total vendors listed", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "listed vendors summed into one number"}
+{"query": "kul total kitne suppliers", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Hindi-English mix asking for total supplier count"}
+{"query": "total number of distinct suppliers", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct suppliers totalled together"}
+{"query": "total number of sellers", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "seller tally requested without any spend"}
+{"query": "total count of merchants", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "merchant count is the vendor count"}
+{"query": "total kitne sellers hain", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Hinglish total against the sellers noun"}
+{"query": "total parties in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "all parties counted as vendors"}
+{"query": "how many total vendors are there", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "asks how many vendors exist overall"}
+{"query": "the total count of distinct vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "definite article then the distinct vendor total"}
+{"query": "total vendor entities", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendor entities is a counting phrase"}
+{"query": "total count of parties", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "party count equals vendor count here"}
+{"query": "total supplier count in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "supplier total scoped to the whole data"}
+{"query": "total merchants listed", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "merchants listed, summing the vendor count"}
+{"query": "total number of merchants", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "straightforward total of merchant records"}
+{"query": "total sellers in the dataset", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "sellers within the dataset totalled"}
+{"query": "total distinct vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct vendors, no aggregation of spend"}
+{"query": "what is the total vendors count", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "possessive phrasing of the vendor total"}
+{"query": "total entities in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "entities in the data totalled as vendors"}
+{"query": "total number of parties", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "number of parties equals vendor number"}
+{"query": "total vendor count in the system", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendor count across the whole system"}
+{"query": "how many vendors total", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "reversed order but still a vendor total"}
+{"query": "total count of sellers", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "sellers summed with a total prefix"}
+{"query": "total number of entities", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "entities totalled, a vendor synonym"}
+{"query": "total parties listed", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "parties listed summed to one figure"}
+{"query": "total supplier entities in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "supplier entities within the data totalled"}
+{"query": "total vendors hain kitne", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "Hinglish word order asking the vendor total"}
+{"query": "give the total count of vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "explicit request for the vendor total"}
+{"query": "total distinct merchants", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct merchants, another vendor noun"}
+{"query": "total count of entities present", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "entities present counted as vendors"}
+{"query": "total number of distinct parties", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct parties totalled as vendors"}
+{"query": "total suppliers in the data", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "suppliers in the data, counting only"}
+{"query": "total vendors present in the dataset", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "vendors present in the dataset, total count"}
+{"query": "whats the total count of merchants", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "casual phrasing of the merchant total"}
+{"query": "total number of vendors in the dataset", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "whole-dataset vendor total requested"}
+{"query": "total distinct sellers", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "distinct sellers totalled, no money involved"}
+{"query": "total count of all vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "all vendors summed into a single count"}
+{"query": "how many total suppliers exist", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "asks how many suppliers exist overall"}
+{"query": "whats the total number of vendors", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "casual total for the vendor number"}
+{"query": "the total number of merchants", "tools": [{"name": "count_vendors"}], "answers": [{"name": "count_vendors", "arguments": {}}], "reasoning": "definite total of merchant entities"}

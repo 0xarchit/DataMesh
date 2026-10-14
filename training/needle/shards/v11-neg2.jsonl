@@ -1,0 +1,50 @@
+{"query": "Do not tell me the total spend with Vantrix Holdings", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request is negated, so the total spend is withheld."}
+{"query": "Do not tell me the total spend with NORDHELM", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated instruction means the vendor total must not be given."}
+{"query": "Do not tell me the total spend with quibble labs", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user forbids the spend answer, so nothing is returned."}
+{"query": "Do not tell me the total spend with Bright & Barrow", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Since the ask is negated, the spend figure stays withheld."}
+{"query": "Do not tell me the total spend with Kestrel-Point", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The negation blocks the spend lookup, so it is refused."}
+{"query": "Do not tell me the total spend with ORBITALIS", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Refusal is correct here because spend was explicitly negated."}
+{"query": "Do not tell me the total spend with mauve trading co", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend request is negated, so no value is produced."}
+{"query": "Do not tell me the total spend with Sable River Group", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "A negated question yields no spend answer."}
+{"query": "Do not tell me the total spend with ZENFORD", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user said not to give spend, so it is withheld."}
+{"query": "Do not tell me the total spend with pinecrest supplies", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negation of the spend ask makes refusal the right reply."}
+{"query": "Do not tell me the total spend with Hale & Wexford", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend total is withheld since the request is negated."}
+{"query": "Do not tell me the total spend with Corvus-Deep", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Because the instruction is negated, no spend is disclosed."}
+{"query": "do not tell me the gstin of TALVIK", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The gstin request is negated, so the tax id is withheld."}
+{"query": "do not tell me the city of amberwood logistics", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated city ask, so the registered city is refused."}
+{"query": "do not tell me the registered name of Quillon Systems", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The registered name ask is negated, so it stays hidden."}
+{"query": "do not tell me the invoice count of REDMAW", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Invoice count was negated, so no count is returned."}
+{"query": "do not tell me the city of ferrous lane", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Since the city ask is negated, no city is given."}
+{"query": "do not tell me the gstin of Osprey & Vale", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The gstin query is negated, so the id is withheld."}
+{"query": "do not tell me the invoice count of Marrow-Bay", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negation means the invoice count is not disclosed."}
+{"query": "do not tell me the registered name of GLINTWORKS", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The registered name is withheld as the request is negated."}
+{"query": "Don't give me the spend for tamarind union", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Don't-give phrasing negates the detail, so it is withheld."}
+{"query": "Don't give me the gstin for Pellworth Group", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated detail request, so the answer is refused."}
+{"query": "Don't give me the city for NAXOS", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user negates this detail, so nothing is provided."}
+{"query": "Don't give me the invoice count for ivory ridge", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Because the detail is negated, refusal is correct."}
+{"query": "Don't give me the registered name for Dray & Co", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated ask for the detail, so it is not shared."}
+{"query": "Don't give me the gstin for Foxglove-End", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The detail was negated, hence no value is returned."}
+{"query": "Don't give me the city for STRATOS", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "A negated detail request produces no answer."}
+{"query": "Don't give me the spend for cinder & ash", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negation of the detail means it is withheld."}
+{"query": "wellspring ltd ka total spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The Hindi negation means the spend is not told."}
+{"query": "Harkness Solutions ki gstin mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Mat batao negates the gstin ask, so it is withheld."}
+{"query": "VOLUND ka total spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend ask in Hindi is negated, so it is refused."}
+{"query": "mistral bay ki gstin mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated gstin request in Hindi, so no tax id is given."}
+{"query": "Quarry & Stone ka total spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Hindi negation forbids the spend answer."}
+{"query": "Brook-Hollow ki gstin mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The gstin question is negated, so it stays withheld."}
+{"query": "ZEPHYRIA ka total spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated spend query in Hindi, so nothing is returned."}
+{"query": "flaxen road ka city mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Mat bolo negates the city ask, so the city is withheld."}
+{"query": "Orchard & Finch ka naam mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The naam request is negated, so the name stays hidden."}
+{"query": "Larkspur-North ka gstin mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated gstin ask with mat bolo, so no id is given."}
+{"query": "THALWEG ka city mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The city ask is negated, so it is not stated."}
+{"query": "ebon trade ka naam mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Mat bolo negation blocks the name, so it is withheld."}
+{"query": "I am not asking for the spend of Silver & Fern", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user denies asking, so the detail is withheld."}
+{"query": "I am not asking for the gstin of Grey-Mantle", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Not-asking phrasing negates it, so refusal is right."}
+{"query": "I am not asking for the city of KAURI", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Since the ask is denied, no value is produced."}
+{"query": "I am not asking for the invoice count of umbral supply", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The disclaimer negates the request, so nothing is given."}
+{"query": "I am not asking for the registered name of Wren & Otter", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Denied request means the detail stays withheld."}
+{"query": "my manager said not to tell you the spend for Hollis-Bright", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported speech still negates intent, so it is withheld."}
+{"query": "she asked me not to check the city of MERIDIANE", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The relayed ask is negated, so the city stays hidden."}
+{"query": "my manager said not to give the gstin for sorrel creek", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "A relayed negated request yields no answer."}
+{"query": "she asked me not to check the invoice count of Alder & Quince", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "She negated the count check, so it is refused."}
+{"query": "my manager said not to reveal the registered name of Vane-Roth", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported framing negates the detail, so nothing is shared."}

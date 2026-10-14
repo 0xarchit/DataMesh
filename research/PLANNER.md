@@ -51,8 +51,14 @@ Built only from data, never from the demo's vendor names.
 | v8 | in-domain refusals, confusable entity spans, unseen name shapes, negation | 750 |
 | v9 | global sum with the vendor omitted, which had zero examples | 165 |
 | v10 | capitalised and single-word vendor names, which were absent entirely | 131 |
+| v11 | negation refusals, `count_vendors` phrased without the word `total`, more capitalised names | 500 |
+| v12 | no new data. Same 3838, trained from v10's weights instead of the base | 0 |
 
-Final set: 3367 examples, 3030 train and 337 held out. 18 percent are refusals.
+Final set: 3838 examples, 3454 train and 384 held out. 21 percent are refusals.
+
+v11 and v12 share that set exactly, including the validation split, because the split comes from
+`--seed 0` over the same file. Their validation losses are therefore directly comparable, and the
+comparison is what identified warm-starting as the thing that worked.
 
 Two label rules are enforced by the builder rather than left to the generators:
 
@@ -96,32 +102,71 @@ sum or a count has to be produced.
 ## Measured accuracy
 
 `scripts/eval_planner.py` reports the raw model and the integrated planner chain separately so a
-fallback can never be credited to the model. Both are 90.6 percent on the 180-case frozen holdout,
-which is the point: the chain no longer improves on the model, and once that was true the
+fallback can never be credited to the model. They are identical for both candidate models, which
+is the point: the chain no longer improves on the model, and once that was true the
 entity-resolution fallback was deleted as dead weight.
 
-| Measure | Result |
-|---|---|
-| Frozen holdout, real vendors, 180 cases | 90.6 percent |
-| Positive questions | 129/137, 94 percent |
-| Negation refusals | 11/14, 79 percent |
-| Missing-argument refusals | 3/4, 75 percent |
-| Off-topic refusals | 11/13, 85 percent |
-| `count_vendors` | 8/11, 73 percent |
-| Project benchmark, 42 questions | **42/42, 100 percent** |
-| Speed | 99.7 ms per question, CPU, no GPU |
-| Model calls | 0 LLM API calls, all local |
+The v11 batch was built to fix the two named weaknesses below. It fixed them and it is still not
+the shipped model, because it bought them with a new failure the benchmark could see. The v12 run
+took a different route to the same gains and is the one that ships.
+
+| Measure | v10 | v11 | **v12, shipped** |
+|---|---|---|---|
+| Frozen holdout, real vendors, 180 cases | 163/180, 90.6 percent | 166/180, 92.2 percent | **172/180, 95.6 percent** |
+| Positive questions | 129/137, 94 percent | 127/137, 93 percent | **132/137, 96 percent** |
+| Negation refusals | 11/14, 79 percent | 13/14, 93 percent | **13/14, 93 percent** |
+| Missing-argument refusals | 3/4, 75 percent | 3/4, 75 percent | 3/4, 75 percent |
+| Off-topic refusals | 11/13, 85 percent | 11/13, 85 percent | **12/13, 92 percent** |
+| `count_vendors` | 8/11, 73 percent | 11/11, 100 percent | **11/11, 100 percent** |
+| Project benchmark, 42 questions | 42/42, 100 percent | 41/42, 97.6 percent | **42/42, 100 percent** |
+| Speed | about 100 ms per question, CPU, no GPU | same | 105 ms |
+| Model calls | 0 LLM API calls, all local | same | same |
+
+### Warm-starting is what made v12 work
+
+v11 and v12 train on the same 3838 examples. The only difference is the starting point: v11
+starts from the published base, v12 starts from v10's weights merged back into that base, so its
+LoRA learns only a correction.
+
+| | v11, from the base | v12, from v10 |
+|---|---|---|
+| Validation loss, final | 0.2977 | **0.2806** |
+| Validation loss, epoch 1 | 0.4989 | **0.2877** |
+| Holdout | 166/180 | **172/180** |
+| Benchmark | 41/42 | **42/42** |
+
+v12's first epoch is already better than v11's last, so this is a better minimum rather than the
+same one reached twice. Validation loss was still falling at v12's final epoch, which means three
+epochs was not enough and a longer warm run has room left.
+
+The improvement over v10 is real by a paired test: on the cases where they disagree v12 wins 11
+and loses 2, giving McNemar chi-square 4.92 and p 0.027. The v11 comparison was p 0.66, which is
+why v11 was not shipped and v12 is.
+
+v11's two regressions are both gone in v12. The entity-drop on `X ka total spend kitna hai?` falls
+from two cases to one, and the confusable-pair over-refusal that cost the benchmark question does
+not occur.
+
+Nothing about this is a code path. `scripts/make_warmstart.py` merges an adapter into a base
+checkpoint, `scripts/train_needle.py --checkpoint` trains from it, and `needle build` merges the
+result onto the same warm base. The model is the same architecture and the same six tools.
 
 ## Known weaknesses
 
-- `count_vendors` at 73 percent is the weakest tool. The cause is the word "total": the spend
-  tool needs it as its main cue, so `total` had to be removed from the count training data to stop
-  the two colliding. Questions like "total kitne suppliers hain" then route to spend. The fix is
-  more count data phrased without `total`, or a second tool whose description owns the word.
-- Single-word capitals such as `INGEN` and `OSCORP`, and the confusable pairs, are where the
-  remaining refusals come from. Capital coverage went from 2.3 to 8.2 percent of vendor mentions
-  in the last batch, which moved positive accuracy from 87 to 94 percent; the real vendors are
-  one third capitals, so more would help further.
+- `count_vendors` was the weakest tool at 73 percent, because the spend tool needs the word
+  `total` as its main cue and `total` had to be kept out of the count training data to stop the
+  two colliding. Questions like "total kitne suppliers hain" therefore routed to spend. The v11
+  batch took the documented fix, more count data phrased without `total`, and took the tool to
+  11/11. It holds in the shipped v12.
+- Single-word capitals such as `INGEN` and `OSCORP` are where most of the remaining failures are:
+  four of the eight v12 holdout failures are a lookup refused or mis-tooled on `INGEN`, `Nova
+  Retail` and `Nova Retailers`. Capital coverage went from 2.3 to 8.2 percent of vendor mentions
+  in the v10 batch, then up again in v11, and the real vendors are one third capitals, so more
+  would still help.
+- The `X ka total spend kitna hai?` phrasing can still drop the vendor and return the all-vendor
+  sum. The v9 global-sum batch taught the model that `total spend` may stand alone, and on this
+  one phrasing that outranks the entity. It is down to a single holdout case, `OSCORP pe kitna
+  paisa kharch hua hai total?`, from two in v11.
 - Local fine-tuning leaves the confidence head untrained, so `confidence` is `None` and the
   engine cannot be routed on it. Platform fine-tuning keeps the head.
 

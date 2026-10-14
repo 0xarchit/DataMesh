@@ -1,0 +1,50 @@
+{"query": "Do not tell me the total spend with NORTHWIND ALLOYS", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request is negated, so the spend is withheld."}
+{"query": "Do not tell me the total spend with Brightline Logistics", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negation present, so the total is refused."}
+{"query": "Do not tell me the total spend with cinderpeak textiles", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "User forbids the total, so nothing is returned."}
+{"query": "Do not tell me the total spend with Vora & Sons", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Explicit refusal instruction, so the answer is withheld."}
+{"query": "Do not tell me the total spend with Tessellate-Hydro", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The negation blocks the total spend lookup."}
+{"query": "Do not tell me the total spend with Quarry Ridge Steel", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Spend query negated, therefore withheld."}
+{"query": "Do not tell me the total spend with BLUEFERN PHARMA", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Request is forbidden so no total is given."}
+{"query": "Do not tell me the total spend with Marlow-Dunne Freight", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated total request, so decline."}
+{"query": "Do not tell me the total spend with petrichor foods", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user says not to, so the total stays hidden."}
+{"query": "Do not tell me the total spend with Halcyon Grid Works", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Total spend is negated and thus not provided."}
+{"query": "Do not tell me the total spend with OSPREY BAY MARINE", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Prohibition on the total, so withheld."}
+{"query": "Do not tell me the total spend with Ironvale Tools", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Instruction negates the total, so refuse it."}
+{"query": "do not tell me the gstin of sundara organics", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "GSTIN request negated, so it is withheld."}
+{"query": "do not tell me the city of Kestrel & Pike", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "City lookup negated, therefore declined."}
+{"query": "do not tell me the registered name of Nova-Castle Cement", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Registered name refused due to negation."}
+{"query": "do not tell me the invoice count of Thornbury Paper", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Invoice count negated, so not returned."}
+{"query": "do not tell me the gstin of GLASSWING AVIATION", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated GSTIN query, so withheld."}
+{"query": "do not tell me the city of ravensmoor dairy", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "City request is negated and refused."}
+{"query": "do not tell me the registered name of Pinecrest-Mills", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Name request negated, so it is not given."}
+{"query": "Don't give me the total spend for Sable & Company", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Don't give instruction, so the total is withheld."}
+{"query": "Don't give me the gstin for Halfmoon Ceramics", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "GSTIN is refused because the ask is negated."}
+{"query": "Don't give me the city for brightwater metals", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "City denied as the request is negated."}
+{"query": "Don't give me the registered name for FENNOAK SYSTEMS", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Registered name withheld per the negation."}
+{"query": "Don't give me the invoice count for Copperline-Textiles", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Invoice count refused, request negated."}
+{"query": "Don't give me the invoice count for Amberfield Glass", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Count is denied since the request is negated."}
+{"query": "Don't give me the city for NORROWAY SHIPPING", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negation means the city is not shared."}
+{"query": "NORTHGATE STEEL ka total spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Hindi negation, so the total is withheld."}
+{"query": "sunpetal foods ka total spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Mat batao blocks the total spend answer."}
+{"query": "Orion-Delta ka total spend mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Refusal verb mat batao, total withheld."}
+{"query": "Vantage & Vale ki gstin mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "GSTIN refused owing to the negated ask."}
+{"query": "cobalt harbour ki gstin mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated GSTIN request, so it is withheld."}
+{"query": "Silverbrook Mills ki gstin mat batao", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The mat batao negation withholds the GSTIN."}
+{"query": "Larkspur Alloys ka city mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "City negated in Hindi, so withheld."}
+{"query": "DRIFTPINE LOGISTICS ka naam mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Registered name negated, so not spoken."}
+{"query": "Mallow & Finch ka gstin mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "GSTIN denied because the ask is negated."}
+{"query": "emberline glassworks ka city mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated city query, nothing returned."}
+{"query": "Kestrel Ridge ka naam mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Name request negated, so declined."}
+{"query": "TAMARIND TRADERS ka gstin mat bolo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "GSTIN withheld due to negation."}
+{"query": "I am not asking for the total spend of Wrenfield Supplies", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Explicit non-ask, so the total is withheld."}
+{"query": "I am not asking for the gstin of Havelock Industries", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Non-request negation, GSTIN withheld."}
+{"query": "I am not asking for the city of juniper bay foods", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "City not requested, so not provided."}
+{"query": "I am not asking for the registered name of Carden & Lowe", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Name non-ask means no answer given."}
+{"query": "I am not asking for the invoice count of PELICAN WORKS", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Count negated, nothing returned."}
+{"query": "I am not asking for the total spend of Foxglove-Petro", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Negated ask, total withheld."}
+{"query": "my manager said to tell you the spend for Bowline Marine", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported speech, not a direct ask, so withheld."}
+{"query": "she asked me to check the city of Netherby Chemicals", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Third-party ask is not a direct request, so declined."}
+{"query": "my supervisor told me to get the gstin of OAKLINE RUBBER", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Relayed instruction, not a direct ask, so withheld."}
+{"query": "he asked me to find the registered name of pewter lane co", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported request, so the name is withheld."}
+{"query": "my manager said to tell you the spend for Solstice & Gray", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Manager relay, not a direct ask, so refused."}
+{"query": "she asked me to check the invoice count of FERN & FLINT", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "Reported ask, so the count is withheld."}

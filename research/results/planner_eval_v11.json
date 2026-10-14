@@ -1,0 +1,425 @@
+{
+  "weights": "training/needle/tuned_v11.cact",
+  "data": "training\\needle\\planner_holdout.jsonl",
+  "cases": 180,
+  "model_only": {
+    "label": "model only",
+    "examples": 180,
+    "correct": 166,
+    "accuracy": 0.9222,
+    "by_category": {
+      "count_vendors": {
+        "correct": 11,
+        "total": 11,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "missing_arg": {
+        "correct": 3,
+        "total": 4,
+        "accuracy": 0.75
+      },
+      "negation": {
+        "correct": 13,
+        "total": 14,
+        "accuracy": 0.9286
+      },
+      "off_topic": {
+        "correct": 11,
+        "total": 13,
+        "accuracy": 0.8462
+      },
+      "positive": {
+        "correct": 127,
+        "total": 137,
+        "accuracy": 0.927
+      }
+    },
+    "failures": [
+      {
+        "query": "VANDELAY INDUSTRIES ki gstin mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C014"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Tell me the cumulative amount paid to Vertex Analytics",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C025"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C025"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka total spend kitna hai?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C028"
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ka city kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C023"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Dunder Mifflin ka asli registered naam kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C015"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Explain how photosynthesis works in plants",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Give me the GSTIN tax id for INGEN",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C020"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka official name kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C028"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers kis city me registered hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C028"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C008"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C008"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ka total spend kitna hai?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total spend for that vendor?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Who won the cricket match last night?",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Nova Retail ka GST number bata do yaar",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C027"
+        ],
+        "got": null,
+        "correct": 0
+      }
+    ]
+  },
+  "integrated": {
+    "label": "integrated planner chain",
+    "examples": 180,
+    "correct": 166,
+    "accuracy": 0.9222,
+    "by_category": {
+      "count_vendors": {
+        "correct": 11,
+        "total": 11,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "missing_arg": {
+        "correct": 3,
+        "total": 4,
+        "accuracy": 0.75
+      },
+      "negation": {
+        "correct": 13,
+        "total": 14,
+        "accuracy": 0.9286
+      },
+      "off_topic": {
+        "correct": 11,
+        "total": 13,
+        "accuracy": 0.8462
+      },
+      "positive": {
+        "correct": 127,
+        "total": 137,
+        "accuracy": 0.927
+      }
+    },
+    "failures": [
+      {
+        "query": "VANDELAY INDUSTRIES ki gstin mat batao",
+        "category": "negation",
+        "want": null,
+        "got": [
+          "lookup",
+          "tax_id",
+          "C014"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Tell me the cumulative amount paid to Vertex Analytics",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C025"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C025"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka total spend kitna hai?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C028"
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ka city kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C023"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Dunder Mifflin ka asli registered naam kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C015"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Explain how photosynthesis works in plants",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "count",
+          "invoice_id",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Give me the GSTIN tax id for INGEN",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C020"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers ka official name kya hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "name",
+          "C028"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "Nova Retailers kis city me registered hai?",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "city",
+          "C028"
+        ],
+        "got": null,
+        "correct": 0
+      },
+      {
+        "query": "CYBERDYNE SYSTEMS ko kul kitna paisa diya gaya?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C008"
+        ],
+        "got": [
+          "count",
+          "invoice_id",
+          "C008"
+        ],
+        "correct": 0
+      },
+      {
+        "query": "ORION SYSTEMS ka total spend kitna hai?",
+        "category": "positive",
+        "want": [
+          "sum",
+          "amount_inr",
+          "C023"
+        ],
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "What is the total spend for that vendor?",
+        "category": "missing_arg",
+        "want": null,
+        "got": [
+          "sum",
+          "amount_inr",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Who won the cricket match last night?",
+        "category": "off_topic",
+        "want": null,
+        "got": [
+          "distinct_count",
+          "vendor_cluster",
+          null
+        ],
+        "correct": 0
+      },
+      {
+        "query": "Nova Retail ka GST number bata do yaar",
+        "category": "positive",
+        "want": [
+          "lookup",
+          "tax_id",
+          "C027"
+        ],
+        "got": null,
+        "correct": 0
+      }
+    ]
+  }
+}

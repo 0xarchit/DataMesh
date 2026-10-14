@@ -5,7 +5,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.a
 
 TOOLS_PATH = os.path.join(ROOT, "training", "needle", "tools.json")
 WEIGHTS_PATH = os.environ.get(
-    "DATAMESH_NEEDLE_WEIGHTS", os.path.join(ROOT, "training", "needle", "tuned_v10.cact")
+    "DATAMESH_NEEDLE_WEIGHTS", os.path.join(ROOT, "training", "needle", "tuned_v12.cact")
 )
 
 TOOL_SPEC = {
