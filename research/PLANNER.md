@@ -75,6 +75,24 @@ The model is at its weakest on vendor-name shapes that training did not contain.
 version had no all-capitals and no single-word vendor names at all, which is why it truncated
 `CYBERDYNE SYSTEMS` to `CYBERDYNE`. That is a data gap, and it was closed with data.
 
+## Against the other ways of answering the same questions
+
+`scripts/run_benchmark.py` runs every arm over one consolidated table on the project's 42
+questions, so the arms differ only in how the plan is produced.
+
+| Arm | Correct | Total tokens | Total seconds |
+|---|---|---|---|
+| Local model writes the plan | 42/42 | **0** | **3.87** |
+| Local 27B model writes the plan | 42/42 | 11,901 | 137.37 |
+| Retrieval over raw records | 9/42 | 41,940 | 187.0 |
+| Retrieval over the consolidated table | 17/42 | 30,003 | 163.77 |
+
+The small model matches the 27B planner on accuracy while removing the token cost entirely and
+cutting wall clock by 35 times, because the plan is one local forward pass instead of a
+generation. Retrieval does well only where the answer is copied verbatim rather than computed:
+it scores 8/8 on tax ids and 8/8 on city with the consolidated corpus, and near zero everywhere a
+sum or a count has to be produced.
+
 ## Measured accuracy
 
 `scripts/eval_planner.py` reports the raw model and the integrated planner chain separately so a

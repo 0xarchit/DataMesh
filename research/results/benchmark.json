@@ -1,242 +1,1112 @@
 {
   "model": ".\\weights\\qwen-3.8-27B.gguf",
+  "seed": null,
+  "questions_file": "questions_bench.json",
   "retrieval_k": 15,
   "corpus_chunks": {
-    "raw": 470,
-    "consolidated": 323
+    "raw": 479,
+    "consolidated": 324
   },
-  "consolidation_seconds": 38.02,
-  "rag_index_seconds": 9.01,
+  "consolidation_seconds": null,
+  "rag_index_seconds": 6.11,
   "reconciliation": {
-    "raw_records": 478,
+    "raw_records": 479,
     "source_counts": {
       "csv": 30,
       "xlsx": 147,
-      "pdf": 293,
+      "pdf": 294,
       "receipt": 8
     },
     "receipts_parsed": 8,
     "vendor_clusters": 30,
-    "raw_transactions": 448,
-    "unique_transactions": 293,
+    "raw_transactions": 449,
+    "unique_transactions": 294,
     "duplicates_removed": 155,
     "conflicts_detected": 20,
     "conflicts_resolved": 20,
     "conflicts_for_review": 0,
     "load_order_baseline_wrong": 7,
-    "total_spend_inr": 9250900,
+    "total_spend_inr": 9921800,
     "generated_from": "raw"
   },
   "arms": {
     "ours_consolidated_engine": {
-      "questions": 10,
-      "correct": 10,
+      "questions": 42,
+      "correct": 42,
       "accuracy": 1.0,
-      "prompt_tokens": 2594,
-      "completion_tokens": 217,
-      "total_tokens": 2811,
-      "mean_tokens_per_question": 281.1,
-      "total_seconds": 34.06,
-      "mean_seconds_per_question": 3.406,
-      "consolidation_seconds_amortized": 3.802,
-      "total_seconds_including_consolidation": 72.08
+      "prompt_tokens": 10933,
+      "completion_tokens": 968,
+      "total_tokens": 11901,
+      "mean_tokens_per_question": 283.4,
+      "total_seconds": 137.37,
+      "mean_seconds_per_question": 3.271
     },
     "rag_over_raw_records": {
-      "questions": 10,
-      "correct": 1,
-      "accuracy": 0.1,
-      "prompt_tokens": 8981,
-      "completion_tokens": 59,
-      "total_tokens": 9040,
-      "mean_tokens_per_question": 904.0,
-      "total_seconds": 42.77,
-      "mean_seconds_per_question": 4.277,
-      "consolidation_seconds_amortized": 3.802,
-      "total_seconds_including_consolidation": 80.79
+      "questions": 42,
+      "correct": 9,
+      "accuracy": 0.2143,
+      "prompt_tokens": 41411,
+      "completion_tokens": 529,
+      "total_tokens": 41940,
+      "mean_tokens_per_question": 998.6,
+      "total_seconds": 187.0,
+      "mean_seconds_per_question": 4.452
     },
     "rag_over_consolidated_table": {
-      "questions": 10,
-      "correct": 4,
-      "accuracy": 0.4,
-      "prompt_tokens": 6742,
-      "completion_tokens": 164,
-      "total_tokens": 6906,
-      "mean_tokens_per_question": 690.6,
-      "total_seconds": 42.64,
-      "mean_seconds_per_question": 4.264,
-      "consolidation_seconds_amortized": 3.802,
-      "total_seconds_including_consolidation": 80.66
+      "questions": 42,
+      "correct": 17,
+      "accuracy": 0.4048,
+      "prompt_tokens": 29621,
+      "completion_tokens": 382,
+      "total_tokens": 30003,
+      "mean_tokens_per_question": 714.4,
+      "total_seconds": 163.77,
+      "mean_seconds_per_question": 3.899
+    },
+    "ours_needle_planner": {
+      "questions": 42,
+      "correct": 42,
+      "accuracy": 1.0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "mean_tokens_per_question": 0.0,
+      "total_seconds": 3.87,
+      "mean_seconds_per_question": 0.092,
+      "plan_sources": {
+        "query plan from Needle, local, no llm tokens": 42
+      }
+    }
+  },
+  "by_type": {
+    "ours_consolidated_engine": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      }
+    },
+    "rag_over_raw_records": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 1,
+        "accuracy": 0.125
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "rag_over_consolidated_table": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 1,
+        "accuracy": 0.125
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "ours_needle_planner": {
+      "sum_upper_variant": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "sum": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "city": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "tax": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "count": {
+        "questions": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "global_sum": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      },
+      "global_count": {
+        "questions": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      }
     }
   },
   "per_question": [
     {
-      "question": "How many distinct vendors appear in the data?",
-      "gold": 30,
+      "question": "What is the total spend with PIONEER LOGISTICAL in INR?",
+      "gold": 298100,
       "ours": {
-        "answer": 30,
+        "answer": 298100,
         "correct": 1,
         "plan_source": "local model",
-        "prompt_tokens": 258,
-        "completion_tokens": 20,
-        "total_tokens": 278,
+        "prompt_tokens": 265,
+        "completion_tokens": 26,
+        "total_tokens": 291,
         "estimated": false,
-        "seconds": 3.247
+        "seconds": 3.954
       },
-      "rag_raw": {
-        "answer": 15,
-        "correct": 0,
-        "chunks": 15,
-        "prompt_tokens": 528,
-        "completion_tokens": 3,
-        "total_tokens": 531,
-        "estimated": false,
-        "seconds": 3.516
-      },
-      "rag_canonical": {
-        "answer": 7,
-        "correct": 0,
-        "chunks": 15,
-        "prompt_tokens": 728,
-        "completion_tokens": 2,
-        "total_tokens": 730,
-        "estimated": false,
-        "seconds": 3.957
-      }
-    },
-    {
-      "question": "What is the total spend across all vendors in INR?",
-      "gold": 9250900,
-      "ours": {
-        "answer": 9250900,
+      "ours_needle_planner": {
+        "answer": 298100,
         "correct": 1,
-        "plan_source": "local model",
-        "prompt_tokens": 261,
-        "completion_tokens": 20,
-        "total_tokens": 281,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
         "estimated": false,
-        "seconds": 3.406
+        "seconds": 0.466
       },
       "rag_raw": {
-        "answer": 398300,
+        "answer": 233800,
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 1027,
+        "prompt_tokens": 1041,
         "completion_tokens": 7,
-        "total_tokens": 1034,
+        "total_tokens": 1048,
         "estimated": false,
-        "seconds": 4.552
+        "seconds": 4.37
       },
       "rag_canonical": {
-        "answer": "15800+12500+12500+12500+15800+15800+24800+50000+34200+96000+7300",
+        "answer": 288600,
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 751,
-        "completion_tokens": 64,
-        "total_tokens": 815,
+        "prompt_tokens": 747,
+        "completion_tokens": 7,
+        "total_tokens": 754,
         "estimated": false,
-        "seconds": 5.864
+        "seconds": 3.888
       }
     },
     {
-      "question": "What is the total spend with Acme Ltd in INR?",
-      "gold": 214700,
+      "question": "What is the total spend with Soylent Foods in INR?",
+      "gold": 308500,
       "ours": {
-        "answer": 214700,
+        "answer": 308500,
         "correct": 1,
         "plan_source": "local model",
-        "prompt_tokens": 262,
-        "completion_tokens": 23,
-        "total_tokens": 285,
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
         "estimated": false,
-        "seconds": 3.537
+        "seconds": 3.289
+      },
+      "ours_needle_planner": {
+        "answer": 308500,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.093
       },
       "rag_raw": {
-        "answer": 2480000,
+        "answer": 248000,
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 993,
-        "completion_tokens": 8,
-        "total_tokens": 1001,
+        "prompt_tokens": 1012,
+        "completion_tokens": 7,
+        "total_tokens": 1019,
         "estimated": false,
-        "seconds": 4.504
+        "seconds": 4.365
       },
       "rag_canonical": {
-        "answer": "15800+12500+12500+12500+24800+15800+24800+96000 = 214700",
+        "answer": 286200,
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 740,
-        "completion_tokens": 56,
-        "total_tokens": 796,
+        "prompt_tokens": 753,
+        "completion_tokens": 7,
+        "total_tokens": 760,
         "estimated": false,
-        "seconds": 5.621
+        "seconds": 4.053
       }
     },
     {
       "question": "What is the total spend with Globex Corporation in INR?",
-      "gold": 359900,
+      "gold": 348600,
       "ours": {
-        "answer": 359900,
+        "answer": 348600,
         "correct": 1,
         "plan_source": "local model",
         "prompt_tokens": 262,
         "completion_tokens": 23,
         "total_tokens": 285,
         "estimated": false,
-        "seconds": 3.512
+        "seconds": 3.246
+      },
+      "ours_needle_planner": {
+        "answer": 348600,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.076
       },
       "rag_raw": {
-        "answer": 1000000,
+        "answer": 1284000,
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 1010,
+        "prompt_tokens": 986,
         "completion_tokens": 8,
-        "total_tokens": 1018,
+        "total_tokens": 994,
         "estimated": false,
-        "seconds": 4.557
+        "seconds": 4.336
       },
       "rag_canonical": {
-        "answer": 383100,
+        "answer": 258900,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 750,
+        "completion_tokens": 7,
+        "total_tokens": 757,
+        "estimated": false,
+        "seconds": 3.969
+      }
+    },
+    {
+      "question": "What city is Soylent Foods registered in?",
+      "gold": "Noida",
+      "ours": {
+        "answer": "noida",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.269
+      },
+      "ours_needle_planner": {
+        "answer": "noida",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.085
+      },
+      "rag_raw": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1008,
+        "completion_tokens": 4,
+        "total_tokens": 1012,
+        "estimated": false,
+        "seconds": 4.317
+      },
+      "rag_canonical": {
+        "answer": "noida",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 724,
+        "completion_tokens": 4,
+        "total_tokens": 728,
+        "estimated": false,
+        "seconds": 3.819
+      }
+    },
+    {
+      "question": "What city is Pioneer Logistics registered in?",
+      "gold": "Gurugram",
+      "ours": {
+        "answer": "gurugram",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 21,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.117
+      },
+      "ours_needle_planner": {
+        "answer": "gurugram",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.09
+      },
+      "rag_raw": {
+        "answer": "gurgaon",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1007,
+        "completion_tokens": 4,
+        "total_tokens": 1011,
+        "estimated": false,
+        "seconds": 4.299
+      },
+      "rag_canonical": {
+        "answer": "gurugram",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 607,
+        "completion_tokens": 5,
+        "total_tokens": 612,
+        "estimated": false,
+        "seconds": 3.632
+      }
+    },
+    {
+      "question": "What is the total spend with Zenith Trading Company in INR?",
+      "gold": 192500,
+      "ours": {
+        "answer": 192500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.184
+      },
+      "ours_needle_planner": {
+        "answer": 192500,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.082
+      },
+      "rag_raw": {
+        "answer": "15800+15800+24800+24800+7300+7300+50000+34200=179000",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1045,
+        "completion_tokens": 53,
+        "total_tokens": 1098,
+        "estimated": false,
+        "seconds": 5.713
+      },
+      "rag_canonical": {
+        "answer": 179600,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 743,
+        "completion_tokens": 7,
+        "total_tokens": 750,
+        "estimated": false,
+        "seconds": 3.879
+      }
+    },
+    {
+      "question": "What is the total spend with GLOBEX CORPORATION in INR?",
+      "gold": 348600,
+      "ours": {
+        "answer": 348600,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.253
+      },
+      "ours_needle_planner": {
+        "answer": 348600,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.099
+      },
+      "rag_raw": {
+        "answer": "15800+12500+12500+7300+12500+96000+96000+960000+12500=1359300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 987,
+        "completion_tokens": 62,
+        "total_tokens": 1049,
+        "estimated": false,
+        "seconds": 4.618
+      },
+      "rag_canonical": {
+        "answer": 258900,
         "correct": 0,
         "chunks": 15,
         "prompt_tokens": 751,
         "completion_tokens": 7,
         "total_tokens": 758,
         "estimated": false,
-        "seconds": 4.084
+        "seconds": 2.775
       }
     },
     {
-      "question": "What city is Acme Ltd registered in?",
-      "gold": "Mumbai",
+      "question": "What city is Pioneer Logistical registered in?",
+      "gold": "Bengaluru",
       "ours": {
-        "answer": "mumbai",
+        "answer": "bengaluru",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.305
+      },
+      "ours_needle_planner": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.083
+      },
+      "rag_raw": {
+        "answer": "bangalore",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1034,
+        "completion_tokens": 3,
+        "total_tokens": 1037,
+        "estimated": false,
+        "seconds": 4.395
+      },
+      "rag_canonical": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 655,
+        "completion_tokens": 5,
+        "total_tokens": 660,
+        "estimated": false,
+        "seconds": 3.719
+      }
+    },
+    {
+      "question": "What is the total spend with Nova Retailers in INR?",
+      "gold": 417200,
+      "ours": {
+        "answer": 417200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.237
+      },
+      "ours_needle_planner": {
+        "answer": 417200,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.068
+      },
+      "rag_raw": {
+        "answer": 388100,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1030,
+        "completion_tokens": 7,
+        "total_tokens": 1037,
+        "estimated": false,
+        "seconds": 4.479
+      },
+      "rag_canonical": {
+        "answer": 233400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 717,
+        "completion_tokens": 7,
+        "total_tokens": 724,
+        "estimated": false,
+        "seconds": 3.938
+      }
+    },
+    {
+      "question": "What is the GSTIN of Pioneer Logistics?",
+      "gold": "06AAJZP8899V1Z3",
+      "ours": {
+        "answer": "06aajzp8899v1z3",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 22,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.208
+      },
+      "ours_needle_planner": {
+        "answer": "06aajzp8899v1z3",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.085
+      },
+      "rag_raw": {
+        "answer": "06aajzp8899v1z3",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1008,
+        "completion_tokens": 15,
+        "total_tokens": 1023,
+        "estimated": false,
+        "seconds": 4.591
+      },
+      "rag_canonical": {
+        "answer": "06aajzp8899v1z3",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 665,
+        "completion_tokens": 15,
+        "total_tokens": 680,
+        "estimated": false,
+        "seconds": 4.131
+      }
+    },
+    {
+      "question": "How many transactions involve Nova Retailers?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.18
+      },
+      "ours_needle_planner": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.074
+      },
+      "rag_raw": {
+        "answer": 8,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1027,
+        "completion_tokens": 2,
+        "total_tokens": 1029,
+        "estimated": false,
+        "seconds": 4.21
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 724,
+        "completion_tokens": 3,
+        "total_tokens": 727,
+        "estimated": false,
+        "seconds": 3.794
+      }
+    },
+    {
+      "question": "What is the total spend with HOOLI SERVICES in INR?",
+      "gold": 292300,
+      "ours": {
+        "answer": 292300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 23,
+        "total_tokens": 285,
+        "estimated": false,
+        "seconds": 3.298
+      },
+      "ours_needle_planner": {
+        "answer": 292300,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.085
+      },
+      "rag_raw": {
+        "answer": "24800+15800+34200+12500+24800+34200+50000+96000 = 292300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1009,
+        "completion_tokens": 56,
+        "total_tokens": 1065,
+        "estimated": false,
+        "seconds": 5.825
+      },
+      "rag_canonical": {
+        "answer": "24800+34200+12500+34200+24800+15800+96000+50000=292300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 701,
+        "completion_tokens": 55,
+        "total_tokens": 756,
+        "estimated": false,
+        "seconds": 5.178
+      }
+    },
+    {
+      "question": "How many transactions involve Umbrella Traders?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 24,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.215
+      },
+      "ours_needle_planner": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.089
+      },
+      "rag_raw": {
+        "answer": 14,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 989,
+        "completion_tokens": 3,
+        "total_tokens": 992,
+        "estimated": false,
+        "seconds": 4.208
+      },
+      "rag_canonical": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 748,
+        "completion_tokens": 3,
+        "total_tokens": 751,
+        "estimated": false,
+        "seconds": 3.855
+      }
+    },
+    {
+      "question": "What city is Nova Retailers registered in?",
+      "gold": "Thane",
+      "ours": {
+        "answer": "thane",
         "correct": 1,
         "plan_source": "local model",
         "prompt_tokens": 258,
         "completion_tokens": 21,
         "total_tokens": 279,
         "estimated": false,
-        "seconds": 3.335
+        "seconds": 3.216
+      },
+      "ours_needle_planner": {
+        "answer": "thane",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.078
       },
       "rag_raw": {
-        "answer": "bombay",
+        "answer": "thana",
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 842,
+        "prompt_tokens": 993,
         "completion_tokens": 3,
-        "total_tokens": 845,
+        "total_tokens": 996,
         "estimated": false,
-        "seconds": 4.018
+        "seconds": 4.315
       },
       "rag_canonical": {
-        "answer": "mumbai",
+        "answer": "thane",
         "correct": 1,
         "chunks": 15,
-        "prompt_tokens": 562,
+        "prompt_tokens": 664,
         "completion_tokens": 3,
-        "total_tokens": 565,
+        "total_tokens": 667,
         "estimated": false,
-        "seconds": 3.701
+        "seconds": 3.706
+      }
+    },
+    {
+      "question": "What is the GSTIN of Pioneer Logistical?",
+      "gold": "27AAKZP1122W1Z6",
+      "ours": {
+        "answer": "27aakzp1122w1z6",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.273
+      },
+      "ours_needle_planner": {
+        "answer": "27aakzp1122w1z6",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.085
+      },
+      "rag_raw": {
+        "answer": "27aakzp1122w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1037,
+        "completion_tokens": 15,
+        "total_tokens": 1052,
+        "estimated": false,
+        "seconds": 4.687
+      },
+      "rag_canonical": {
+        "answer": "27aakzp1122w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 741,
+        "completion_tokens": 15,
+        "total_tokens": 756,
+        "estimated": false,
+        "seconds": 4.144
+      }
+    },
+    {
+      "question": "What is the total spend with UMBRELLA TRADERS in INR?",
+      "gold": 371000,
+      "ours": {
+        "answer": 371000,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 267,
+        "completion_tokens": 27,
+        "total_tokens": 294,
+        "estimated": false,
+        "seconds": 3.454
+      },
+      "ours_needle_planner": {
+        "answer": 371000,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.101
+      },
+      "rag_raw": {
+        "answer": 398800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1032,
+        "completion_tokens": 7,
+        "total_tokens": 1039,
+        "estimated": false,
+        "seconds": 4.427
+      },
+      "rag_canonical": {
+        "answer": 331700,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 757,
+        "completion_tokens": 7,
+        "total_tokens": 764,
+        "estimated": false,
+        "seconds": 3.955
+      }
+    },
+    {
+      "question": "What is the GSTIN of Hooli Services?",
+      "gold": "27AAGCH5678X1Z9",
+      "ours": {
+        "answer": "27aagch5678x1z9",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 260,
+        "completion_tokens": 23,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.224
+      },
+      "ours_needle_planner": {
+        "answer": "27aagch5678x1z9",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.086
+      },
+      "rag_raw": {
+        "answer": "27aagch5678x1z9",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 906,
+        "completion_tokens": 14,
+        "total_tokens": 920,
+        "estimated": false,
+        "seconds": 4.485
+      },
+      "rag_canonical": {
+        "answer": "27aagch5678x1z9",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 677,
+        "completion_tokens": 14,
+        "total_tokens": 691,
+        "estimated": false,
+        "seconds": 4.035
+      }
+    },
+    {
+      "question": "What is the total spend across all vendors in INR?",
+      "gold": 9921800,
+      "ours": {
+        "answer": 9921800,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 20,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.132
+      },
+      "ours_needle_planner": {
+        "answer": 9921800,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.068
+      },
+      "rag_raw": {
+        "answer": 333800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1025,
+        "completion_tokens": 7,
+        "total_tokens": 1032,
+        "estimated": false,
+        "seconds": 4.458
+      },
+      "rag_canonical": {
+        "answer": 333100,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 754,
+        "completion_tokens": 7,
+        "total_tokens": 761,
+        "estimated": false,
+        "seconds": 3.937
+      }
+    },
+    {
+      "question": "What is the GSTIN of Soylent Foods?",
+      "gold": "09AAFCS1234W1Z6",
+      "ours": {
+        "answer": "09aafcs1234w1z6",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 260,
+        "completion_tokens": 23,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.266
+      },
+      "ours_needle_planner": {
+        "answer": "09aafcs1234w1z6",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.083
+      },
+      "rag_raw": {
+        "answer": "09aafcs1234w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 989,
+        "completion_tokens": 13,
+        "total_tokens": 1002,
+        "estimated": false,
+        "seconds": 4.555
+      },
+      "rag_canonical": {
+        "answer": "09aafcs1234w1z6",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 727,
+        "completion_tokens": 13,
+        "total_tokens": 740,
+        "estimated": false,
+        "seconds": 4.141
+      }
+    },
+    {
+      "question": "What is the GSTIN of Globex Corporation?",
+      "gold": "29AAGCG1234P1Z5",
+      "ours": {
+        "answer": "29aagcg1234p1z5",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.227
+      },
+      "ours_needle_planner": {
+        "answer": "29aagcg1234p1z5",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.085
+      },
+      "rag_raw": {
+        "answer": "29aagcg1234p1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 920,
+        "completion_tokens": 14,
+        "total_tokens": 934,
+        "estimated": false,
+        "seconds": 4.384
+      },
+      "rag_canonical": {
+        "answer": "29aagcg1234p1z5",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 582,
+        "completion_tokens": 14,
+        "total_tokens": 596,
+        "estimated": false,
+        "seconds": 3.877
       }
     },
     {
@@ -250,65 +1120,745 @@
         "completion_tokens": 21,
         "total_tokens": 279,
         "estimated": false,
-        "seconds": 3.348
+        "seconds": 3.126
+      },
+      "ours_needle_planner": {
+        "answer": "bengaluru",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.08
       },
       "rag_raw": {
         "answer": "bangalore",
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 925,
+        "prompt_tokens": 909,
         "completion_tokens": 3,
-        "total_tokens": 928,
+        "total_tokens": 912,
         "estimated": false,
-        "seconds": 4.199
+        "seconds": 4.168
       },
       "rag_canonical": {
         "answer": "bengaluru",
         "correct": 1,
         "chunks": 15,
-        "prompt_tokens": 595,
+        "prompt_tokens": 582,
         "completion_tokens": 5,
-        "total_tokens": 600,
+        "total_tokens": 587,
         "estimated": false,
-        "seconds": 3.73
+        "seconds": 3.675
       }
     },
     {
-      "question": "What is the GSTIN of Initech Solutions?",
-      "gold": "07AAECI5678Q1Z2",
+      "question": "What is the total spend with ZENITH TRADING COMPANY in INR?",
+      "gold": 192500,
       "ours": {
-        "answer": "07aaeci5678q1z2",
+        "answer": 192500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 265,
+        "completion_tokens": 25,
+        "total_tokens": 290,
+        "estimated": false,
+        "seconds": 3.271
+      },
+      "ours_needle_planner": {
+        "answer": 192500,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.089
+      },
+      "rag_raw": {
+        "answer": "15800+15800+24800+24800+7300+7300+50000+34200=179000",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1047,
+        "completion_tokens": 53,
+        "total_tokens": 1100,
+        "estimated": false,
+        "seconds": 5.706
+      },
+      "rag_canonical": {
+        "answer": 189600,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 745,
+        "completion_tokens": 7,
+        "total_tokens": 752,
+        "estimated": false,
+        "seconds": 4.014
+      }
+    },
+    {
+      "question": "How many transactions involve Soylent Foods?",
+      "gold": 12,
+      "ours": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 23,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.261
+      },
+      "ours_needle_planner": {
+        "answer": 12,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.08
+      },
+      "rag_raw": {
+        "answer": 14,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 987,
+        "completion_tokens": 3,
+        "total_tokens": 990,
+        "estimated": false,
+        "seconds": 4.324
+      },
+      "rag_canonical": {
+        "answer": 14,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 750,
+        "completion_tokens": 3,
+        "total_tokens": 753,
+        "estimated": false,
+        "seconds": 3.902
+      }
+    },
+    {
+      "question": "What city is Zenith Trading Company registered in?",
+      "gold": "Pune",
+      "ours": {
+        "answer": "pune",
         "correct": 1,
         "plan_source": "local model",
         "prompt_tokens": 259,
         "completion_tokens": 22,
         "total_tokens": 281,
         "estimated": false,
-        "seconds": 3.481
+        "seconds": 3.261
+      },
+      "ours_needle_planner": {
+        "answer": "pune",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.085
       },
       "rag_raw": {
-        "answer": "07aaeci5678q1z2",
-        "correct": 1,
+        "answer": "poona",
+        "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 1027,
-        "completion_tokens": 14,
-        "total_tokens": 1041,
+        "prompt_tokens": 976,
+        "completion_tokens": 3,
+        "total_tokens": 979,
         "estimated": false,
-        "seconds": 4.821
+        "seconds": 4.208
       },
       "rag_canonical": {
-        "answer": "07aaeci5678q1z2",
+        "answer": "pune",
         "correct": 1,
         "chunks": 15,
-        "prompt_tokens": 626,
-        "completion_tokens": 14,
-        "total_tokens": 640,
+        "prompt_tokens": 580,
+        "completion_tokens": 3,
+        "total_tokens": 583,
         "estimated": false,
-        "seconds": 4.068
+        "seconds": 3.592
       }
     },
     {
-      "question": "How many transactions involve Stark Industries?",
+      "question": "What is the total spend with NOVA RETAILERS in INR?",
+      "gold": 417200,
+      "ours": {
+        "answer": 417200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.39
+      },
+      "ours_needle_planner": {
+        "answer": 417200,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.085
+      },
+      "rag_raw": {
+        "answer": 533100,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1032,
+        "completion_tokens": 7,
+        "total_tokens": 1039,
+        "estimated": false,
+        "seconds": 4.448
+      },
+      "rag_canonical": {
+        "answer": 233400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 719,
+        "completion_tokens": 7,
+        "total_tokens": 726,
+        "estimated": false,
+        "seconds": 3.917
+      }
+    },
+    {
+      "question": "What is the total spend with PIONEER LOGISTICS in INR?",
+      "gold": 331200,
+      "ours": {
+        "answer": 331200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.353
+      },
+      "ours_needle_planner": {
+        "answer": 331200,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.095
+      },
+      "rag_raw": {
+        "answer": 393600,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1043,
+        "completion_tokens": 7,
+        "total_tokens": 1050,
+        "estimated": false,
+        "seconds": 4.411
+      },
+      "rag_canonical": {
+        "answer": 185400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 748,
+        "completion_tokens": 7,
+        "total_tokens": 755,
+        "estimated": false,
+        "seconds": 3.931
+      }
+    },
+    {
+      "question": "What city is Hooli Services registered in?",
+      "gold": "Thane",
+      "ours": {
+        "answer": "thane",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.222
+      },
+      "ours_needle_planner": {
+        "answer": "thane",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.09
+      },
+      "rag_raw": {
+        "answer": "thana",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 881,
+        "completion_tokens": 3,
+        "total_tokens": 884,
+        "estimated": false,
+        "seconds": 4.054
+      },
+      "rag_canonical": {
+        "answer": "thane",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 608,
+        "completion_tokens": 3,
+        "total_tokens": 611,
+        "estimated": false,
+        "seconds": 3.587
+      }
+    },
+    {
+      "question": "What is the GSTIN of Zenith Trading Company?",
+      "gold": "29AACZL3344N1Z8",
+      "ours": {
+        "answer": "29aaczl3344n1z8",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 260,
+        "completion_tokens": 23,
+        "total_tokens": 283,
+        "estimated": false,
+        "seconds": 3.311
+      },
+      "ours_needle_planner": {
+        "answer": "29aaczl3344n1z8",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.082
+      },
+      "rag_raw": {
+        "answer": "29aaczl3344n1z8",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 977,
+        "completion_tokens": 14,
+        "total_tokens": 991,
+        "estimated": false,
+        "seconds": 4.652
+      },
+      "rag_canonical": {
+        "answer": "29aaczl3344n1z8",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 623,
+        "completion_tokens": 14,
+        "total_tokens": 637,
+        "estimated": false,
+        "seconds": 4.006
+      }
+    },
+    {
+      "question": "What is the total spend with Hooli Services in INR?",
+      "gold": 292300,
+      "ours": {
+        "answer": 292300,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 24,
+        "total_tokens": 287,
+        "estimated": false,
+        "seconds": 3.3
+      },
+      "ours_needle_planner": {
+        "answer": 292300,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.079
+      },
+      "rag_raw": {
+        "answer": "24800+15800+34200+12500+24800+34200+50000+96000 = 292300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1010,
+        "completion_tokens": 56,
+        "total_tokens": 1066,
+        "estimated": false,
+        "seconds": 5.765
+      },
+      "rag_canonical": {
+        "answer": "24800+34200+12500+34200+24800+15800+96000+50000=292300",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 702,
+        "completion_tokens": 55,
+        "total_tokens": 757,
+        "estimated": false,
+        "seconds": 5.287
+      }
+    },
+    {
+      "question": "What is the GSTIN of Umbrella Traders?",
+      "gold": "19AAFCU9012R1Z8",
+      "ours": {
+        "answer": "19aafcu9012r1z8",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 260,
+        "completion_tokens": 24,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.241
+      },
+      "ours_needle_planner": {
+        "answer": "19aafcu9012r1z8",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.087
+      },
+      "rag_raw": {
+        "answer": "19aafcu9012r1z8",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 957,
+        "completion_tokens": 14,
+        "total_tokens": 971,
+        "estimated": false,
+        "seconds": 4.434
+      },
+      "rag_canonical": {
+        "answer": "19aafcu9012r1z8",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 677,
+        "completion_tokens": 14,
+        "total_tokens": 691,
+        "estimated": false,
+        "seconds": 4.034
+      }
+    },
+    {
+      "question": "What is the total spend with Pioneer Logistics in INR?",
+      "gold": 331200,
+      "ours": {
+        "answer": 331200,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 261,
+        "completion_tokens": 23,
+        "total_tokens": 284,
+        "estimated": false,
+        "seconds": 3.214
+      },
+      "ours_needle_planner": {
+        "answer": 331200,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.079
+      },
+      "rag_raw": {
+        "answer": 331100,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1040,
+        "completion_tokens": 7,
+        "total_tokens": 1047,
+        "estimated": false,
+        "seconds": 2.798
+      },
+      "rag_canonical": {
+        "answer": 283400,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 745,
+        "completion_tokens": 7,
+        "total_tokens": 752,
+        "estimated": false,
+        "seconds": 2.809
+      }
+    },
+    {
+      "question": "What is the total spend with SOYLENT FOODS in INR?",
+      "gold": 308500,
+      "ours": {
+        "answer": 308500,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 264,
+        "completion_tokens": 25,
+        "total_tokens": 289,
+        "estimated": false,
+        "seconds": 3.326
+      },
+      "ours_needle_planner": {
+        "answer": 308500,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.1
+      },
+      "rag_raw": {
+        "answer": 248000,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1013,
+        "completion_tokens": 7,
+        "total_tokens": 1020,
+        "estimated": false,
+        "seconds": 4.381
+      },
+      "rag_canonical": {
+        "answer": 286200,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 754,
+        "completion_tokens": 7,
+        "total_tokens": 761,
+        "estimated": false,
+        "seconds": 4.02
+      }
+    },
+    {
+      "question": "How many transactions involve Hooli Services?",
+      "gold": 8,
+      "ours": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 23,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.244
+      },
+      "ours_needle_planner": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.078
+      },
+      "rag_raw": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 947,
+        "completion_tokens": 3,
+        "total_tokens": 950,
+        "estimated": false,
+        "seconds": 4.193
+      },
+      "rag_canonical": {
+        "answer": 9,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 749,
+        "completion_tokens": 2,
+        "total_tokens": 751,
+        "estimated": false,
+        "seconds": 3.837
+      }
+    },
+    {
+      "question": "What city is Umbrella Traders registered in?",
+      "gold": "Kolkata",
+      "ours": {
+        "answer": "kolkata",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 23,
+        "total_tokens": 282,
+        "estimated": false,
+        "seconds": 3.339
+      },
+      "ours_needle_planner": {
+        "answer": "kolkata",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.081
+      },
+      "rag_raw": {
+        "answer": "calcutta",
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 956,
+        "completion_tokens": 4,
+        "total_tokens": 960,
+        "estimated": false,
+        "seconds": 4.224
+      },
+      "rag_canonical": {
+        "answer": "kolkata",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 572,
+        "completion_tokens": 3,
+        "total_tokens": 575,
+        "estimated": false,
+        "seconds": 3.62
+      }
+    },
+    {
+      "question": "How many transactions involve Globex Corporation?",
+      "gold": 8,
+      "ours": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 22,
+        "total_tokens": 279,
+        "estimated": false,
+        "seconds": 3.216
+      },
+      "ours_needle_planner": {
+        "answer": 8,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.08
+      },
+      "rag_raw": {
+        "answer": 4,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 863,
+        "completion_tokens": 2,
+        "total_tokens": 865,
+        "estimated": false,
+        "seconds": 4.027
+      },
+      "rag_canonical": {
+        "answer": 9,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 744,
+        "completion_tokens": 2,
+        "total_tokens": 746,
+        "estimated": false,
+        "seconds": 3.905
+      }
+    },
+    {
+      "question": "What is the total spend with Umbrella Traders in INR?",
+      "gold": 371000,
+      "ours": {
+        "answer": 371000,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 263,
+        "completion_tokens": 25,
+        "total_tokens": 288,
+        "estimated": false,
+        "seconds": 3.34
+      },
+      "ours_needle_planner": {
+        "answer": 371000,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.083
+      },
+      "rag_raw": {
+        "answer": 398800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1028,
+        "completion_tokens": 7,
+        "total_tokens": 1035,
+        "estimated": false,
+        "seconds": 4.451
+      },
+      "rag_canonical": {
+        "answer": 338700,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 753,
+        "completion_tokens": 7,
+        "total_tokens": 760,
+        "estimated": false,
+        "seconds": 4.043
+      }
+    },
+    {
+      "question": "How many transactions involve Zenith Trading Company?",
+      "gold": 9,
+      "ours": {
+        "answer": 9,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 23,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.29
+      },
+      "ours_needle_planner": {
+        "answer": 9,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.082
+      },
+      "rag_raw": {
+        "answer": 6,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 997,
+        "completion_tokens": 2,
+        "total_tokens": 999,
+        "estimated": false,
+        "seconds": 4.269
+      },
+      "rag_canonical": {
+        "answer": 6,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 740,
+        "completion_tokens": 2,
+        "total_tokens": 742,
+        "estimated": false,
+        "seconds": 3.81
+      }
+    },
+    {
+      "question": "How many transactions involve Pioneer Logistics?",
       "gold": 9,
       "ours": {
         "answer": 9,
@@ -318,95 +1868,213 @@
         "completion_tokens": 22,
         "total_tokens": 278,
         "estimated": false,
-        "seconds": 3.358
+        "seconds": 3.207
+      },
+      "ours_needle_planner": {
+        "answer": 9,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.083
+      },
+      "rag_raw": {
+        "answer": 10,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1036,
+        "completion_tokens": 3,
+        "total_tokens": 1039,
+        "estimated": false,
+        "seconds": 4.379
+      },
+      "rag_canonical": {
+        "answer": 13,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 742,
+        "completion_tokens": 3,
+        "total_tokens": 745,
+        "estimated": false,
+        "seconds": 3.786
+      }
+    },
+    {
+      "question": "How many transactions involve Pioneer Logistical?",
+      "gold": 10,
+      "ours": {
+        "answer": 10,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 257,
+        "completion_tokens": 23,
+        "total_tokens": 280,
+        "estimated": false,
+        "seconds": 3.255
+      },
+      "ours_needle_planner": {
+        "answer": 10,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.077
+      },
+      "rag_raw": {
+        "answer": 12,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1033,
+        "completion_tokens": 3,
+        "total_tokens": 1036,
+        "estimated": false,
+        "seconds": 4.416
+      },
+      "rag_canonical": {
+        "answer": 10,
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 760,
+        "completion_tokens": 3,
+        "total_tokens": 763,
+        "estimated": false,
+        "seconds": 3.757
+      }
+    },
+    {
+      "question": "What is the total spend with Pioneer Logistical in INR?",
+      "gold": 298100,
+      "ours": {
+        "answer": 298100,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 262,
+        "completion_tokens": 24,
+        "total_tokens": 286,
+        "estimated": false,
+        "seconds": 3.315
+      },
+      "ours_needle_planner": {
+        "answer": 298100,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.083
+      },
+      "rag_raw": {
+        "answer": 198800,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 1038,
+        "completion_tokens": 7,
+        "total_tokens": 1045,
+        "estimated": false,
+        "seconds": 4.502
+      },
+      "rag_canonical": {
+        "answer": 238600,
+        "correct": 0,
+        "chunks": 15,
+        "prompt_tokens": 744,
+        "completion_tokens": 7,
+        "total_tokens": 751,
+        "estimated": false,
+        "seconds": 3.959
+      }
+    },
+    {
+      "question": "What is the GSTIN of Nova Retailers?",
+      "gold": "09AAIZN6677U1Z7",
+      "ours": {
+        "answer": "09aaizn6677u1z7",
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 259,
+        "completion_tokens": 22,
+        "total_tokens": 281,
+        "estimated": false,
+        "seconds": 3.221
+      },
+      "ours_needle_planner": {
+        "answer": "09aaizn6677u1z7",
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.072
+      },
+      "rag_raw": {
+        "answer": "09aaizn6677u1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 1028,
+        "completion_tokens": 14,
+        "total_tokens": 1042,
+        "estimated": false,
+        "seconds": 4.647
+      },
+      "rag_canonical": {
+        "answer": "09aaizn6677u1z7",
+        "correct": 1,
+        "chunks": 15,
+        "prompt_tokens": 671,
+        "completion_tokens": 14,
+        "total_tokens": 685,
+        "estimated": false,
+        "seconds": 4.111
+      }
+    },
+    {
+      "question": "How many distinct vendors appear in the data?",
+      "gold": 30,
+      "ours": {
+        "answer": 30,
+        "correct": 1,
+        "plan_source": "local model",
+        "prompt_tokens": 258,
+        "completion_tokens": 20,
+        "total_tokens": 278,
+        "estimated": false,
+        "seconds": 3.119
+      },
+      "ours_needle_planner": {
+        "answer": 30,
+        "correct": 1,
+        "plan_source": "query plan from Needle, local, no llm tokens",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "estimated": false,
+        "seconds": 0.062
       },
       "rag_raw": {
         "answer": 15,
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 836,
+        "prompt_tokens": 528,
         "completion_tokens": 3,
-        "total_tokens": 839,
+        "total_tokens": 531,
         "estimated": false,
-        "seconds": 4.032
+        "seconds": 3.507
       },
       "rag_canonical": {
-        "answer": 10,
+        "answer": 7,
         "correct": 0,
         "chunks": 15,
-        "prompt_tokens": 713,
-        "completion_tokens": 3,
-        "total_tokens": 716,
+        "prompt_tokens": 726,
+        "completion_tokens": 2,
+        "total_tokens": 728,
         "estimated": false,
-        "seconds": 3.84
-      }
-    },
-    {
-      "question": "What is the total spend with Hooli Services in INR?",
-      "gold": 160600,
-      "ours": {
-        "answer": 160600,
-        "correct": 1,
-        "plan_source": "local model",
-        "prompt_tokens": 263,
-        "completion_tokens": 24,
-        "total_tokens": 287,
-        "estimated": false,
-        "seconds": 3.479
-      },
-      "rag_raw": {
-        "answer": 100000,
-        "correct": 0,
-        "chunks": 15,
-        "prompt_tokens": 1007,
-        "completion_tokens": 7,
-        "total_tokens": 1014,
-        "estimated": false,
-        "seconds": 4.471
-      },
-      "rag_canonical": {
-        "answer": 100700,
-        "correct": 0,
-        "chunks": 15,
-        "prompt_tokens": 715,
-        "completion_tokens": 7,
-        "total_tokens": 722,
-        "estimated": false,
-        "seconds": 4.057
-      }
-    },
-    {
-      "question": "What city is Wayne Enterprises registered in?",
-      "gold": "Pune",
-      "ours": {
-        "answer": "pune",
-        "correct": 1,
-        "plan_source": "local model",
-        "prompt_tokens": 257,
-        "completion_tokens": 21,
-        "total_tokens": 278,
-        "estimated": false,
-        "seconds": 3.361
-      },
-      "rag_raw": {
-        "answer": "poona",
-        "correct": 0,
-        "chunks": 15,
-        "prompt_tokens": 786,
-        "completion_tokens": 3,
-        "total_tokens": 789,
-        "estimated": false,
-        "seconds": 4.104
-      },
-      "rag_canonical": {
-        "answer": "pune",
-        "correct": 1,
-        "chunks": 15,
-        "prompt_tokens": 561,
-        "completion_tokens": 3,
-        "total_tokens": 564,
-        "estimated": false,
-        "seconds": 3.714
+        "seconds": 3.737
       }
     }
   ]
