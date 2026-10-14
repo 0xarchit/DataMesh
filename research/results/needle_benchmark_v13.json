@@ -1,0 +1,600 @@
+{
+  "weights": "training\\needle\\tuned_v13.cact",
+  "questions": "data\\gold\\questions_bench.json",
+  "correct": 41,
+  "total": 42,
+  "accuracy": 0.9762,
+  "tokens": 0,
+  "seconds": 3.92,
+  "ms_per_question": 93.5,
+  "sources": {
+    "query plan from Needle, local, no llm tokens": 41,
+    "refused by Needle": 1
+  },
+  "per_question": [
+    {
+      "q": "What is the total spend with PIONEER LOGISTICAL in INR?",
+      "type": "sum_upper_variant",
+      "gold": 298100,
+      "answer": 298100,
+      "plan": {
+        "op": "sum",
+        "entity": "PIONEER LOGISTICAL",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.4472
+    },
+    {
+      "q": "What is the total spend with Soylent Foods in INR?",
+      "type": "sum",
+      "gold": 308500,
+      "answer": 308500,
+      "plan": {
+        "op": "sum",
+        "entity": "Soylent Foods",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0719
+    },
+    {
+      "q": "What is the total spend with Globex Corporation in INR?",
+      "type": "sum",
+      "gold": 348600,
+      "answer": 348600,
+      "plan": {
+        "op": "sum",
+        "entity": "Globex Corporation",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0731
+    },
+    {
+      "q": "What city is Soylent Foods registered in?",
+      "type": "city",
+      "gold": "Noida",
+      "answer": "noida",
+      "plan": {
+        "op": "lookup",
+        "entity": "Soylent Foods",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0774
+    },
+    {
+      "q": "What city is Pioneer Logistics registered in?",
+      "type": "city",
+      "gold": "Gurugram",
+      "answer": "gurugram",
+      "plan": {
+        "op": "lookup",
+        "entity": "Pioneer Logistics",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0786
+    },
+    {
+      "q": "What is the total spend with Zenith Trading Company in INR?",
+      "type": "sum",
+      "gold": 192500,
+      "answer": 192500,
+      "plan": {
+        "op": "sum",
+        "entity": "Zenith Trading Company",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0742
+    },
+    {
+      "q": "What is the total spend with GLOBEX CORPORATION in INR?",
+      "type": "sum_upper_variant",
+      "gold": 348600,
+      "answer": 348600,
+      "plan": {
+        "op": "sum",
+        "entity": "GLOBEX CORPORATION",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.1077
+    },
+    {
+      "q": "What city is Pioneer Logistical registered in?",
+      "type": "city",
+      "gold": "Bengaluru",
+      "answer": "bengaluru",
+      "plan": {
+        "op": "lookup",
+        "entity": "Pioneer Logistical",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0779
+    },
+    {
+      "q": "What is the total spend with Nova Retailers in INR?",
+      "type": "sum",
+      "gold": 417200,
+      "answer": 417200,
+      "plan": {
+        "op": "sum",
+        "entity": "Nova Retailers",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0746
+    },
+    {
+      "q": "What is the GSTIN of Pioneer Logistics?",
+      "type": "tax",
+      "gold": "06AAJZP8899V1Z3",
+      "answer": "06aajzp8899v1z3",
+      "plan": {
+        "op": "lookup",
+        "entity": "Pioneer Logistics",
+        "column": "tax_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0775
+    },
+    {
+      "q": "How many transactions involve Nova Retailers?",
+      "type": "count",
+      "gold": 12,
+      "answer": 12,
+      "plan": {
+        "op": "count",
+        "entity": "Nova Retailers",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0761
+    },
+    {
+      "q": "What is the total spend with HOOLI SERVICES in INR?",
+      "type": "sum_upper_variant",
+      "gold": 292300,
+      "answer": 292300,
+      "plan": {
+        "op": "sum",
+        "entity": "HOOLI SERVICES",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0963
+    },
+    {
+      "q": "How many transactions involve Umbrella Traders?",
+      "type": "count",
+      "gold": 12,
+      "answer": 12,
+      "plan": {
+        "op": "count",
+        "entity": "Umbrella Traders",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0775
+    },
+    {
+      "q": "What city is Nova Retailers registered in?",
+      "type": "city",
+      "gold": "Thane",
+      "answer": "thane",
+      "plan": {
+        "op": "lookup",
+        "entity": "Nova Retailers",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0788
+    },
+    {
+      "q": "What is the GSTIN of Pioneer Logistical?",
+      "type": "tax",
+      "gold": "27AAKZP1122W1Z6",
+      "answer": "27aakzp1122w1z6",
+      "plan": {
+        "op": "lookup",
+        "entity": "Pioneer Logistical",
+        "column": "tax_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0864
+    },
+    {
+      "q": "What is the total spend with UMBRELLA TRADERS in INR?",
+      "type": "sum_upper_variant",
+      "gold": 371000,
+      "answer": 371000,
+      "plan": {
+        "op": "sum",
+        "entity": "UMBRELLA TRADERS",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0981
+    },
+    {
+      "q": "What is the GSTIN of Hooli Services?",
+      "type": "tax",
+      "gold": "27AAGCH5678X1Z9",
+      "answer": null,
+      "plan": null,
+      "source": "refused by Needle",
+      "correct": 0,
+      "seconds": 0.0581
+    },
+    {
+      "q": "What is the total spend across all vendors in INR?",
+      "type": "global_sum",
+      "gold": 9921800,
+      "answer": 9921800,
+      "plan": {
+        "op": "sum",
+        "entity": null,
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.071
+    },
+    {
+      "q": "What is the GSTIN of Soylent Foods?",
+      "type": "tax",
+      "gold": "09AAFCS1234W1Z6",
+      "answer": "09aafcs1234w1z6",
+      "plan": {
+        "op": "lookup",
+        "entity": "Soylent Foods",
+        "column": "tax_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0823
+    },
+    {
+      "q": "What is the GSTIN of Globex Corporation?",
+      "type": "tax",
+      "gold": "29AAGCG1234P1Z5",
+      "answer": "29aagcg1234p1z5",
+      "plan": {
+        "op": "lookup",
+        "entity": "Globex Corporation",
+        "column": "tax_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0847
+    },
+    {
+      "q": "What city is Globex Corporation registered in?",
+      "type": "city",
+      "gold": "Bengaluru",
+      "answer": "bengaluru",
+      "plan": {
+        "op": "lookup",
+        "entity": "Globex Corporation",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0767
+    },
+    {
+      "q": "What is the total spend with ZENITH TRADING COMPANY in INR?",
+      "type": "sum_upper_variant",
+      "gold": 192500,
+      "answer": 192500,
+      "plan": {
+        "op": "sum",
+        "entity": "ZENITH TRADING COMPANY",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0883
+    },
+    {
+      "q": "How many transactions involve Soylent Foods?",
+      "type": "count",
+      "gold": 12,
+      "answer": 12,
+      "plan": {
+        "op": "count",
+        "entity": "Soylent Foods",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0788
+    },
+    {
+      "q": "What city is Zenith Trading Company registered in?",
+      "type": "city",
+      "gold": "Pune",
+      "answer": "pune",
+      "plan": {
+        "op": "lookup",
+        "entity": "Zenith Trading Company",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0907
+    },
+    {
+      "q": "What is the total spend with NOVA RETAILERS in INR?",
+      "type": "sum_upper_variant",
+      "gold": 417200,
+      "answer": 417200,
+      "plan": {
+        "op": "sum",
+        "entity": "NOVA RETAILERS",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0905
+    },
+    {
+      "q": "What is the total spend with PIONEER LOGISTICS in INR?",
+      "type": "sum_upper_variant",
+      "gold": 331200,
+      "answer": 331200,
+      "plan": {
+        "op": "sum",
+        "entity": "PIONEER LOGISTICS",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.099
+    },
+    {
+      "q": "What city is Hooli Services registered in?",
+      "type": "city",
+      "gold": "Thane",
+      "answer": "thane",
+      "plan": {
+        "op": "lookup",
+        "entity": "Hooli Services",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0751
+    },
+    {
+      "q": "What is the GSTIN of Zenith Trading Company?",
+      "type": "tax",
+      "gold": "29AACZL3344N1Z8",
+      "answer": "29aaczl3344n1z8",
+      "plan": {
+        "op": "lookup",
+        "entity": "Zenith Trading Company",
+        "column": "tax_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0784
+    },
+    {
+      "q": "What is the total spend with Hooli Services in INR?",
+      "type": "sum",
+      "gold": 292300,
+      "answer": 292300,
+      "plan": {
+        "op": "sum",
+        "entity": "Hooli Services",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0793
+    },
+    {
+      "q": "What is the GSTIN of Umbrella Traders?",
+      "type": "tax",
+      "gold": "19AAFCU9012R1Z8",
+      "answer": "19aafcu9012r1z8",
+      "plan": {
+        "op": "lookup",
+        "entity": "Umbrella Traders",
+        "column": "tax_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.085
+    },
+    {
+      "q": "What is the total spend with Pioneer Logistics in INR?",
+      "type": "sum",
+      "gold": 331200,
+      "answer": 331200,
+      "plan": {
+        "op": "sum",
+        "entity": "Pioneer Logistics",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0867
+    },
+    {
+      "q": "What is the total spend with SOYLENT FOODS in INR?",
+      "type": "sum_upper_variant",
+      "gold": 308500,
+      "answer": 308500,
+      "plan": {
+        "op": "sum",
+        "entity": "SOYLENT FOODS",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0907
+    },
+    {
+      "q": "How many transactions involve Hooli Services?",
+      "type": "count",
+      "gold": 8,
+      "answer": 8,
+      "plan": {
+        "op": "count",
+        "entity": "Hooli Services",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0833
+    },
+    {
+      "q": "What city is Umbrella Traders registered in?",
+      "type": "city",
+      "gold": "Kolkata",
+      "answer": "kolkata",
+      "plan": {
+        "op": "lookup",
+        "entity": "Umbrella Traders",
+        "column": "city"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0977
+    },
+    {
+      "q": "How many transactions involve Globex Corporation?",
+      "type": "count",
+      "gold": 8,
+      "answer": 8,
+      "plan": {
+        "op": "count",
+        "entity": "Globex Corporation",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0938
+    },
+    {
+      "q": "What is the total spend with Umbrella Traders in INR?",
+      "type": "sum",
+      "gold": 371000,
+      "answer": 371000,
+      "plan": {
+        "op": "sum",
+        "entity": "Umbrella Traders",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0942
+    },
+    {
+      "q": "How many transactions involve Zenith Trading Company?",
+      "type": "count",
+      "gold": 9,
+      "answer": 9,
+      "plan": {
+        "op": "count",
+        "entity": "Zenith Trading Company",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0999
+    },
+    {
+      "q": "How many transactions involve Pioneer Logistics?",
+      "type": "count",
+      "gold": 9,
+      "answer": 9,
+      "plan": {
+        "op": "count",
+        "entity": "Pioneer Logistics",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.1001
+    },
+    {
+      "q": "How many transactions involve Pioneer Logistical?",
+      "type": "count",
+      "gold": 10,
+      "answer": 10,
+      "plan": {
+        "op": "count",
+        "entity": "Pioneer Logistical",
+        "column": "invoice_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0982
+    },
+    {
+      "q": "What is the total spend with Pioneer Logistical in INR?",
+      "type": "sum",
+      "gold": 298100,
+      "answer": 298100,
+      "plan": {
+        "op": "sum",
+        "entity": "Pioneer Logistical",
+        "column": "amount_inr"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0987
+    },
+    {
+      "q": "What is the GSTIN of Nova Retailers?",
+      "type": "tax",
+      "gold": "09AAIZN6677U1Z7",
+      "answer": "09aaizn6677u1z7",
+      "plan": {
+        "op": "lookup",
+        "entity": "Nova Retailers",
+        "column": "tax_id"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0962
+    },
+    {
+      "q": "How many distinct vendors appear in the data?",
+      "type": "global_count",
+      "gold": 30,
+      "answer": 30,
+      "plan": {
+        "op": "distinct_count",
+        "entity": null,
+        "column": "vendor_cluster"
+      },
+      "source": "query plan from Needle, local, no llm tokens",
+      "correct": 1,
+      "seconds": 0.0745
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{"query": "The user said not to reveal the GSTIN of Vertex Alloys.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN was explicitly requested to be withheld, so no tool is called."}
+{"query": "Bluepeak Logistics ka total spend mat batao.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user refused the spend figure, so no tool is called."}
+{"query": "I would rather not see the spend for Cindercraft Metals.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user declined the spend, so no tool is called."}
+{"query": "Under no circumstances give me the GSTIN of Halcyon Textiles.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN must not be given, so no tool is called."}
+{"query": "Orbital Foundry ka city bata do.", "tools": [{"name": "vendor_city"}], "answers": [{"name": "vendor_city", "arguments": {"vendor": "Orbital Foundry"}}], "reasoning": "The city of the named vendor."}
+{"query": "Mere colleague ne bola Quarry Nine Minerals ka naam mat batana.", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "A colleague forbade the name, so no tool is called."}
+{"query": "GSTIN of Sablewood Timber - do not disclose.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The user asked for the GSTIN to be withheld."}
+{"query": "I was told not to share the spend for Trident Polymers.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was ordered withheld, so no tool is called."}
+{"query": "Umbra Steelworks ki city nahi chahiye.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The user does not want the city, so no tool is called."}
+{"query": "What is the GSTIN of Vivid Pack Solutions?", "tools": [{"name": "vendor_gstin"}], "answers": [{"name": "vendor_gstin", "arguments": {"vendor": "Vivid Pack Solutions"}}], "reasoning": "The GSTIN of the named vendor."}
+{"query": "Please withhold the tax id of Westgate Chemicals.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The tax id was asked to be withheld, so no tool is called."}
+{"query": "Never tell me Yonder Foods' city.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The user forbade the city, so no tool is called."}
+{"query": "Zephyr Components ka GSTIN mat pucho.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN must not be asked for, so no tool is called."}
+{"query": "The manager said Amberline Traders' city is confidential and must not be shown.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was declared confidential, so no tool is called."}
+{"query": "Basalt Rock Works ka naam bata do.", "tools": [{"name": "vendor_name"}], "answers": [{"name": "vendor_name", "arguments": {"vendor": "Basalt Rock Works"}}], "reasoning": "The registered name of the named vendor."}
+{"query": "Never give me Copperleaf Papers' GSTIN.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN was forbidden, so no tool is called."}
+{"query": "Driftbay Shipping ka spend mujhe nahi dikhana.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was refused, so no tool is called."}
+{"query": "I would prefer not to know the city for Emberforge Castings.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The user declined the city, so no tool is called."}
+{"query": "Mere colleague ne bola Fernwood Organics ka GSTIN mat dena.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "A colleague forbade the GSTIN, so no tool is called."}
+{"query": "How much did we spend with Granite Hollow Mining?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {"vendor": "Granite Hollow Mining"}}], "reasoning": "The total spend with the named vendor."}
+{"query": "Under no circumstances reveal Ironvale Works' registered name.", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The name was forbidden, so no tool is called."}
+{"query": "Jade Harbor Freight ka spend nahi batana mujhe.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was asked to be withheld, so no tool is called."}
+{"query": "The user instructed that Kestrel Instruments' tax id must not be shared.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The tax id was ordered withheld, so no tool is called."}
+{"query": "Larkspur Mills ki city nahi chahiye mujhe.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The user does not want the city, so no tool is called."}
+{"query": "Merrow Chemicals ki city bata do.", "tools": [{"name": "vendor_city"}], "answers": [{"name": "vendor_city", "arguments": {"vendor": "Merrow Chemicals"}}], "reasoning": "The city of the named vendor."}
+{"query": "Kindly withhold Nightjar Optics' tax id.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The tax id was asked to be withheld, so no tool is called."}
+{"query": "Opal Ridge Plastics ka naam kabhi mat batao.", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The name was forbidden, so no tool is called."}
+{"query": "They told me not to reveal the spend for Pinnacle Wire.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was ordered withheld, so no tool is called."}
+{"query": "City of Quillon Tools - do not tell me.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was asked to be withheld, so no tool is called."}
+{"query": "Silverbeck Glass ka GSTIN kya hai?", "tools": [{"name": "vendor_gstin"}], "answers": [{"name": "vendor_gstin", "arguments": {"vendor": "Silverbeck Glass"}}], "reasoning": "The GSTIN of the named vendor."}
+{"query": "Never show me Vertex Alloys' city.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was forbidden, so no tool is called."}
+{"query": "Bluepeak Logistics ka GSTIN mat pucho.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN must not be asked, so no tool is called."}
+{"query": "Mere senior ne bola Cindercraft Metals ka naam mat batao.", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "A senior forbade the name, so no tool is called."}
+{"query": "I would rather not see the total spend for Halcyon Textiles.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The user declined the spend, so no tool is called."}
+{"query": "Orbital Foundry ka official naam bata do.", "tools": [{"name": "vendor_name"}], "answers": [{"name": "vendor_name", "arguments": {"vendor": "Orbital Foundry"}}], "reasoning": "The registered name of the named vendor."}
+{"query": "Quarry Nine Minerals ka spend nahi chahiye.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was refused, so no tool is called."}
+{"query": "Under no circumstances give me Sablewood Timber's GSTIN.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN was forbidden, so no tool is called."}
+{"query": "I was told not to share the city of Trident Polymers.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was ordered withheld, so no tool is called."}
+{"query": "Umbra Steelworks ka naam mat batao abhi.", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The name was forbidden, so no tool is called."}
+{"query": "Vivid Pack Solutions ke saath kitna spend hua?", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {"vendor": "Vivid Pack Solutions"}}], "reasoning": "The total spend with the named vendor."}
+{"query": "Please do not give me Westgate Chemicals' tax id.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The tax id was refused, so no tool is called."}
+{"query": "Never reveal Amberline Traders' city.", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was forbidden, so no tool is called."}
+{"query": "Basalt Rock Works ka GSTIN mat batao.", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN was asked to be withheld, so no tool is called."}
+{"query": "The user said not to disclose the spend for Copperleaf Papers.", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was ordered withheld, so no tool is called."}
+{"query": "Driftbay Shipping ki city bata do.", "tools": [{"name": "vendor_city"}], "answers": [{"name": "vendor_city", "arguments": {"vendor": "Driftbay Shipping"}}], "reasoning": "The city of the named vendor."}

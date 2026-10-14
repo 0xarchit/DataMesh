@@ -53,12 +53,14 @@ Built only from data, never from the demo's vendor names.
 | v10 | capitalised and single-word vendor names, which were absent entirely | 131 |
 | v11 | negation refusals, `count_vendors` phrased without the word `total`, more capitalised names | 500 |
 | v12 | no new data. Same 3838, trained from v10's weights instead of the base | 0 |
+| v13 | capitalised vendor names, vendor retention on `total spend`, negation refusals | +463 |
 
-Final set: 3838 examples, 3454 train and 384 held out. 21 percent are refusals.
+Final set: 4278 examples, 3850 train and 428 held out. 22 percent are refusals.
 
 v11 and v12 share that set exactly, including the validation split, because the split comes from
 `--seed 0` over the same file. Their validation losses are therefore directly comparable, and the
-comparison is what identified warm-starting as the thing that worked.
+comparison is what identified warm-starting as the thing that worked. v13 changes the file, so its
+validation split is a different 428 examples and its loss is not comparable to theirs.
 
 Two label rules are enforced by the builder rather than left to the generators:
 
@@ -110,17 +112,18 @@ The v11 batch was built to fix the two named weaknesses below. It fixed them and
 the shipped model, because it bought them with a new failure the benchmark could see. The v12 run
 took a different route to the same gains and is the one that ships.
 
-| Measure | v10 | v11 | **v12, shipped** |
-|---|---|---|---|
-| Frozen holdout, real vendors, 180 cases | 163/180, 90.6 percent | 166/180, 92.2 percent | **172/180, 95.6 percent** |
-| Positive questions | 129/137, 94 percent | 127/137, 93 percent | **132/137, 96 percent** |
-| Negation refusals | 11/14, 79 percent | 13/14, 93 percent | **13/14, 93 percent** |
-| Missing-argument refusals | 3/4, 75 percent | 3/4, 75 percent | 3/4, 75 percent |
-| Off-topic refusals | 11/13, 85 percent | 11/13, 85 percent | **12/13, 92 percent** |
-| `count_vendors` | 8/11, 73 percent | 11/11, 100 percent | **11/11, 100 percent** |
-| Project benchmark, 42 questions | 42/42, 100 percent | 41/42, 97.6 percent | **42/42, 100 percent** |
-| Speed | about 100 ms per question, CPU, no GPU | same | 105 ms |
-| Model calls | 0 LLM API calls, all local | same | same |
+| Measure | v10 | v11 | **v12, shipped** | v13 |
+|---|---|---|---|---|
+| Frozen holdout, real vendors, 180 cases | 163/180, 90.6 percent | 166/180, 92.2 percent | **172/180, 95.6 percent** | 171/180, 95.0 percent |
+| Positive questions | 129/137, 94 percent | 127/137, 93 percent | **132/137, 96 percent** | 132/137, 96 percent |
+| Negation refusals | 11/14, 79 percent | 13/14, 93 percent | **13/14, 93 percent** | 13/14, 93 percent |
+| Missing-argument refusals | 3/4, 75 percent | 3/4, 75 percent | 3/4, 75 percent | 3/4, 75 percent |
+| Off-topic refusals | 11/13, 85 percent | 11/13, 85 percent | **12/13, 92 percent** | 12/13, 92 percent |
+| `count_vendors` | 8/11, 73 percent | 11/11, 100 percent | **11/11, 100 percent** | 10/11, 91 percent |
+| Project benchmark, 42 questions | 42/42, 100 percent | 41/42, 97.6 percent | **42/42, 100 percent** | 41/42, 97.6 percent |
+| Of those, the eight `vendor_gstin` | 8/8 | 7/8 | **8/8** | 7/8 |
+| Speed | about 100 ms per question, CPU, no GPU | same | 105 ms | 94 ms |
+| Model calls | 0 LLM API calls, all local | same | same | same |
 
 ### Warm-starting is what made v12 work
 
@@ -150,6 +153,30 @@ not occur.
 Nothing about this is a code path. `scripts/make_warmstart.py` merges an adapter into a base
 checkpoint, `scripts/train_needle.py --checkpoint` trains from it, and `needle build` merges the
 result onto the same warm base. The model is the same architecture and the same six tools.
+
+### v13 added data and lost ground
+
+v13 is v12 plus 463 fresh examples written for the eight v12 failures, then four warm epochs from
+v12. It scored 171/180 against v12's 172/180 and 41/42 against v12's 42/42, so it did not ship.
+On the cases where they disagree v13 wins 4 and loses 5, which is one case and not a real
+difference either way. What decides it is the benchmark.
+
+The v13 data was aimed at capitalised vendor names, which were four of v12's eight failures. All
+four are still failing. The generation prompt named `INGEN`, `Nova Retail`, `ORION SYSTEMS` and
+`Vertex Analytics` as style examples, and those are real vendors, so every line using them had to
+be dropped, 62 lines in all. The surviving capitalised lines used other invented names and the
+model did not carry the behaviour across. Name the shapes, never the names.
+
+A pattern across four models is worth recording even at this sample size. v10 and v12 answer all
+eight `vendor_gstin` benchmark questions; v11 and v13 answer seven. Every extra training round
+after v12 has cost exactly one of them, and the eight include the confusable pairs, so what the
+extra epochs buy with one hand they take back by becoming more willing to refuse with the other.
+It is the clearest reason to stop here: three rounds of more data have not beaten v12, and the
+holdout cannot tell them apart while the benchmark can.
+
+The next lever is not more of the same data. Four of v12's eight failures are lookups refused on a
+short capitalised name, so the thing to test is whether those names tokenise into pieces the
+model cannot separate from the question's other words, before writing a fifth batch.
 
 ## Known weaknesses
 

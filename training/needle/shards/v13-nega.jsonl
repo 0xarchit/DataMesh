@@ -1,0 +1,43 @@
+{"query": "Quantum Textiles ki gstin mat batao", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The user forbade giving the GSTIN, so no tool is called."}
+{"query": "Don't give me the city of Vertex Polymers", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was negated, so no tool is called."}
+{"query": "Blue Ridge Logistics ka registered naam mat batao yaar", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The user asked to withhold the registered name, so no tool is called."}
+{"query": "Please give me the city of Kestrel Foods", "tools": [{"name": "vendor_city"}], "answers": [{"name": "vendor_city", "arguments": {"vendor": "Kestrel Foods"}}], "reasoning": "A direct request for the city of the named vendor."}
+{"query": "Never mind, don't total the spend for Orion Chemicals", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The request was retracted and negated, so no tool is called."}
+{"query": "I don't want the tax id of Sapphire Motors", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The user refused the tax id, so no tool is called."}
+{"query": "skip the city for Delta Castings", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The user asked to skip the city, so no tool is called."}
+{"query": "leave out the spend for Meridian Papers", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was asked to be left out, so no tool is called."}
+{"query": "Pinnacle Ceramics ki gstin bata do", "tools": [{"name": "vendor_gstin"}], "answers": [{"name": "vendor_gstin", "arguments": {"vendor": "Pinnacle Ceramics"}}], "reasoning": "A direct request for the GSTIN of the named vendor."}
+{"query": "Do not count the transactions for Falcon Tools", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "The count was negated, so no tool is called."}
+{"query": "Aster Pharma ka naam mat batao", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The name was asked to be withheld, so no tool is called."}
+{"query": "Cobalt Engineering city skip karo", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was told to be skipped, so no tool is called."}
+{"query": "Don't total spend for Granite Works", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was explicitly negated, so no tool is called."}
+{"query": "Do tell me the GSTIN of Lumen Electricals", "tools": [{"name": "vendor_gstin"}], "answers": [{"name": "vendor_gstin", "arguments": {"vendor": "Lumen Electricals"}}], "reasoning": "A positive request for the GSTIN of the named vendor."}
+{"query": "Horizon Steel ka tax id mat do", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The tax id was refused, so no tool is called."}
+{"query": "Please don't give the registered name of Zephyr Packaging", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The registered name was refused, so no tool is called."}
+{"query": "Trellis Agro ki city mat batao", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was negated, so no tool is called."}
+{"query": "Never tell me the spend for Nimbus Systems", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was forbidden, so no tool is called."}
+{"query": "Coral Plastics ki gstin bata do yaar", "tools": [{"name": "vendor_gstin"}], "answers": [{"name": "vendor_gstin", "arguments": {"vendor": "Coral Plastics"}}], "reasoning": "A positive request for the GSTIN of the named vendor."}
+{"query": "leave the transactions count for Everest Rubbers alone", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "The count was asked to be left alone, so no tool is called."}
+{"query": "Sterling Optics naam mat batao", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The name was refused, so no tool is called."}
+{"query": "skip gstin for Vega Instruments", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN was told to be skipped, so no tool is called."}
+{"query": "Do not total the spend of Proton Bearings", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was negated, so no tool is called."}
+{"query": "Give me the total spend with Helix Labs", "tools": [{"name": "total_spend"}], "answers": [{"name": "total_spend", "arguments": {"vendor": "Helix Labs"}}], "reasoning": "A positive request for the total spend of the named vendor."}
+{"query": "Ironclad Fasteners ka registered naam mat batao", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The registered name was refused, so no tool is called."}
+{"query": "don't want city for Jade Interiors", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was negated, so no tool is called."}
+{"query": "Kinetic Pumps ki gstin chhodo yaar", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The user asked to leave the GSTIN, so no tool is called."}
+{"query": "Please withhold the spend for Lattice Fabricators", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was asked to be withheld, so no tool is called."}
+{"query": "Whatever you do, don't give the GSTIN of Quantum Textiles", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN was explicitly forbidden, so no tool is called."}
+{"query": "Vertex Polymers ka spend mat nikalo", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was asked not to be computed, so no tool is called."}
+{"query": "no city for Blue Ridge Logistics please", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was negated, so no tool is called."}
+{"query": "Don't count invoices for Kestrel Foods", "tools": [{"name": "count_transactions"}], "answers": [], "reasoning": "The count was negated, so no tool is called."}
+{"query": "What is the city of Orion Chemicals?", "tools": [{"name": "vendor_city"}], "answers": [{"name": "vendor_city", "arguments": {"vendor": "Orion Chemicals"}}], "reasoning": "A positive request for the city of the named vendor."}
+{"query": "Sapphire Motors ka tax id mat batao", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The tax id was refused, so no tool is called."}
+{"query": "skip the name for Delta Castings", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The name was told to be skipped, so no tool is called."}
+{"query": "Do not reveal the spend for Meridian Papers", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was asked not to be revealed, so no tool is called."}
+{"query": "Pinnacle Ceramics ki city mat batao", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was negated, so no tool is called."}
+{"query": "Count the transactions involving Falcon Tools", "tools": [{"name": "count_transactions"}], "answers": [{"name": "count_transactions", "arguments": {"vendor": "Falcon Tools"}}], "reasoning": "A positive request to count the transactions of the named vendor."}
+{"query": "Aster Pharma ki gstin mat do", "tools": [{"name": "vendor_gstin"}], "answers": [], "reasoning": "The GSTIN was refused, so no tool is called."}
+{"query": "forget the spend with Cobalt Engineering", "tools": [{"name": "total_spend"}], "answers": [], "reasoning": "The spend was asked to be forgotten, so no tool is called."}
+{"query": "Granite Works ka registered naam mat batao please", "tools": [{"name": "vendor_name"}], "answers": [], "reasoning": "The registered name was refused, so no tool is called."}
+{"query": "I don't want the city of Lumen Electricals", "tools": [{"name": "vendor_city"}], "answers": [], "reasoning": "The city was negated, so no tool is called."}
+{"query": "GSTIN of Horizon Steel bata do", "tools": [{"name": "vendor_gstin"}], "answers": [{"name": "vendor_gstin", "arguments": {"vendor": "Horizon Steel"}}], "reasoning": "A positive request for the GSTIN of the named vendor."}
